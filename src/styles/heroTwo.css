@@ -1,0 +1,29 @@
+.borderSet {
+    border-radius: 20px !important;
+    background-color: white !important;
+}
+
+.title {
+    color: blue;
+    font-weight: 600;
+}
+
+.descriptionHeroTwo {
+    color: grey;
+
+    font-weight: 300;
+}
+
+.heroTwoMoveUp {
+    position: relative;
+    bottom: 50px;
+}
+
+#rightBorder {
+
+    margin: auto;
+    height: 100px !important;
+    width: 2px !important;
+    border-radius: 20px;
+    background-color: grey !important;
+}

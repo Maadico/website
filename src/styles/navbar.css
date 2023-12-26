@@ -1,0 +1,31 @@
+#navbarColor {
+    background-color: rgb(236, 251, 248) !important;
+}
+
+.brandLogo {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+a {
+    font-weight: 500 !important;
+}
+
+a:hover {
+    color: rgb(61, 203, 182) !important;
+}
+
+.navAppointment {
+    color: white;
+    font-weight: 400 !important;
+    font-size: medium !important;
+    background-color: rgb(14, 113, 194);
+    border: 0 !important;
+    outline: 0 !important;
+}
+
+.navAppointment:hover {
+    color: white;
+    font-size: medium !important;
+    background-color: rgb(4, 137, 247);
+}

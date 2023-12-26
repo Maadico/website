@@ -1,0 +1,60 @@
+.Hero {
+    height: 80vh;
+    width: 100%;
+    overflow: hidden !important;
+    background-image: linear-gradient(to right, rgb(56, 105, 122), rgb(100, 173, 190));
+}
+
+.heroColor p {
+    color: white;
+    font-weight: 600;
+}
+
+.heroColor h1 {
+    color: white;
+    font-weight: 500;
+}
+
+.heroColor .description {
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.btnHero {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+}
+
+.Appointment {
+    background-color: rgb(61, 203, 182);
+    color: white;
+    font-weight: 500;
+}
+
+.Appointment:hover {
+    background-color: rgb(12, 240, 206);
+    color: white;
+}
+
+.callNow {
+    outline: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+}
+
+.callNow:hover {
+
+    color: rgba(255, 255, 255, 0.897);
+
+}
+
+
+.imgDoctor {
+    margin-top: -14px;
+}
+
+.imgDoctor img {
+    height: 500px;
+}
