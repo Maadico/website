@@ -1,0 +1,13 @@
+.contact {
+    background-color: rgb(246, 252, 252) !important;
+    height: 100%;
+    width: 100%;
+}
+
+.contactHeading h3 {
+    font-weight: 600;
+}
+
+.contactSubHeading {
+    font-weight: 400;
+}

@@ -5,6 +5,9 @@ import Header from "./components/Header";
 import "./styles/hero.css";
 import "./styles/navbar.css";
 import "./styles/heroTwo.css";
+import "./styles/contact.css";
+
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -13,6 +16,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </div>

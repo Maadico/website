@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <div className="container-fluid" id="navbarColor">
       <div className="container">
@@ -26,7 +27,7 @@ const Header = () => {
             >
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="#">
+                  <Link className="nav-link active" aria-current="page" to="/">
                     Home
                   </Link>
                 </li>
@@ -52,12 +53,15 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" aria-disabled="true">
+                  <Link to="/contact" className="nav-link" aria-disabled="true">
                     Contact
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <button className="btn  navAppointment mx-2">
+                  <button
+                    onClick={() => navigate("/contact")}
+                    className="btn  navAppointment mx-2"
+                  >
                     Make Appointment
                   </button>
                 </li>
