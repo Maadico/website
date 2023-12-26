@@ -34,7 +34,7 @@ const Contact = () => {
       Address: contact.address,
       City: contact.city,
       State: contact.state,
-      Pincode: contact.pinCode,
+      PinCode: contact.pinCode,
       Country: contact.country,
       IsApplied: contact.isApplied,
       Department: contact.department,
