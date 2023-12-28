@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import { Radio, Select, Calendar } from "antd";
+import { Radio, Select, Calendar, DatePicker } from "antd";
 import axios from "axios";
 const Contact = () => {
   const [contact, setContact] = useState({
     name: "",
     email: "",
-    // phone: "",
-    // dob: "",
+    phone: "",
+    dob: "",
     gender: "",
     address: "",
     city: "",
@@ -40,12 +40,15 @@ const Contact = () => {
       Department: contact.department,
       Procedure: contact.procedure,
       AppointmentDate: contact.appointmentDate,
+      Phone: contact.phone,
+      Dob: contact.dob,
     };
     axios
       .post(apiUrl, contactDetaiils)
       .then(function (response) {
         // Handle successful response
         console.log("Response:", response);
+        alert("data is submitted");
       })
       .catch(function (error) {
         // Handle error
@@ -83,6 +86,7 @@ const Contact = () => {
                       name: e.target.value,
                     }));
                   }}
+                  required
                 />
               </div>
               <div className="form-group col-md-6">
@@ -98,7 +102,41 @@ const Contact = () => {
                       email: e.target.value,
                     }));
                   }}
+                  required
                 />
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="form-group col-md-6">
+                <label htmlFor="inputEmail4">Phone</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="inputEmail4"
+                  placeholder="Name"
+                  onChange={(e) => {
+                    setContact((prevContact) => ({
+                      ...prevContact,
+                      phone: e.target.value,
+                    }));
+                  }}
+                  required
+                />
+              </div>
+              <div className="form-group col-md-6">
+                <label htmlFor="inputPassword4">DOB</label>
+                <div className="row mx-1">
+                  <DatePicker
+                    onChange={(date, dateString) => {
+                      setContact((prevContact) => ({
+                        ...prevContact,
+                        dob: date,
+                      }));
+                    }}
+                    required
+                  />
+                </div>
               </div>
             </div>
             <div className="form-group">
@@ -114,6 +152,7 @@ const Contact = () => {
                     address: e.target.value,
                   }));
                 }}
+                required
               />
             </div>
 
@@ -130,6 +169,7 @@ const Contact = () => {
                       city: e.target.value,
                     }));
                   }}
+                  required
                 />
               </div>
               <div className="form-group col-md-4">
@@ -144,6 +184,7 @@ const Contact = () => {
                       state: e.target.value,
                     }));
                   }}
+                  required
                 />
               </div>
               <div className="form-group col-md-2">
@@ -158,6 +199,7 @@ const Contact = () => {
                       pinCode: e.target.value,
                     }));
                   }}
+                  required
                 />
               </div>
             </div>
@@ -178,6 +220,7 @@ const Contact = () => {
                           }));
                         }}
                         value={contact.gender}
+                        required
                       >
                         <Radio value="Male">Male</Radio>
                         <Radio value="Female">Female</Radio>
@@ -200,6 +243,7 @@ const Contact = () => {
                       }));
                     }}
                     value={contact.isApplied}
+                    required
                   >
                     <Radio value="yes">Yes</Radio>
                     <Radio value="no">No</Radio>
@@ -222,10 +266,10 @@ const Contact = () => {
                       style={{
                         width: "40%",
                       }}
-                      onChange={(e) => {
+                      onChange={(value) => {
                         setContact((prevContact) => ({
                           ...prevContact,
-                          department: e.target.value,
+                          department: value,
                         }));
                       }}
                       options={[
@@ -254,10 +298,10 @@ const Contact = () => {
                       style={{
                         width: "40%",
                       }}
-                      onChange={(e) => {
+                      onChange={(value) => {
                         setContact((prevContact) => ({
                           ...prevContact,
-                          procedure: e.target.value,
+                          procedure: value,
                         }));
                       }}
                       options={[
@@ -295,9 +339,10 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
+              <div className="col-md-6"></div>
             </div>
 
-            <div className="row m-auto mt-2">
+            <div className="row m-auto py-4">
               <button type="submit" className="btn btn-primary w-25">
                 Submit
               </button>

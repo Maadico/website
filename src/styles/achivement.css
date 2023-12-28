@@ -1,0 +1,25 @@
+.Achivement {
+    background-color: rgb(30, 93, 187);
+    height: 25vh;
+    width: 100%;
+
+}
+
+.achievementCat {
+    margin: auto;
+    margin-top: 50px;
+}
+
+.achievementCat h5 {
+    font-weight: 700;
+    color: white;
+    font-size: 2rem;
+}
+
+.achievementCat p {
+    font-weight: 600;
+    color: white;
+    font-size: 1rem;
+    opacity: 0.7;
+
+}

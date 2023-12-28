@@ -1,0 +1,55 @@
+.service {
+    background-color: rgb(246, 252, 252) !important;
+    height: 100%;
+    width: 100%;
+
+}
+
+.serviceHeading h5 {
+    color: rgb(91, 202, 186);
+    font-weight: 900;
+}
+
+.serviceSubHeading h1 {
+    font-weight: 700;
+}
+
+.box {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgb(237, 249, 247);
+    transition: 0.3s ease-in-out;
+}
+
+.box .logo span {
+    color: rgb(141, 236, 224);
+    font-size: 50px;
+}
+
+.box .heading h5 {
+    color: rgb(31, 87, 162);
+    font-weight: 600;
+}
+
+.box .SubHeading p {
+    color: grey;
+    opacity: 0.9;
+}
+
+.readMore span {
+    color: rgb(31, 87, 162);
+    display: hidden;
+}
+
+.box:hover {
+    background-color: rgb(246, 252, 252);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box:hover .logo span {
+    color: rgb(31, 87, 162);
+}
+
+.box:hover .readMore span {
+    display: block;
+}

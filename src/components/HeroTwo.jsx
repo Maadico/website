@@ -2,7 +2,7 @@ import React from "react";
 import { FaUserDoctor, FaCarOn, FaVirusCovid } from "react-icons/fa6";
 const HeroTwo = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "rgb(246, 252, 252)" }}>
       <div className="container heroTwoMoveUp">
         <div className="row  borderSet bg-light">
           <div className="col-md-4 ">

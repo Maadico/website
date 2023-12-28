@@ -1,7 +1,6 @@
 import React from "react";
 import doctor from "../Images/heroDoctor.png";
 import { useNavigate } from "react-router-dom";
-
 const Hero = () => {
   const navigate = useNavigate();
 

@@ -1,0 +1,41 @@
+.processWork {
+    background-color: white;
+    height: 80vh;
+    width: 100%;
+}
+
+.process p {
+    color: grey;
+    opacity: 0.9;
+}
+
+.boxProcess {
+    background-color: transparent;
+}
+
+.logoProcess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: rgb(238, 248, 247);
+}
+
+.boxProcess .logoProcess span {
+
+
+    color: rgb(31, 87, 162);
+    font-size: 40px;
+}
+
+.boxProcess .heading h5 {
+    color: rgb(31, 87, 162);
+    font-weight: 600;
+}
+
+.boxProcess .SubHeading p {
+    color: grey;
+    opacity: 0.9;
+}

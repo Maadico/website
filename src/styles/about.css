@@ -1,0 +1,64 @@
+.about {
+    background-color: rgb(246, 252, 252) !important;
+    height: 100%;
+    width: 100%;
+    padding: 90px 0;
+}
+
+.aboutHeading h5 {
+    color: rgb(61, 203, 182);
+}
+
+.aboutSubheading h1 {
+    font-weight: 700 !important;
+}
+
+.aboutDescription p {
+    opacity: 0.8;
+    text-align: justify;
+}
+
+.AboutPoint {
+    font-weight: 500;
+    color: grey;
+    opacity: 0.9;
+}
+
+.rightShift {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: right !important;
+}
+
+.imgContainer {
+    background-color: black;
+    position: absolute;
+    height: 70%;
+    width: 30% !important;
+    z-index: 99999999 !important;
+
+
+}
+
+.imgContainer img {
+    height: 100%;
+    width: 100%;
+}
+
+.upperAbout {
+    position: relative;
+    background-color: rgb(61, 203, 182);
+    height: 200px;
+    width: 90%;
+    left: -15px !important;
+    bottom: -65% !important;
+
+}
+
+.lowerAbout {
+    position: relative;
+    background-color: rgb(168, 192, 228);
+    height: 200px;
+    left: 110px !important;
+    top: -55%;
+}
