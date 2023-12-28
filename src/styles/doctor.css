@@ -1,0 +1,94 @@
+.doctor {
+    height: auto;
+    background-color: white;
+    width: 100%;
+}
+
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.4s;
+
+}
+
+.swiper-slide:hover {
+    transform: scale(0.8);
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.details {
+    position: absolute;
+    bottom: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+}
+
+.swiper-slide:hover .details {
+    transform: scale(1.2);
+    background-color: rgb(65, 201, 183);
+}
+
+.name,
+.department,
+.social {
+    margin: auto !important;
+}
+
+.name h6 {
+    font-weight: 800;
+    color: blue;
+}
+
+.swiper-slide:hover .name h6 {
+    color: white;
+}
+
+.department p {
+    color: grey;
+    opacity: 0.8;
+    line-height: 3px;
+
+}
+
+.swiper-slide:hover .department p {
+    opacity: 1;
+}
+
+.socialId {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    display: none;
+    line-height: 0px;
+}
+
+.socialId span {
+    margin: 0 10px;
+    color: white;
+    line-height: 0px;
+}
+
+.swiper-slide:hover .socialId {
+    display: flex;
+}

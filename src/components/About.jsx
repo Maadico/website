@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FaHandHoldingMedical } from "react-icons/fa6";
 import { MdOutlineVerified } from "react-icons/md";
-import profile from "../Images/doctorAbout.jpg";
+import profile from "../Images/hero.png";
 const About = () => {
   const navigate = useNavigate();
   return (
@@ -107,8 +107,8 @@ const About = () => {
                   <div className="imgContainer  ">
                     <img src={profile} alt={"doctor"} />
                   </div>
-                  <div className="upperAbout "></div>
-                  <div className="lowerAbout"></div>
+                  {/* <div className="upperAbout "></div>
+                  <div className="lowerAbout"></div> */}
                 </div>
               </div>
             </div>

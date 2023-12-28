@@ -12,6 +12,8 @@ import "./styles/achivement.css";
 import "./styles/service.css";
 import "./styles/workProcess.css";
 import "./styles/facilities.css";
+import "./styles/doctor.css";
+import "./styles/review.css";
 
 import Contact from "./pages/Contact";
 

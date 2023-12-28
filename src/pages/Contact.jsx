@@ -57,7 +57,7 @@ const Contact = () => {
   };
   return (
     <div className="contact">
-      <div className="container ">
+      <div className="container pt-5">
         <div className="row contactHeading text-center pt-2">
           <h3>Doctor Appointment Request Form</h3>
         </div>
@@ -67,10 +67,10 @@ const Contact = () => {
             updates and plan your appointment.
           </p>
         </div>
-        <hr />
+
         {/* form */}
 
-        <div className="row">
+        <div className="row glassEffect p-4">
           <form onSubmit={handleSubmit}>
             <div className="row">
               <div className="form-group col-md-6">

@@ -24,17 +24,16 @@
     opacity: 0.9;
 }
 
-.rightShift {
+/* .rightShift {
     display: flex !important;
     flex-direction: row !important;
     justify-content: right !important;
-}
+} */
 
 .imgContainer {
-    background-color: black;
     position: absolute;
     height: 70%;
-    width: 30% !important;
+    width: 40% !important;
     z-index: 99999999 !important;
 
 

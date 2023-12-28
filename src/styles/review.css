@@ -1,0 +1,68 @@
+.review {
+    height: auto;
+    width: 100%;
+    background-color: rgb(246, 252, 252) !important;
+}
+
+.reviewSwiper {
+    width: 240px;
+    height: 320px;
+}
+
+.swiper-slide {
+    border-radius: 18px;
+    color: grey;
+
+}
+
+.descriptionReview p {
+    text-align: justify;
+    font-size: medium !important;
+}
+
+.imgREview .imgPic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.detailsPatient {
+    text-align: justify;
+    line-height: 0;
+}
+
+.detailsPatient h6 {
+    color: blue;
+}
+
+.detailsPatient p {
+    color: grey;
+    opacity: 0.9;
+    font-weight: 300;
+    font-size: small;
+}
+
+.swiper-slide:nth-child(1n) {
+    background-color: white;
+}
+
+.swiper-slide:nth-child(2n) {
+    background-color: rgb(246, 252, 252) !important;
+}
+
+.swiper-slide:nth-child(3n) {
+    background-color: rgb(10, 184, 175);
+}
+
+.swiper-slide:nth-child(4n) {
+    background-color: rgb(44, 7, 211);
+}
+
+.swiper-slide:nth-child(5n) {
+    background-color: rgb(225, 235, 241);
+}
+
+.swiper-slide:nth-child(6n) {
+    background-color: rgb(10, 160, 180);
+}
