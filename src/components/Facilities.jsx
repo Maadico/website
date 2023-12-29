@@ -7,7 +7,7 @@ const Facilities = () => {
   return (
     <div className="Facilities">
       <div className="container">
-        <div className="row">
+        <div className="row m-0 g-0 p-0">
           <div className="col-md-6 py-5 FacilitiesPaddingRemove">
             <div className="row h-50  py-5 FacilitiesPaddingRemove">
               <div className="row aboutHeading pt-5">
@@ -39,7 +39,7 @@ const Facilities = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 w-100">
+          <div className="col-md-6 ">
             <div className="row">
               <div className="col-6 ">
                 <div className="row flex-column ">

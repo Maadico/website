@@ -19,25 +19,26 @@ const Service = () => {
               Find Out More About <br /> Our Service
             </h1>
           </div>
+          {/* all services section */}
 
           <div className="row m-0 p-0 g-0 ourServices">
             <div className="col-md-4 space">
               <div className="box m-1 text-center">
-                <div className="row logo ">
+                <div className="row logo m-0 p-0 g-0">
                   <span>
                     <FaHeartbeat />
                   </span>
                 </div>
-                <div className="row heading">
+                <div className="row m-0 p-0 heading">
                   <h5>Heading</h5>
                 </div>
-                <div className="row SubHeading">
+                <div className="row SubHeading m-0 p-0">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
                     sit amet, consectetur Lorem ipsum dolor sit
                   </p>
                 </div>
-                <div className="row readMore">
+                <div className="row readMore m-0 p-0">
                   <span>
                     Read More <FaLongArrowAltRight />
                   </span>
@@ -46,21 +47,21 @@ const Service = () => {
             </div>
             <div className="col-md-4 space">
               <div className="box m-1 text-center">
-                <div className="row logo ">
+                <div className="row logo m-0 p-0 g-0">
                   <span>
                     <FaHeartbeat />
                   </span>
                 </div>
-                <div className="row heading">
+                <div className="row m-0 p-0 heading">
                   <h5>Heading</h5>
                 </div>
-                <div className="row SubHeading">
+                <div className="row SubHeading m-0 p-0">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
                     sit amet, consectetur Lorem ipsum dolor sit
                   </p>
                 </div>
-                <div className="row readMore">
+                <div className="row readMore m-0 p-0">
                   <span>
                     Read More <FaLongArrowAltRight />
                   </span>
@@ -69,21 +70,21 @@ const Service = () => {
             </div>
             <div className="col-md-4 space">
               <div className="box m-1 text-center">
-                <div className="row logo ">
+                <div className="row logo m-0 p-0 g-0">
                   <span>
                     <FaHeartbeat />
                   </span>
                 </div>
-                <div className="row heading">
+                <div className="row m-0 p-0 heading">
                   <h5>Heading</h5>
                 </div>
-                <div className="row SubHeading">
+                <div className="row SubHeading m-0 p-0">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
                     sit amet, consectetur Lorem ipsum dolor sit
                   </p>
                 </div>
-                <div className="row readMore">
+                <div className="row readMore m-0 p-0">
                   <span>
                     Read More <FaLongArrowAltRight />
                   </span>
@@ -92,44 +93,21 @@ const Service = () => {
             </div>
             <div className="col-md-4 space">
               <div className="box m-1 text-center">
-                <div className="row logo ">
+                <div className="row logo m-0 p-0 g-0">
                   <span>
                     <FaHeartbeat />
                   </span>
                 </div>
-                <div className="row heading">
+                <div className="row m-0 p-0 heading">
                   <h5>Heading</h5>
                 </div>
-                <div className="row SubHeading">
+                <div className="row SubHeading m-0 p-0">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
                     sit amet, consectetur Lorem ipsum dolor sit
                   </p>
                 </div>
-                <div className="row readMore">
-                  <span>
-                    Read More <FaLongArrowAltRight />
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 space ">
-              <div className="box m-1 text-center">
-                <div className="row logo ">
-                  <span>
-                    <FaHeartbeat />
-                  </span>
-                </div>
-                <div className="row heading">
-                  <h5>Heading</h5>
-                </div>
-                <div className="row SubHeading">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
-                    sit amet, consectetur Lorem ipsum dolor sit
-                  </p>
-                </div>
-                <div className="row readMore">
+                <div className="row readMore m-0 p-0">
                   <span>
                     Read More <FaLongArrowAltRight />
                   </span>
@@ -138,21 +116,44 @@ const Service = () => {
             </div>
             <div className="col-md-4 space">
               <div className="box m-1 text-center">
-                <div className="row logo ">
+                <div className="row logo m-0 p-0 g-0">
                   <span>
                     <FaHeartbeat />
                   </span>
                 </div>
-                <div className="row heading">
+                <div className="row m-0 p-0 heading">
                   <h5>Heading</h5>
                 </div>
-                <div className="row SubHeading">
+                <div className="row SubHeading m-0 p-0">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
                     sit amet, consectetur Lorem ipsum dolor sit
                   </p>
                 </div>
-                <div className="row readMore">
+                <div className="row readMore m-0 p-0">
+                  <span>
+                    Read More <FaLongArrowAltRight />
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 space">
+              <div className="box m-1 text-center">
+                <div className="row logo m-0 p-0 g-0">
+                  <span>
+                    <FaHeartbeat />
+                  </span>
+                </div>
+                <div className="row m-0 p-0 heading">
+                  <h5>Heading</h5>
+                </div>
+                <div className="row SubHeading m-0 p-0">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
+                    sit amet, consectetur Lorem ipsum dolor sit
+                  </p>
+                </div>
+                <div className="row readMore m-0 p-0">
                   <span>
                     Read More <FaLongArrowAltRight />
                   </span>
