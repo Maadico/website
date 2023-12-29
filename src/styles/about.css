@@ -61,3 +61,87 @@
     left: 110px !important;
     top: -55%;
 }
+
+@media screen and (max-width:991px) {
+
+    /* .aboutSubheading h1 br {
+        display: none;
+    } */
+    .about {
+
+        padding: 30px 0;
+    }
+
+
+    .aboutSubheading h1 {
+        font-weight: 800 !important;
+        font-size: x-large;
+    }
+
+    .aboutDescription p {
+        opacity: 0.8;
+        text-align: justify;
+        font-size: small;
+    }
+
+    .AboutPoint {
+        font-weight: 400;
+        color: grey;
+        opacity: 0.9;
+        font-size: small;
+
+    }
+
+    .aboutBtnSmall {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .noneAtSmallAbout {
+        display: none;
+    }
+
+    .about {
+
+        padding: 40px 0;
+    }
+
+    .aboutSubheading h1 {
+        font-weight: 800 !important;
+        font-size: xx-large;
+    }
+
+    .aboutDescription p {
+        opacity: 0.8;
+        text-align: justify;
+        font-size: medium;
+    }
+
+    .aboutBtnSmall {
+        font-size: medium;
+    }
+
+
+}
+
+@media screen and (max-width:425px) {
+    .aboutSubheading h1 {
+        font-weight: 700 !important;
+        font-size: x-large;
+    }
+
+    .aboutDescription p {
+        opacity: 0.8;
+        text-align: justify;
+        font-size: small;
+    }
+
+    .aboutBtnSmall {
+        font-size: medium;
+    }
+
+    .aboutBtnSmall {
+        font-size: small;
+    }
+}

@@ -19,7 +19,7 @@ const Home = () => {
       <Review />
       <WorkProcess />
       <Facilities />
-      <Doctor />
+      {/* <Doctor /> */}
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import React from "react";
 import { FaHandHoldingMedical } from "react-icons/fa6";
-import { FaHeartbeat, FaLongArrowAltRight } from "react-icons/fa";
+import { FaHeartbeat } from "react-icons/fa";
 const WorkProcess = () => {
   return (
-    <div className="processWork py-4">
-      <div className="container">
-        <div className="row">
-          <div className="row serviceHeading text-center pt-3">
+    <div className="processWork py-4 ">
+      <div className="container ">
+        <div className="row ">
+          <div className="row  m-0 serviceHeading text-center pt-3">
             <h5>
               <span>
                 <FaHandHoldingMedical fontSize={25} />
@@ -14,10 +14,10 @@ const WorkProcess = () => {
               <span>Our Work Process</span>
             </h5>
           </div>
-          <div className="row serviceSubHeading text-center">
+          <div className="row m-0 serviceSubHeading text-center">
             <h1>Let`s See How We Work</h1>
           </div>
-          <div className="row  text-center">
+          <div className="row m-0 text-center">
             <div className="w-50 text-center m-auto process">
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -25,7 +25,7 @@ const WorkProcess = () => {
               </p>
             </div>
           </div>
-          <div className="row ourServices mt-4">
+          <div className="row m-0 ourServices mt-4">
             <div className="col-md-4 ">
               <div className=" boxProcess m-1 text-center ">
                 <div className="row logoProcess m-auto text-center">

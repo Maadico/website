@@ -3,10 +3,10 @@ import { FaHandHoldingMedical } from "react-icons/fa6";
 import { FaHeartbeat, FaLongArrowAltRight } from "react-icons/fa";
 const Service = () => {
   return (
-    <div className="service py-4">
-      <div className="container">
-        <div className="row">
-          <div className="row serviceHeading text-center pt-3">
+    <div className="service py-4 ">
+      <div className="container ">
+        <div className="row ">
+          <div className="row m-0 p-0 g-0 serviceHeading text-center pt-3 ">
             <h5>
               <span>
                 <FaHandHoldingMedical fontSize={25} />
@@ -14,14 +14,14 @@ const Service = () => {
               <span>Medical Service</span>
             </h5>
           </div>
-          <div className="row serviceSubHeading text-center">
+          <div className="row m-0 p-0 g-0 serviceSubHeading text-center">
             <h1>
               Find Out More About <br /> Our Service
             </h1>
           </div>
 
-          <div className="row ourServices">
-            <div className="col-md-4 ">
+          <div className="row m-0 p-0 g-0 ourServices">
+            <div className="col-md-4 space">
               <div className="box m-1 text-center">
                 <div className="row logo ">
                   <span>
@@ -44,7 +44,7 @@ const Service = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 ">
+            <div className="col-md-4 space">
               <div className="box m-1 text-center">
                 <div className="row logo ">
                   <span>
@@ -67,7 +67,7 @@ const Service = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 ">
+            <div className="col-md-4 space">
               <div className="box m-1 text-center">
                 <div className="row logo ">
                   <span>
@@ -90,7 +90,7 @@ const Service = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 ">
+            <div className="col-md-4 space">
               <div className="box m-1 text-center">
                 <div className="row logo ">
                   <span>
@@ -113,7 +113,7 @@ const Service = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 ">
+            <div className="col-md-4 space ">
               <div className="box m-1 text-center">
                 <div className="row logo ">
                   <span>
@@ -136,7 +136,7 @@ const Service = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 ">
+            <div className="col-md-4 space">
               <div className="box m-1 text-center">
                 <div className="row logo ">
                   <span>

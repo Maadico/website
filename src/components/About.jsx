@@ -19,9 +19,7 @@ const About = () => {
               </h5>
             </div>
             <div className="row aboutSubheading">
-              <h1>
-                Welcome to Medical <br /> Center Hospital
-              </h1>
+              <h1>Welcome to Medical Center Hospital</h1>
             </div>
             <div className="row aboutDescription">
               <p className="mt-2">
@@ -32,8 +30,8 @@ const About = () => {
               </p>
             </div>
             <div className="row AboutPoint mt-2">
-              <div className="row">
-                <div className="col-md-6">
+              <div className="row ExperienceAtSmallScreen">
+                <div className="col-sm-6">
                   <p>
                     <span>
                       <MdOutlineVerified
@@ -46,7 +44,7 @@ const About = () => {
                     </span>
                   </p>
                 </div>
-                <div className="col-md-6">
+                <div className="col-sm-6">
                   <p>
                     <span>
                       <MdOutlineVerified
@@ -60,8 +58,9 @@ const About = () => {
                   </p>
                 </div>
               </div>
+
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-sm-6">
                   <p>
                     <span>
                       <MdOutlineVerified
@@ -74,7 +73,7 @@ const About = () => {
                     </span>
                   </p>
                 </div>
-                <div className="col-md-6">
+                <div className="col-sm-6">
                   <p>
                     <span>
                       <MdOutlineVerified
@@ -93,22 +92,20 @@ const About = () => {
               <div className="btnHero m-0 p-0">
                 <button
                   onClick={() => navigate("/contact")}
-                  className="btn Appointment "
+                  className="btn Appointment aboutBtnSmall"
                 >
                   Book An Appointment
                 </button>
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 noneAtSmallAbout">
             <div className="row h-100">
               <div className="row rightShift">
                 <div className="imgCont w-75 px-5">
                   <div className="imgContainer  ">
                     <img src={profile} alt={"doctor"} />
                   </div>
-                  {/* <div className="upperAbout "></div>
-                  <div className="lowerAbout"></div> */}
                 </div>
               </div>
             </div>
