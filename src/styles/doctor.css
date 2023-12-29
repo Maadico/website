@@ -92,3 +92,5 @@
 .swiper-slide:hover .socialId {
     display: flex;
 }
+
+@media screen and (max-width:991px) {}
