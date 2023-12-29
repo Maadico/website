@@ -1,6 +1,7 @@
 import React from "react";
 import doctor from "../Images/heroDoctor.png";
 import { useNavigate } from "react-router-dom";
+import doctor2 from "../Images/mobileDoctor.png";
 const Hero = () => {
   const navigate = useNavigate();
 
@@ -8,12 +9,12 @@ const Hero = () => {
     <div className="Hero">
       <div className="container">
         <div className="row pt-1">
-          <div className="col-md-6 mt-5 pt-4">
+          <div className="col-md-6 mt-5 pt-4 atSmall ">
             <div className="row heroColor">
               <p>⚕️ WELCOME TO MEDCARE</p>
             </div>
             <div className="row heroColor">
-              <h1>
+              <h1 className="largeDevice">
                 Taking Care of <br /> Your Health is our <br />
                 Top Priority.
               </h1>
@@ -37,7 +38,8 @@ const Hero = () => {
             </div>
           </div>
           <div className="col-md-6   imgDoctor ">
-            <img src={doctor} alt="doctor" />
+            <img src={doctor} alt="doctor" className="firstDoctor" />
+            <img src={doctor2} alt="doctor" className="secondDoctor" />
           </div>
         </div>
       </div>

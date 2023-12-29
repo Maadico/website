@@ -109,6 +109,95 @@
     margin-top: -14px;
 }
 
-.imgDoctor img {
+.imgDoctor .firstDoctor {
     height: 500px;
+}
+
+.imgDoctor .secondDoctor {
+    display: none;
+}
+
+@media screen and (max-width:1183px) {
+    .atSmall {
+        margin-top: 2px !important;
+    }
+
+}
+
+@media screen and (max-width:991px) {
+    .imgDoctor .firstDoctor {
+        height: 400px;
+    }
+
+    .imgDoctor {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .Hero {
+        height: auto !important;
+
+    }
+
+    .imgDoctor .firstDoctor {
+        display: none;
+    }
+
+    .imgDoctor {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgDoctor .secondDoctor {
+        display: block;
+
+    }
+}
+
+@media screen and (max-width:525px) {
+    @media (max-width: 525px) {
+        .row.heroColor h1 br {
+            display: none;
+
+        }
+    }
+
+    .heroColor p {
+        font-weight: 700;
+    }
+
+    .heroColor h1 {
+        font-weight: 800;
+        font-size: 2rem;
+    }
+
+    .heroColor .description {
+        font-weight: 400;
+        opacity: 0.7;
+    }
+
+    .imgDoctor .secondDoctor {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:359px) {
+
+    .Appointment {
+        font-weight: 700;
+        font-size: smaller;
+    }
+
+    .Appointment:hover {
+        background-color: rgb(12, 240, 206);
+        color: white;
+    }
+
+    .callNow {
+        font-size: smaller;
+        font-weight: 500;
+    }
 }

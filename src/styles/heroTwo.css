@@ -17,10 +17,6 @@
 
 .heroTwoMoveUp {
     position: relative !important;
-    /* margin: 0px auto;
-    top: 100% !important;
-    left: 50% !important;
-    transform: translate(-50%, -40%); */
     bottom: 90px;
 
 }
@@ -32,4 +28,108 @@
     width: 2px !important;
     border-radius: 20px;
     background-color: grey !important;
+}
+
+@media screen and (max-width:1073px) {
+    .heroTwoMoveUp {
+        position: relative !important;
+        bottom: 70px;
+
+    }
+
+    .descriptionHeroTwo {
+        font-size: smaller;
+        font-weight: 200;
+    }
+
+
+}
+
+@media screen and (max-width:991px) {
+    .title {
+        font-weight: 500;
+        font-size: medium;
+    }
+
+    .descriptionHeroTwo {
+        font-size: smaller;
+        text-align: justify;
+        font-weight: 200;
+        word-break: break-all;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .heroTwoMoveUp {
+        position: static !important;
+        padding-top: 100px;
+
+    }
+
+    #rightBorder {
+        display: none;
+    }
+
+    .borderSet {
+        border-radius: initial !important;
+        background-color: initial !important;
+        box-shadow: none !important;
+    }
+
+    .atSmallHerTwo {
+        margin: auto;
+    }
+
+    .bgColorSmall {
+
+        background-color: white !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .atSmallMargin {
+        margin: 20px 0;
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: x-large;
+    }
+
+    .descriptionHeroTwo {
+        font-size: medium;
+        text-align: justify;
+        font-weight: 200;
+        word-break: break-all;
+    }
+
+}
+
+@media screen and (max-width:525px) {
+    .heroTwoMoveUp {
+        position: static !important;
+        padding-top: 20px;
+
+    }
+}
+
+@media screen and (max-width:372px) {
+    .bgColorSmall {
+        padding: 0 20px;
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: large;
+    }
+
+    .descriptionHeroTwo {
+        font-size: small;
+        text-align: justify;
+        font-weight: 700;
+        word-break: break-all;
+    }
+
+    .descriptionHeroTwo br {
+        display: none;
+    }
 }
