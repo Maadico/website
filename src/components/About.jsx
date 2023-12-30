@@ -6,7 +6,7 @@ import profile from "../Images/hero.png";
 const About = () => {
   const navigate = useNavigate();
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="container">
         <div className="row">
           <div className="col-md-6">

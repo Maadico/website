@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 const Header = () => {
   const navigate = useNavigate();
   return (
@@ -32,20 +33,20 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="#">
+                  <a className="nav-link" href="#about">
                     About
-                  </Link>
+                  </a>
                 </li>
 
                 <li className="nav-item">
-                  <Link className="nav-link" aria-disabled="true">
+                  <a className="nav-link" aria-disabled="true" href="#service">
                     Service
-                  </Link>
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" aria-disabled="true">
+                  <a className="nav-link" aria-disabled="true" href="#doctor">
                     Doctor
-                  </Link>
+                  </a>
                 </li>
 
                 <li className="nav-item">

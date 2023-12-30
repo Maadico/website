@@ -37,7 +37,7 @@ const Doctor = () => {
     };
   }, []);
   return (
-    <div className="doctor">
+    <div className="doctor" id="doctor">
       <div className="container ">
         <div className="row py-5 ">
           <div className="row aboutHeading  m-0">

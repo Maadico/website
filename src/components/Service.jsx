@@ -3,7 +3,7 @@ import { FaHandHoldingMedical } from "react-icons/fa6";
 import { FaHeartbeat, FaLongArrowAltRight } from "react-icons/fa";
 const Service = () => {
   return (
-    <div className="service py-4 ">
+    <div className="service py-4 " id="service">
       <div className="container ">
         <div className="row ">
           <div className="row m-0 p-0 g-0 serviceHeading text-center pt-3 ">
