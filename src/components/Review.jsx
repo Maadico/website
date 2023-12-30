@@ -34,7 +34,7 @@ const Review = () => {
             </div>
           </div>
 
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <Swiper
               effect={"cards"}
               grabCursor={true}
@@ -70,7 +70,7 @@ const Review = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

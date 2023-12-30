@@ -8,6 +8,7 @@ import WorkProcess from "../components/WorkProcess";
 import Facilities from "../components/Facilities";
 import Doctor from "../components/Doctor";
 import Review from "../components/Review";
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div>
@@ -20,6 +21,7 @@ const Home = () => {
       <WorkProcess />
       <Facilities />
       <Doctor />
+      <Footer />
     </div>
   );
 };

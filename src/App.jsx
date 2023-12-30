@@ -5,6 +5,7 @@ import Header from "./components/Header";
 
 import "./styles/hero.css";
 import "./styles/navbar.css";
+import "./styles/footer.css";
 import "./styles/heroTwo.css";
 import "./styles/contact.css";
 import "./styles/about.css";

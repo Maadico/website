@@ -1,0 +1,210 @@
+.footer {
+    height: auto;
+    width: 100%;
+    padding: 4rem;
+    background-color: rgb(30, 34, 69);
+}
+
+.footHeading h1 {
+    color: white;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.footDescription p {
+    color: white;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.socialFoot p span {
+    color: white;
+    margin: 0 4px;
+    cursor: pointer;
+    opacity: 0.8;
+
+}
+
+.footSecondHeading h4 {
+    color: white;
+    opacity: 0.8;
+}
+
+/* .footSecondHeading h4 {
+    border: 1px solid white;
+} */
+
+.lastDescription p {
+    color: white;
+    opacity: 0.8;
+}
+
+.footMenu a {
+    text-decoration: none;
+    color: white;
+    font-size: medium;
+    line-height: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.footMenu2 p {
+    color: white;
+    font-size: medium;
+    line-height: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.btnFoot button span {
+    font-size: small;
+    margin: 0.1rem;
+    opacity: 0.7;
+}
+
+.borderSet2 {
+    height: 2px;
+    width: 100px;
+    background-color: white;
+
+}
+
+@media screen and (max-width:1022px) {
+    .footSecondHeading h4 {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .footSecondHeading h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .footHeading h1 {
+        font-size: medium;
+    }
+
+    .footDescription p {
+        font-size: small;
+    }
+
+    .socialFoot p span {
+        font-size: smaller;
+
+    }
+
+    .footSecondHeading h4 {
+        font-size: medium;
+    }
+
+    /* .footSecondHeading h4 {
+        border: 1px solid white;
+    } */
+
+    .lastDescription p {
+        font-size: small;
+    }
+
+    .footMenu a {
+        font-size: x-small;
+    }
+
+    .footMenu2 p {
+        font-size: x-small;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+
+    .atSmallFooter {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    .foot {
+        padding: 20px 0;
+        width: 50%;
+        text-align: center;
+        margin: auto !important;
+    }
+
+    .footer {
+
+        padding: 1rem;
+    }
+
+    .borderSet2 {
+        margin: auto;
+    }
+
+    .footMenu a {
+        font-size: small;
+        font-weight: 500;
+    }
+
+    .footMenu2 p {
+        font-weight: 500;
+        font-size: small;
+    }
+}
+
+@media screen and (max-width:525px) {
+    .atSmallFooter {
+        flex-direction: column;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    .foot {
+        padding: 20px 0;
+        width: 100%;
+        text-align: center;
+        margin: auto !important;
+    }
+
+    .footer {
+
+        padding: 1rem;
+    }
+
+    .borderSet2 {
+        margin: auto;
+    }
+
+    .footMenu a {
+        font-size: medium;
+        font-weight: 500;
+    }
+
+    .footMenu2 p {
+        font-weight: 500;
+        font-size: medium;
+    }
+
+
+    .footHeading h1 {
+        font-size: x-large;
+    }
+
+    .footDescription p {
+        font-size: medium;
+    }
+
+    .socialFoot p span {
+        font-size: small;
+
+    }
+
+    .footSecondHeading h4 {
+        font-size: large;
+    }
+
+    /* .footSecondHeading h4 {
+        border: 1px solid white;
+    } */
+
+    .lastDescription p {
+        font-size: medium;
+    }
+}
