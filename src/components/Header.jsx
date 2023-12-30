@@ -47,11 +47,7 @@ const Header = () => {
                     Doctor
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" aria-disabled="true">
-                    Blog
-                  </Link>
-                </li>
+
                 <li className="nav-item">
                   <Link to="/contact" className="nav-link" aria-disabled="true">
                     Contact
