@@ -54,7 +54,7 @@ const Facilities = () => {
                           />
                         </span>
                       </div>
-                      <div className=" row title FacilitiesTitle">
+                      <div className=" row title FacilitiesTitle sessionColor">
                         <h5>Online Session</h5>
                       </div>
                       <div className="row description FacilitiesDescription">
@@ -77,7 +77,7 @@ const Facilities = () => {
                           />
                         </span>
                       </div>
-                      <div className=" row title FacilitiesTitle">
+                      <div className="sessionColor row title FacilitiesTitle">
                         <h5>Online Session</h5>
                       </div>
                       <div className="row description FacilitiesDescription">
@@ -94,7 +94,7 @@ const Facilities = () => {
               <div className="col-6">
                 <div className="row flex-column ">
                   <div className="col ">
-                    <div className="boxFacilities p-3 m-2">
+                    <div className="boxFacilities  p-3 m-2">
                       <div className="row logoProcessFa text-center">
                         <span>
                           <MdEmergencyShare
@@ -104,7 +104,7 @@ const Facilities = () => {
                           />
                         </span>
                       </div>
-                      <div className=" row title FacilitiesTitle">
+                      <div className="sessionColor row title FacilitiesTitle">
                         <h5>Online Session</h5>
                       </div>
                       <div className="row description FacilitiesDescription">
@@ -126,29 +126,7 @@ const Facilities = () => {
                           />
                         </span>
                       </div>
-                      <div className=" row title FacilitiesTitle">
-                        <h5>Online Session</h5>
-                      </div>
-                      <div className="row description FacilitiesDescription">
-                        <p>
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          nulla tempore soluta
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col ">
-                    <div className="boxFacilities p-3 m-2">
-                      <div className="row logoProcessFa text-center">
-                        <span>
-                          <MdEmergencyShare
-                            fontSize={30}
-                            color="blue"
-                            className="logoSizeFac"
-                          />
-                        </span>
-                      </div>
-                      <div className=" row title FacilitiesTitle">
+                      <div className="sessionColor row title FacilitiesTitle">
                         <h5>Online Session</h5>
                       </div>
                       <div className="row description FacilitiesDescription">

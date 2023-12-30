@@ -12,8 +12,12 @@
 }
 
 .boxFacilities {
-    background-color: rgb(64, 201, 183);
+    background-color: rgb(201, 248, 242);
     border-radius: 8px;
+}
+
+.sessionColor h5 {
+    color: rgb(31, 87, 162);
 }
 
 .logoProcessFa {
