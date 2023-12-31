@@ -49,7 +49,7 @@ const Facilities = () => {
                         <span>
                           <MdEmergencyShare
                             fontSize={30}
-                            color="blue"
+                            color="rgb(31,87,162)"
                             className="logoSizeFac"
                           />
                         </span>
@@ -72,7 +72,7 @@ const Facilities = () => {
                         <span>
                           <MdEmergencyShare
                             fontSize={30}
-                            color="blue"
+                            color="rgb(31,87,162)"
                             className="logoSizeFac"
                           />
                         </span>
@@ -99,7 +99,7 @@ const Facilities = () => {
                         <span>
                           <MdEmergencyShare
                             fontSize={30}
-                            color="blue"
+                            color="rgb(31,87,162)"
                             className="logoSizeFac"
                           />
                         </span>
@@ -121,7 +121,7 @@ const Facilities = () => {
                         <span>
                           <MdEmergencyShare
                             fontSize={30}
-                            color="blue"
+                            color="rgb(31,87,162)"
                             className="logoSizeFac"
                           />
                         </span>

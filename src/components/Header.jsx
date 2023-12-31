@@ -1,15 +1,15 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import logo from "../Images/logoDoctor.png";
 const Header = () => {
   const navigate = useNavigate();
   return (
     <div className="container-fluid" id="navbarColor">
-      <div className="container">
-        <nav className="navbar navbar-expand-lg ">
+      <div className="container p-0">
+        <nav className="navbar navbar-expand-lg p-0">
           <div className="container-fluid">
-            <Link className="navbar-brand brandLogo" to="/">
-              Doctor
+            <Link className="navbar-brand brandLogo logoDoctor" to="/">
+              <img src={logo} alt="" />
             </Link>
             <button
               className="navbar-toggler"
@@ -57,7 +57,7 @@ const Header = () => {
                 <li className="nav-item">
                   <button
                     onClick={() => navigate("/contact")}
-                    className="btn  navAppointment mx-2"
+                    className="btn  navAppointment mx-2 py-2"
                   >
                     Make Appointment
                   </button>

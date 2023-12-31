@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHandHoldingMedical } from "react-icons/fa6";
+import { FaHandHoldingMedical, FaStar } from "react-icons/fa6";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import profile from "../Images/heroDoctor-hd.png";
 // import required modules
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { IoIosStarHalf } from "react-icons/io";
 const Review = () => {
   return (
     <div className="review">
@@ -54,13 +56,41 @@ const Review = () => {
                 <SwiperSlide className="testimonial">
                   <div className="row descriptionReview">
                     <p>
+                      <span className="mx-2">
+                        <FaQuoteLeft fontSize={20} />
+                      </span>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Ipsum amet consectetur porro quia. Nihil aperiam deserunt
                       commodi fugiat, accusantium ea delectus soluta fuga, ipsa
-                      quod aut blanditiis error at ullam.
+                      quod aut blanditiis error at ullam.{" "}
+                      <span className="mx-1">
+                        <FaQuoteRight fontSize={20} />
+                      </span>
                     </p>
                   </div>
-                  <div className="reviewBorder "></div>
+                  <div className="row star m-0 p-0 g-0">
+                    <div className="d-flex flex-row m-0 p-0 g-0 mb-2">
+                      <span>
+                        <FaStar color=" rgb(255, 187, 0)" fontSize={25} />
+                      </span>
+                      <span>
+                        <FaStar color=" rgb(255, 187, 0)" fontSize={25} />
+                      </span>
+                      <span>
+                        <FaStar color=" rgb(255, 187, 0)" fontSize={25} />
+                      </span>
+                      <span>
+                        <FaStar color=" rgb(255, 187, 0)" fontSize={25} />
+                      </span>
+                      <span>
+                        <IoIosStarHalf
+                          color=" rgb(255, 187, 0)"
+                          fontSize={25}
+                        />
+                      </span>
+                    </div>
+                  </div>
+
                   <div className="row ">
                     <div className="d-flex justify-content-between align-items-center">
                       <div className="imgREview">
