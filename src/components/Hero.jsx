@@ -2,6 +2,8 @@ import React from "react";
 import doctor from "../Images/heroDoctor.png";
 import { useNavigate } from "react-router-dom";
 import doctor2 from "../Images/mobileDoctor.png";
+import { IoCall } from "react-icons/io5";
+
 const Hero = () => {
   const navigate = useNavigate();
 
@@ -33,7 +35,12 @@ const Hero = () => {
                 >
                   Book An Appointment
                 </button>
-                <button className="btn callNow mx-3">📞 Call now</button>
+                <button className="btn mx-1 px-4 btn-outline-light">
+                  <span>
+                    <IoCall fontSize={20} color="rgb(129,240,224)" />
+                  </span>
+                  <span>Call</span>
+                </button>
               </div>
             </div>
           </div>
