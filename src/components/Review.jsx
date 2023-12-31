@@ -51,7 +51,7 @@ const Review = () => {
               className="mySwiper reviewSection"
             >
               {[1, 2, 3, 4, 5, 6].map((x) => (
-                <SwiperSlide>
+                <SwiperSlide className="testimonial">
                   <div className="row descriptionReview">
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
