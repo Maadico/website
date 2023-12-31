@@ -4,14 +4,20 @@
     background-color: rgb(246, 252, 252) !important;
 }
 
-.reviewSwiper {
-    width: 240px;
-    height: 320px;
+.reviewSection {
+    width: 100%;
+    height: 65%;
 }
 
 .swiper-slide {
-    border-radius: 18px;
-    color: grey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 18px;
+    background: #dbebee;
+    border-radius: 14px;
+    padding: 2rem;
+
 
 }
 
@@ -19,13 +25,25 @@
     text-align: justify;
     font-size: medium !important;
     word-break: break-all;
+    color: black;
+    font-weight: 500;
+    opacity: 0.8;
 }
 
-.imgREview .imgPic {
+
+.imgREview {
     height: 50px;
     width: 50px;
     border-radius: 50%;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgREview img {
+    height: 100%;
+    width: 100%;
 }
 
 .detailsPatient {
@@ -45,61 +63,63 @@
 
 }
 
-.swiper-slide:nth-child(1n) {
-    background-color: white;
+.reviewBorder {
+    width: 90%;
+    height: 3px;
+    background-color: rgb(246, 247, 247);
 }
 
-.swiper-slide:nth-child(2n) {
-    background-color: rgb(246, 252, 252) !important;
-}
+@media screen and (max-width:991px) {
+    .swiper-slide {
 
-.swiper-slide:nth-child(3n) {
-    background-color: rgb(10, 184, 175);
-}
+        font-size: 10px;
 
-.swiper-slide:nth-child(4n) {
-    background-color: rgb(44, 7, 211);
-}
+        padding: 1rem;
 
-.swiper-slide:nth-child(5n) {
-    background-color: rgb(225, 235, 241);
-}
 
-.swiper-slide:nth-child(6n) {
-    background-color: rgb(10, 160, 180);
-}
-
-@media screen and (max-width:767px) {
-    .reviewSmallPadding {
-        padding: 0 !important;
-    }
-}
-
-@media screen and (max-width:600px) {
-    .atSmallScreenReview p {
-
-        font-size: small !important;
-        height: auto !important;
-        font-weight: 700;
-        opacity: 0.6;
-    }
-}
-
-@media screen and (max-width:500px) {
-    .reviewSwiper {
-        width: 200px;
-        height: 240px;
     }
 
     .descriptionReview p {
-        font-size: small !important;
-        word-break: break-all;
+        font-size: x-small;
+        font-weight: 400;
+        opacity: 0.8;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .reviewSection {
+        width: 100%;
+        height: 75%;
+    }
+
+    .reviewSmallPadding {
+        padding: 0 !important;
+    }
+
+    .marginRemove {
+        margin: 0 !important;
     }
 }
 
-@media screen and (max-width:340px) {
-    .reviewSwiper {
-        width: 180px;
-        height: 220px;
+@media screen and (max-width:425px) {
+    .reviewSection {
+        width: 100%;
+        height: 85%;
+    }
+
+    .descriptionReview p {
+        font-size: xx-small;
+        font-weight: 400;
+        opacity: 0.8;
+    }
+
+    .swiper-slide {
+
+        font-size: 1px;
+
+        padding: 1rem;
+
+
     }
 }

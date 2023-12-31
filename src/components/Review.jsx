@@ -1,10 +1,12 @@
 import React from "react";
 import { FaHandHoldingMedical } from "react-icons/fa6";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
-import profile from "../Images/heroDoctor-hd.png";
 import "swiper/css";
-import "swiper/css/effect-cards";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import profile from "../Images/heroDoctor-hd.png";
+// import required modules
+import { Keyboard, Pagination, Navigation } from "swiper/modules";
 const Review = () => {
   return (
     <div className="review">
@@ -34,43 +36,46 @@ const Review = () => {
             </div>
           </div>
 
-          {/* <div className="col-md-6">
+          <div className="col-md-6 pt-5 mt-5 reviewSmallPadding marginRemove">
             <Swiper
-              effect={"cards"}
-              grabCursor={true}
-              modules={[EffectCards]}
-              className="mySwiper reviewSwiper"
+              slidesPerView={1}
+              spaceBetween={30}
+              keyboard={{
+                enabled: true,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Keyboard, Pagination, Navigation]}
+              className="mySwiper reviewSection"
             >
               {[1, 2, 3, 4, 5, 6].map((x) => (
                 <SwiperSlide>
-                  <div className="row px-2 reviewSwiperPaddingRemove">
-                    <div className="row descriptionReview">
-                      <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Similique omnis dignissimos consequuntur quia cum,
-                        Similique omnis dignissimos consequuntur quia cum,
-                        Similique omnis dignissimos consequuntur quia cum,
-                      </p>
-                    </div>
-                    <hr />
-                    <div className="row px-2">
-                      <div className="d-flex">
-                        <div className=" imgREview">
-                          <div className="imgPic">
-                            <img src={profile} alt="" />
-                          </div>
-                        </div>
-                        <div className="detailsPatient mx-2 text-left">
-                          <h6>Shivam Gupta</h6>
-                          <p>Patient</p>
-                        </div>
+                  <div className="row descriptionReview">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ipsum amet consectetur porro quia. Nihil aperiam deserunt
+                      commodi fugiat, accusantium ea delectus soluta fuga, ipsa
+                      quod aut blanditiis error at ullam.
+                    </p>
+                  </div>
+                  <div className="reviewBorder "></div>
+                  <div className="row ">
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div className="imgREview">
+                        <img src={profile} alt="" />
+                      </div>
+                      <div className="detailsPatient p-2">
+                        <h6>Neha Sharma</h6>
+                        <p>Patients</p>
                       </div>
                     </div>
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
