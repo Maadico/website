@@ -2,7 +2,7 @@ import React from "react";
 import { FaHandHoldingMedical } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useEffect } from "react";
-import profile from "../Images/doctorAbout.jpg";
+import profile from "../Images/doctorAbout.jpeg";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -65,10 +65,10 @@ const Doctor = () => {
                   <img src={profile} alt="" />
                   <div className="details row mx-2 py-3  text-center m-auto">
                     <div className="row name text-center ">
-                      <h6>Dr. Neha Mehra</h6>
+                      <h6>Dr. Tanish Gupta</h6>
                     </div>
                     <div className="department row text-center ">
-                      <p>Cardiology</p>
+                      <p>Orthopaedist</p>
                     </div>
                     <div className="row social  m-0 p-0">
                       <div className="socialId m-0 p-0">
