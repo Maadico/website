@@ -1,25 +1,18 @@
 import React from "react";
 import { useState } from "react";
-import { Radio, Select, Calendar, DatePicker } from "antd";
+import { Radio, Calendar } from "antd";
 import axios from "axios";
 const Contact = () => {
   const [contact, setContact] = useState({
     name: "",
     email: "",
     phone: "",
-    dob: "",
+
     gender: "",
-    address: "",
-    city: "",
-    state: "",
-    pinCode: "",
-    country: "",
-    isApplied: "",
-    department: "",
-    procedure: "",
+
     appointmentDate: "",
-    // appointmentTime: "",
   });
+  const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -31,28 +24,23 @@ const Contact = () => {
       Name: contact.name,
       Email: contact.email,
       Gender: contact.gender,
-      Address: contact.address,
-      City: contact.city,
-      State: contact.state,
-      PinCode: contact.pinCode,
-      Country: contact.country,
-      IsApplied: contact.isApplied,
-      Department: contact.department,
-      Procedure: contact.procedure,
+
       AppointmentDate: contact.appointmentDate,
       Phone: contact.phone,
-      Dob: contact.dob,
     };
+    setLoading(true);
     axios
       .post(apiUrl, contactDetaiils)
       .then(function (response) {
         // Handle successful response
-        console.log("Response:", response);
-        alert("data is submitted");
+        // console.log("Response:", response);
+        setLoading(false);
+        // alert("data is submitted");
       })
       .catch(function (error) {
         // Handle error
         console.error("Error:", error);
+        setLoading(false);
       });
   };
   return (
@@ -114,7 +102,7 @@ const Contact = () => {
                   type="text"
                   className="form-control"
                   id="inputEmail4"
-                  placeholder="Name"
+                  placeholder="phone"
                   onChange={(e) => {
                     setContact((prevContact) => ({
                       ...prevContact,
@@ -124,87 +112,6 @@ const Contact = () => {
                   required
                 />
               </div>
-              <div className="form-group col-md-6">
-                <label htmlFor="inputPassword4">DOB</label>
-                <div className="row mx-1">
-                  <DatePicker
-                    onChange={(date, dateString) => {
-                      setContact((prevContact) => ({
-                        ...prevContact,
-                        dob: date,
-                      }));
-                    }}
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="form-group">
-              <label htmlFor="inputAddress">Address</label>
-              <input
-                type="text"
-                className="form-control"
-                id="inputAddress"
-                placeholder="1234 Main St"
-                onChange={(e) => {
-                  setContact((prevContact) => ({
-                    ...prevContact,
-                    address: e.target.value,
-                  }));
-                }}
-                required
-              />
-            </div>
-
-            <div className="row">
-              <div className="form-group col-md-6">
-                <label htmlFor="inputCity">City</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="inputCity"
-                  onChange={(e) => {
-                    setContact((prevContact) => ({
-                      ...prevContact,
-                      city: e.target.value,
-                    }));
-                  }}
-                  required
-                />
-              </div>
-              <div className="form-group col-md-4">
-                <label htmlFor="inputCity">State</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="inputCity"
-                  onChange={(e) => {
-                    setContact((prevContact) => ({
-                      ...prevContact,
-                      state: e.target.value,
-                    }));
-                  }}
-                  required
-                />
-              </div>
-              <div className="form-group col-md-2">
-                <label htmlFor="inputZip">Zip</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="inputZip"
-                  onChange={(e) => {
-                    setContact((prevContact) => ({
-                      ...prevContact,
-                      pinCode: e.target.value,
-                    }));
-                  }}
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="row">
               <div className="col-md-6">
                 <div className="row">
                   <fieldset className="form-group">
@@ -228,94 +135,6 @@ const Contact = () => {
                       </Radio.Group>
                     </div>
                   </fieldset>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="row">
-                  <legend className="col-form-label col-sm-5 pt-0">
-                    Have you Applied before ?
-                  </legend>
-                  <Radio.Group
-                    onChange={(e) => {
-                      setContact((prevContact) => ({
-                        ...prevContact,
-                        isApplied: e.target.value,
-                      }));
-                    }}
-                    value={contact.isApplied}
-                    required
-                  >
-                    <Radio value="yes">Yes</Radio>
-                    <Radio value="no">No</Radio>
-                  </Radio.Group>
-                </div>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-6">
-                <div className="row mt-1">
-                  <legend className="col-form-label  pt-0">
-                    Which Department would you like top get an appointment from
-                    ?
-                  </legend>
-
-                  <div className="row mt-2 py-2 ">
-                    <Select
-                      defaultValue="Cardio"
-                      style={{
-                        width: "40%",
-                      }}
-                      onChange={(value) => {
-                        setContact((prevContact) => ({
-                          ...prevContact,
-                          department: value,
-                        }));
-                      }}
-                      options={[
-                        {
-                          value: "ortho",
-                          label: "Ortho",
-                        },
-                        {
-                          value: "nero",
-                          label: "Neuro",
-                        },
-                      ]}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="row my-1">
-                  <legend className="col-form-label  pt-0">
-                    Which procedure do you want to make an appointment for?
-                  </legend>
-
-                  <div className="row  ">
-                    <Select
-                      defaultValue="Medical Eximination"
-                      style={{
-                        width: "40%",
-                      }}
-                      onChange={(value) => {
-                        setContact((prevContact) => ({
-                          ...prevContact,
-                          procedure: value,
-                        }));
-                      }}
-                      options={[
-                        {
-                          value: "Doctor Check",
-                          label: "Doctor Check",
-                        },
-                        {
-                          value: "Result Analysis",
-                          label: "Result Analysis",
-                        },
-                      ]}
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -343,8 +162,12 @@ const Contact = () => {
             </div>
 
             <div className="row m-auto py-4">
-              <button type="submit" className="btn btn-primary w-25">
-                Submit
+              <button
+                type="submit"
+                className="btn btn-primary w-25"
+                default={loading}
+              >
+                {loading ? "Loading..." : "Submit"}
               </button>
             </div>
           </form>
