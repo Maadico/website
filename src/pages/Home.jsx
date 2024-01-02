@@ -26,7 +26,7 @@ const Home = () => {
       <Footer />
       <div className="fixIcon">
         <div className="icon1">
-          <a href="">
+          <a href="#heroSection">
             <MdAddIcCall fontSize={25} color="white" />
           </a>
         </div>
