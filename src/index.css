@@ -7,3 +7,24 @@
 a {
   text-decoration: none !important;
 }
+
+.fixIcon {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 9999999999999;
+  bottom: 4px;
+  right: 10px
+}
+
+.icon1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: aqua;
+  margin: 3px 0;
+
+}
