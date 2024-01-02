@@ -74,6 +74,7 @@ const Contact = () => {
                 <label htmlFor="inputEmail4">Name</label>
                 <input
                   type="text"
+                  value={contact.name}
                   className="form-control"
                   id="inputEmail4"
                   placeholder="Name"
@@ -93,6 +94,7 @@ const Contact = () => {
                   className="form-control"
                   id="inputPassword4"
                   placeholder="Email"
+                  value={contact.email}
                   onChange={(e) => {
                     setContact((prevContact) => ({
                       ...prevContact,
@@ -111,6 +113,7 @@ const Contact = () => {
                   className="form-control"
                   id="inputEmail4"
                   placeholder="phone"
+                  value={contact.phone}
                   onChange={(e) => {
                     setContact((prevContact) => ({
                       ...prevContact,

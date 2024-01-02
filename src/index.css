@@ -13,8 +13,8 @@ a {
   flex-direction: column;
   position: fixed;
   z-index: 9999999999999;
-  bottom: 75px;
-  right: 10px
+  bottom: 10px;
+  right: 15px
 }
 
 .icon1 {
@@ -25,7 +25,7 @@ a {
   width: 40px;
   border-radius: 50%;
   background-color: aqua;
-  margin: 3px 0;
+  margin: 15px 0;
 
 }
 
