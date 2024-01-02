@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import profile from "../Images/heroDoctor-hd.png";
 // import required modules
-import { Keyboard, Pagination, Navigation } from "swiper/modules";
+import { Keyboard, Pagination, Navigation, Autoplay } from "swiper/modules";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { IoIosStarHalf } from "react-icons/io";
 const Review = () => {
@@ -42,6 +42,11 @@ const Review = () => {
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
               keyboard={{
                 enabled: true,
               }}
@@ -49,7 +54,7 @@ const Review = () => {
                 clickable: true,
               }}
               navigation={true}
-              modules={[Keyboard, Pagination, Navigation]}
+              modules={[Keyboard, Pagination, Navigation, Autoplay]}
               className="mySwiper reviewSection"
             >
               {[1, 2, 3, 4, 5, 6].map((x) => (
