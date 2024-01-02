@@ -36,7 +36,10 @@ const Hero = () => {
                 >
                   Book An Appointment
                 </button>
-                <button className="btn mx-3 px-4 btn-primary">
+                <a
+                  href="tel:+9198209 52248"
+                  className="btn mx-3 px-4 btn-primary"
+                >
                   <span>
                     <MdAddIcCall fontSize={20} color="#fff" />
                   </span>
@@ -46,7 +49,7 @@ const Hero = () => {
                   >
                     Call
                   </span>
-                </button>
+                </a>
               </div>
             </div>
           </div>

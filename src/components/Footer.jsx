@@ -1,5 +1,6 @@
 import React from "react";
 import { MdEmail, MdLocationOn } from "react-icons/md";
+import { Link } from "react-router-dom";
 import { IoCall } from "react-icons/io5";
 const Footer = () => {
   return (
@@ -52,9 +53,9 @@ const Footer = () => {
                 <a href="#doctor">
                   <p>Our Doctors</p>
                 </a>
-                <a href="/">
+                <Link to="/contact">
                   <p>Contact</p>
-                </a>
+                </Link>
                 <a href="#service">
                   <p>Review</p>
                 </a>
@@ -92,12 +93,12 @@ const Footer = () => {
                 </p>
               </div>
               <div className="row btnFoot">
-                <button className="btn btn-outline-light">
+                <a href="tel:+9198209 52248" className="btn btn-outline-light">
                   <span>
                     <IoCall fontSize={20} color="rgb(129,240,224)" />
                   </span>
-                  <span>Book An Appointment</span>
-                </button>
+                  <span className="mx-2">Book An Appointment</span>
+                </a>
               </div>
             </div>
           </div>

@@ -35,6 +35,15 @@ const Contact = () => {
         // Handle successful response
         // console.log("Response:", response);
         setLoading(false);
+        setContact({
+          name: "",
+          email: "",
+          phone: "",
+
+          gender: "",
+
+          appointmentDate: "",
+        });
         // alert("data is submitted");
       })
       .catch(function (error) {
@@ -44,7 +53,7 @@ const Contact = () => {
       });
   };
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="container pt-5">
         <div className="row contactHeading text-center pt-2">
           <h3>Doctor Appointment Request Form</h3>
@@ -90,7 +99,6 @@ const Contact = () => {
                       email: e.target.value,
                     }));
                   }}
-                  required
                 />
               </div>
             </div>
@@ -99,7 +107,7 @@ const Contact = () => {
               <div className="form-group col-md-6">
                 <label htmlFor="inputEmail4">Phone</label>
                 <input
-                  type="text"
+                  type="number"
                   className="form-control"
                   id="inputEmail4"
                   placeholder="phone"
@@ -127,7 +135,6 @@ const Contact = () => {
                           }));
                         }}
                         value={contact.gender}
-                        required
                       >
                         <Radio value="Male">Male</Radio>
                         <Radio value="Female">Female</Radio>

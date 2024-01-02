@@ -8,7 +8,6 @@ import WorkProcess from "../components/WorkProcess";
 import Facilities from "../components/Facilities";
 import Doctor from "../components/Doctor";
 import Review from "../components/Review";
-import Footer from "../components/Footer";
 import { MdAddIcCall } from "react-icons/md";
 import { BiSolidToTop } from "react-icons/bi";
 const Home = () => {
@@ -23,10 +22,10 @@ const Home = () => {
       <WorkProcess />
       <Facilities />
       <Doctor />
-      <Footer />
+
       <div className="fixIcon">
         <div className="icon1">
-          <a href="#heroSection">
+          <a href="tel:+9198209 52248">
             <MdAddIcCall fontSize={25} color="white" />
           </a>
         </div>

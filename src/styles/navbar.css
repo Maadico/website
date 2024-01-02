@@ -10,7 +10,8 @@
 
 .logoDoctor img {
     height: 80px;
-    width: 180px;
+    width: 100px;
+    object-fit: cover;
 }
 
 .nav-item {

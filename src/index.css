@@ -13,7 +13,7 @@ a {
   flex-direction: column;
   position: fixed;
   z-index: 9999999999999;
-  bottom: 4px;
+  bottom: 75px;
   right: 10px
 }
 
@@ -27,4 +27,8 @@ a {
   background-color: aqua;
   margin: 3px 0;
 
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
