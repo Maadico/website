@@ -5,29 +5,24 @@ const Achivement = () => {
     <div className="Achivement">
       <div className="container">
         <div className=" d-flex flex-row justify-content-between align-items-center">
-          <div className="">
-            <div className="achievementCat">
-              <h5>35+</h5>
-              <p>National Awards</p>
-            </div>
+          <div className="achievementCat">
+            <h5>35+</h5>
+            <p>National Awards</p>
           </div>
-          <div className="">
-            <div className="achievementCat">
-              <h5>45+</h5>
-              <p>National Awards</p>
-            </div>
+
+          <div className="achievementCat">
+            <h5>45+</h5>
+            <p>National Awards</p>
           </div>
-          <div className="">
-            <div className="achievementCat">
-              <h5>95+</h5>
-              <p>National Awards</p>
-            </div>
+
+          <div className="achievementCat">
+            <h5>95+</h5>
+            <p>National Awards</p>
           </div>
-          <div className="">
-            <div className="achievementCat">
-              <h5>135+</h5>
-              <p>National Awards</p>
-            </div>
+
+          <div className="achievementCat">
+            <h5>135+</h5>
+            <p>National Awards</p>
           </div>
         </div>
       </div>

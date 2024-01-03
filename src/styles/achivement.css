@@ -1,13 +1,15 @@
 .Achivement {
-    background-color: rgb(30, 93, 187);
-    height: 25vh;
+    background-color: rgb(126, 163, 226);
+    height: auto;
     width: 100%;
+    padding: 0;
 
 }
 
 .achievementCat {
     margin: auto;
     margin-top: 50px;
+    padding: 0;
 }
 
 .achievementCat h5 {
@@ -61,6 +63,36 @@
 
     .Achivement {
         height: auto;
+
+    }
+}
+
+@media screen and (max-width:412px) and (min-height:915px) {
+    .Achivement {
+        background-color: rgb(126, 163, 226);
+        height: 10vh;
+        width: 100%;
+        padding: 0;
+
+    }
+}
+
+@media screen and (max-width:430px) and (min-height:930px) {
+    .Achivement {
+        background-color: rgb(126, 163, 226);
+        height: 10vh;
+        width: 100%;
+        padding: 0;
+
+    }
+}
+
+@media screen and (max-width:414px) and (min-height:896px) {
+    .Achivement {
+        background-color: rgb(126, 163, 226);
+        height: 10vh;
+        width: 100%;
+        padding: 0;
 
     }
 }

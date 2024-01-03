@@ -39,6 +39,7 @@
 .readMore span {
     color: rgb(31, 87, 162);
     display: hidden;
+
 }
 
 .box:hover {
@@ -79,4 +80,15 @@
         font-size: medium;
         font-weight: 600;
     }
+
+}
+
+@media screen and (max-width:575px) {
+    .box {
+        width: 90%;
+        margin: 10px auto !important;
+
+    }
+
+
 }
