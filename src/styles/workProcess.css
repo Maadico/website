@@ -19,25 +19,95 @@
     align-items: center;
     height: 80px;
     width: 80px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.NumberIcon {
+    font-size: small !important;
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
-    background-color: rgb(238, 248, 247);
+    background-color: rgb(3, 69, 209);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
 }
 
 .boxProcess .logoProcess span {
 
 
-    color: rgb(31, 87, 162);
+    color: black;
     font-size: 40px;
 }
 
 .boxProcess .heading h5 {
-    color: rgb(31, 87, 162);
+    color: black;
     font-weight: 600;
+    margin: 10px 0;
 }
 
 .boxProcess .SubHeading p {
     color: grey;
     opacity: 0.9;
+}
+
+@media screen and (max-width:991px) {
+
+    .process p {
+        font-size: small;
+        font-weight: 600;
+    }
+
+    .logoProcess {
+
+        height: 70px;
+        width: 70px;
+
+    }
+
+    .NumberIcon {
+        font-size: small !important;
+        position: absolute;
+        top: -10px;
+        right: -17px;
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        background-color: rgb(3, 69, 209);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 700;
+    }
+
+    .boxProcess .logoProcess span {
+
+
+        color: black;
+        font-size: 35px;
+    }
+
+    .boxProcess .heading h5 {
+        color: black;
+        font-weight: 700;
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+
+    .boxProcess .SubHeading p {
+        color: grey;
+        opacity: 0.9;
+        font-size: small;
+    }
 }
 
 @media screen and (max-width:767px) {

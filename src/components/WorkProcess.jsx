@@ -1,21 +1,14 @@
 import React from "react";
-import { FaHandHoldingMedical } from "react-icons/fa6";
-import { FaHeartbeat } from "react-icons/fa";
+import { TbBrandBooking } from "react-icons/tb";
+import { BsHospital } from "react-icons/bs";
+import { MdOutlineMedicalServices } from "react-icons/md";
 const WorkProcess = () => {
   return (
     <div className="processWork py-4 ">
       <div className="container ">
         <div className="row ">
-          <div className="row  m-0 serviceHeading text-center pt-3">
-            <h5>
-              <span>
-                <FaHandHoldingMedical fontSize={25} />
-              </span>{" "}
-              <span>How It Work!</span>
-            </h5>
-          </div>
-          <div className="row m-0 serviceSubHeading text-center">
-            <h1>Let`s See How We Work</h1>
+          <div className="row  m-0 serviceSubHeading text-center">
+            <h1>How It Works!</h1>
           </div>
           <div className="row m-0 text-center">
             <div className="w-50 text-center m-auto process">
@@ -30,11 +23,12 @@ const WorkProcess = () => {
               <div className=" boxProcess m-1 text-center ">
                 <div className="row logoProcess m-auto text-center">
                   <span>
-                    <FaHeartbeat />
+                    <BsHospital />
                   </span>
+                  <div className="NumberIcon">1</div>
                 </div>
                 <div className="row heading">
-                  <h5>Heading</h5>
+                  <h5>Find A Doctor</h5>
                 </div>
                 <div className="row SubHeading">
                   <p>
@@ -48,11 +42,12 @@ const WorkProcess = () => {
               <div className=" boxProcess m-1 text-center ">
                 <div className="row logoProcess m-auto text-center">
                   <span>
-                    <FaHeartbeat />
+                    <TbBrandBooking />
                   </span>
+                  <div className="NumberIcon">2</div>
                 </div>
                 <div className="row heading">
-                  <h5>Heading</h5>
+                  <h5>Book An Appointment</h5>
                 </div>
                 <div className="row SubHeading">
                   <p>
@@ -66,11 +61,12 @@ const WorkProcess = () => {
               <div className=" boxProcess m-1 text-center ">
                 <div className="row logoProcess m-auto text-center">
                   <span>
-                    <FaHeartbeat />
+                    <MdOutlineMedicalServices />
                   </span>
+                  <div className="NumberIcon">3</div>
                 </div>
                 <div className="row heading">
-                  <h5>Heading</h5>
+                  <h5>Get Service</h5>
                 </div>
                 <div className="row SubHeading">
                   <p>

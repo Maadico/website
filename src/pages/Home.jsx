@@ -34,9 +34,10 @@ const Home = () => {
     <div id="heroSection">
       <Hero />
       <WorkProcess />
-      {/* <HeroTwo />
       <About />
-      <Achivement />
+      <HeroTwo />
+
+      {/* <Achivement />
       <Service />
       <Review />
 

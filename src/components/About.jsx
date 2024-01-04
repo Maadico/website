@@ -1,8 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { FaHandHoldingMedical } from "react-icons/fa6";
 import { MdOutlineVerified } from "react-icons/md";
-import profile from "../Images/hero.png";
+import profile from "../Images/doctorAbout2.jpg";
 const About = () => {
   const navigate = useNavigate();
   return (
@@ -10,16 +9,8 @@ const About = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <div className="row aboutHeading">
-              <h5>
-                <span>
-                  <FaHandHoldingMedical fontSize={25} />
-                </span>{" "}
-                <span>About us</span>
-              </h5>
-            </div>
             <div className="row aboutSubheading">
-              <h1>Welcome to Medical Center Hospital</h1>
+              <h1>Why People Have Faith In Us</h1>
             </div>
             <div className="row aboutDescription">
               <p className="mt-2">
@@ -34,10 +25,7 @@ const About = () => {
                 <div className="col-sm-6">
                   <p>
                     <span>
-                      <MdOutlineVerified
-                        fontSize={20}
-                        color="rgb(61, 203, 182)"
-                      />
+                      <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
                     <span className="aboutSubPoint m-2">
                       15+ Years Of Experience
@@ -47,10 +35,7 @@ const About = () => {
                 <div className="col-sm-6">
                   <p>
                     <span>
-                      <MdOutlineVerified
-                        fontSize={20}
-                        color="rgb(61, 203, 182)"
-                      />
+                      <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
                     <span className="aboutSubPoint m-2">
                       15+ Years Of Experience
@@ -63,10 +48,7 @@ const About = () => {
                 <div className="col-sm-6">
                   <p>
                     <span>
-                      <MdOutlineVerified
-                        fontSize={20}
-                        color="rgb(61, 203, 182)"
-                      />
+                      <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
                     <span className="aboutSubPoint m-2">
                       15+ Years Of Experience
@@ -76,10 +58,7 @@ const About = () => {
                 <div className="col-sm-6">
                   <p>
                     <span>
-                      <MdOutlineVerified
-                        fontSize={20}
-                        color="rgb(61, 203, 182)"
-                      />
+                      <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
                     <span className="aboutSubPoint m-2">
                       15+ Years Of Experience
@@ -92,14 +71,14 @@ const About = () => {
               <div className="btnHero m-0 p-0">
                 <button
                   onClick={() => navigate("/contact")}
-                  className="btn Appointment aboutBtnSmall"
+                  className="btn Appointment2 aboutBtnSmall"
                 >
                   Book An Appointment
                 </button>
               </div>
             </div>
           </div>
-          <div className="col-md-6 noneAtSmallAbout">
+          <div className="col-md-6 noneAtSmallAbout ">
             <div className="row h-100">
               <div className="row rightShift">
                 <div className="imgCont w-75 px-5">

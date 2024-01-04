@@ -5,12 +5,29 @@
     padding: 90px 0;
 }
 
+.Appointment2 {
+    background-color: rgb(4, 82, 206);
+    color: white;
+    font-weight: 400;
+}
+
+.Appointment2:hover {
+    background-color: rgb(4, 82, 206);
+    color: white;
+}
+
 .aboutHeading h5 {
     color: rgb(61, 203, 182);
 }
 
 .aboutSubheading h1 {
     font-weight: 700 !important;
+    font-size: 2.3rem;
+}
+
+.noneAtSmallAbout {
+    border-radius: 0 190px 0 0;
+    background-color: rgb(50, 78, 124);
 }
 
 .aboutDescription p {
@@ -24,11 +41,7 @@
     opacity: 0.9;
 }
 
-/* .rightShift {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: right !important;
-} */
+
 
 .imgContainer {
     position: absolute;
@@ -42,6 +55,8 @@
 .imgContainer img {
     height: 80%;
     width: 100%;
+    border-radius: 0 190px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .upperAbout {
@@ -61,6 +76,7 @@
     left: 110px !important;
     top: -55%;
 }
+
 
 @media screen and (max-width:991px) {
 
