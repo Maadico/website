@@ -1,9 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { MdOutlineVerified } from "react-icons/md";
 import profile from "../Images/doctorAbout2.jpg";
 const About = () => {
-  const navigate = useNavigate();
   return (
     <div className="about" id="about">
       <div className="container">
@@ -69,12 +67,9 @@ const About = () => {
             </div>
             <div className="bookAppointMentBtn mt-2">
               <div className="btnHero m-0 p-0">
-                <button
-                  onClick={() => navigate("/contact")}
-                  className="btn Appointment2 aboutBtnSmall"
-                >
+                <a href="#contacts" className="btn Appointment2 aboutBtnSmall">
                   Book An Appointment
-                </button>
+                </a>
               </div>
             </div>
           </div>

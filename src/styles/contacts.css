@@ -1,0 +1,96 @@
+.contacts {
+    height: auto;
+    width: 100%;
+    color: white;
+
+}
+
+.contactHeading .headingContact {
+    color: black;
+    font-size: 2rem;
+    display: inline-block;
+    font-weight: 800;
+}
+
+.contactHeading .contactIcon {
+    color: black;
+    font-size: 2.2rem;
+
+}
+
+.imagContainerContact {
+    margin: 30px 0 !important;
+    background-color: rgb(50, 78, 124);
+    border-radius: 0 170px 0 0;
+}
+
+.imagContainerContact img {
+    border-radius: 0 190px 0 0;
+    height: auto;
+    width: 90%;
+    margin-top: 50px;
+    left: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.colSetContact {
+    margin: 30px 0;
+    border-radius: 0 130px 0 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width:1199px) {
+    .contactHeading .headingContact {
+        color: black;
+        font-size: 1.4rem;
+        display: inline-block;
+        font-weight: 800;
+    }
+
+    .contactHeading .contactIcon {
+        color: black;
+        font-size: 1.6rem;
+
+    }
+}
+
+@media screen and (max-width:1028px) {
+    .imagContainerContact {
+        margin: 10px 0 !important;
+        border-radius: 0 100px 0 0;
+    }
+
+    .imagContainerContact img {
+        border-radius: 0 100px 0 0;
+
+    }
+}
+
+@media screen and (max-width:991px) {
+    .imagContainerContact {
+        margin: 10px 0 !important;
+        background-color: rgb(50, 78, 124);
+        border-radius: 0 100px 0 0;
+    }
+
+    .imagContainerContact img {
+        border-radius: 0 100px 0 0;
+        height: 100%;
+        width: 90%;
+
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .atSmall991FullContact {
+        width: 100% !important;
+    }
+
+
+}
+
+@media screen and (max-width:767px) {
+    .imagContainerContact {
+        display: none;
+    }
+}

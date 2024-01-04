@@ -1,13 +1,10 @@
 import React from "react";
 import doctor from "../Images/doctor2.png";
-import { useNavigate } from "react-router-dom";
 import doctor2 from "../Images/mobileDoctopr2.png";
 // import { IoCall } from "react-icons/io5";
 import { MdAddIcCall } from "react-icons/md";
 
 const Hero = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="Hero">
       <div className="container">
@@ -29,12 +26,9 @@ const Hero = () => {
             </div>
             <div className="row heroColor m-0 p-0 ">
               <div className="btnHero m-0 p-0 ">
-                <button
-                  onClick={() => navigate("/contact")}
-                  className="btn Appointment "
-                >
+                <a href="#contacts" className="btn Appointment ">
                   Book An Appointment
-                </button>
+                </a>
                 <a
                   href="#not work"
                   className="btn AppointmentCall mx-3 px-4 btn-outline-light"

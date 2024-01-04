@@ -1,12 +1,7 @@
 import React from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import logo from "../Images/logoDoctor.png";
 const Header = () => {
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
-  console.log("location", pathname);
-
-  // const doctorLink = pathname === "/contact" ? "/#doctor" : "#doctor";
   return (
     <div className="container-fluid" id="navbarColor">
       <div className="container p-0">
@@ -55,17 +50,14 @@ const Header = () => {
                 </li>
 
                 <li className="nav-item">
-                  <Link to="/contact" className="nav-link" aria-disabled="true">
+                  <a href="#contacts" className="nav-link" aria-disabled="true">
                     Contact
-                  </Link>
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <button
-                    onClick={() => navigate("/contact")}
-                    className="btn  navAppointment mx-2 py-2"
-                  >
+                  <a href="#contacts" className="btn  navAppointment mx-2 py-2">
                     Make Appointment
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>

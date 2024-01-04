@@ -87,7 +87,7 @@ const Footer = () => {
                 </p>
               </div>
               <div className="row btnFoot">
-                <a href="tel:+9198209 52248" className="btn btn-outline-light">
+                <a href="#notwork" className="btn btn-outline-light">
                   <span>
                     <IoCall fontSize={20} color="rgb(129,240,224)" />
                   </span>

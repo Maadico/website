@@ -10,6 +10,7 @@ import Doctor from "../components/Doctor";
 import Review from "../components/Review";
 import { MdAddIcCall } from "react-icons/md";
 import { BiSolidToTop } from "react-icons/bi";
+import Contact from "../components/Contact";
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {
@@ -43,6 +44,7 @@ const Home = () => {
 
       <Facilities />
       <Doctor />
+      <Contact />
       {showButton && (
         <div className="fixIcon">
           <div className="icon1">

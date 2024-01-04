@@ -7,7 +7,6 @@ import "./styles/hero.css";
 import "./styles/navbar.css";
 import "./styles/footer.css";
 import "./styles/heroTwo.css";
-import "./styles/contact.css";
 import "./styles/about.css";
 import "./styles/achivement.css";
 import "./styles/service.css";
@@ -15,8 +14,8 @@ import "./styles/workProcess.css";
 import "./styles/facilities.css";
 import "./styles/doctor.css";
 import "./styles/review.css";
+import "./styles/contacts.css";
 
-import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -26,7 +25,6 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>
