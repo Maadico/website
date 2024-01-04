@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import logo from "../Images/logoDoctor.png";
+// import logo from "../Images/logoDoctor.png";
 const Header = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -13,7 +13,8 @@ const Header = () => {
         <nav className="navbar navbar-expand-lg p-0">
           <div className="container-fluid">
             <Link className="navbar-brand brandLogo logoDoctor" to="/">
-              <img src={logo} alt="" />
+              {/* <img src={logo} alt="" /> */}
+              Doctor
             </Link>
             <button
               className="navbar-toggler"

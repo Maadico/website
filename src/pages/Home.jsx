@@ -33,12 +33,13 @@ const Home = () => {
   return (
     <div id="heroSection">
       <Hero />
+      <WorkProcess />
       {/* <HeroTwo />
       <About />
       <Achivement />
       <Service />
       <Review />
-      <WorkProcess />
+
       <Facilities />
       <Doctor /> */}
       {showButton && (

@@ -11,7 +11,7 @@ const WorkProcess = () => {
               <span>
                 <FaHandHoldingMedical fontSize={25} />
               </span>{" "}
-              <span>Our Work Process</span>
+              <span>How It Work!</span>
             </h5>
           </div>
           <div className="row m-0 serviceSubHeading text-center">

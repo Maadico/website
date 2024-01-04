@@ -1,12 +1,14 @@
 #navbarColor {
-    background-color: rgb(236, 251, 248) !important;
-    padding: 0 !important;
+    background-color: rgb(255, 255, 255) !important;
+    /* padding: 0 !important; */
+    padding: 1rem 0;
 }
 
-/* .brandLogo {
+.brandLogo {
     font-size: 1.5rem;
     font-weight: 500;
-} */
+    color: rgb(61, 59, 81);
+}
 
 .logoDoctor img {
     height: 80px;
@@ -17,6 +19,7 @@
 .nav-item {
     margin: 0 0.6rem;
     font-size: 1.2rem;
+    color: grey;
 }
 
 a {
@@ -24,7 +27,7 @@ a {
 }
 
 a:hover {
-    color: rgb(61, 203, 182) !important;
+    color: rgb(4, 82, 206) !important;
 }
 
 .navAppointment {
