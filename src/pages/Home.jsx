@@ -33,14 +33,14 @@ const Home = () => {
   return (
     <div id="heroSection">
       <Hero />
-      <HeroTwo />
+      {/* <HeroTwo />
       <About />
       <Achivement />
       <Service />
       <Review />
       <WorkProcess />
       <Facilities />
-      <Doctor />
+      <Doctor /> */}
       {showButton && (
         <div className="fixIcon">
           <div className="icon1">
