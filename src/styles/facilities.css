@@ -1,7 +1,7 @@
 .Facilities {
     height: auto;
     width: 100%;
-    background-color: rgb(246, 252, 252);
+    background-color: white;
 }
 
 .FacilitiesBtn button {
@@ -12,8 +12,9 @@
 }
 
 .boxFacilities {
-    background-color: rgb(201, 248, 242);
-    border-radius: 8px;
+    background-color: rgb(209, 236, 232);
+    border-radius: 0px 30px 19px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .sessionColor h5 {

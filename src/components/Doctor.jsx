@@ -2,7 +2,7 @@ import React from "react";
 import { FaHandHoldingMedical } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useEffect } from "react";
-import profile from "../Images/doctorAbout.jpeg";
+import profile from "../Images/doctorAbout.jpg";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -40,14 +40,6 @@ const Doctor = () => {
     <div className="doctor" id="doctor">
       <div className="container ">
         <div className="row py-5 ">
-          <div className="row aboutHeading  m-0">
-            <h5>
-              <span>
-                <FaHandHoldingMedical fontSize={25} />
-              </span>{" "}
-              <span>Our Doctors</span>
-            </h5>
-          </div>
           <div className="row aboutSubheading  m-0">
             <h1>Our Best Doctor</h1>
           </div>

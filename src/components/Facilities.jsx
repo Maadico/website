@@ -1,5 +1,4 @@
 import React from "react";
-import { FaHandHoldingMedical } from "react-icons/fa6";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { MdEmergencyShare } from "react-icons/md";
 
@@ -10,14 +9,6 @@ const Facilities = () => {
         <div className="row m-0 g-0 p-0">
           <div className="col-md-6 py-5 FacilitiesPaddingRemove">
             <div className="row h-50  py-5 FacilitiesPaddingRemove">
-              <div className="row aboutHeading pt-5">
-                <h5>
-                  <span>
-                    <FaHandHoldingMedical fontSize={25} />
-                  </span>{" "}
-                  <span>Our Facilities</span>
-                </h5>
-              </div>
               <div className="row aboutSubheading">
                 <h1>
                   Facilities That We <br /> Provide

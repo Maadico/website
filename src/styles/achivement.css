@@ -1,39 +1,77 @@
 .Achivement {
-    background-color: rgb(126, 163, 226);
+    background-color: rgb(84, 146, 247);
     height: auto;
     width: 100%;
-    padding: 0;
+    padding: 0 !important;
+    border-radius: 0 130px 0 0;
 
 }
 
+.achiveIcon {
+    font-size: 40px;
+    margin: 3px 0;
+    color: rgb(55, 50, 124);
+}
+
 .achievementCat {
+    text-align: center;
     margin: auto;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     padding: 0;
 }
 
 .achievementCat h5 {
     font-weight: 700;
     color: white;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .achievementCat p {
     font-weight: 600;
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
     opacity: 0.7;
+    letter-spacing: 2px;
+}
 
+@media screen and (max-width:767px) {
+    .achiveIcon {
+        font-size: 30px;
+    }
+
+    .achievementCat {
+        text-align: center;
+        margin: auto;
+        padding: 0;
+    }
+
+    .achievementCat h5 {
+        font-weight: 700;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .achievementCat p {
+        font-weight: 600;
+        color: white;
+        font-size: 0.8rem;
+        opacity: 0.7;
+        letter-spacing: 2px;
+    }
 }
 
 @media screen and (max-width:575px) {
     .achievementCat h5 {
-        font-size: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .achiveIcon {
+        font-size: 25px;
     }
 
     .Achivement {
         height: 20vh;
-
+        border-radius: 70px 0 0px 0;
     }
 
     .achievementCat {
@@ -45,15 +83,16 @@
     .achievementCat p {
         font-weight: 500;
         color: white;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         opacity: 0.9;
+        letter-spacing: initial;
 
     }
 }
 
 @media screen and (max-width:393px) {
     .achievementCat h5 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .achievementCat p {

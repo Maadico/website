@@ -10,13 +10,18 @@
     /* color: rgb(255, 187, 0); */
 }
 
+.gapBw {
+    margin: 40px 0;
+    text-align: end !important;
+}
+
 .testimonial {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     font-size: 18px;
-    background: #dbebee;
-    border-radius: 14px;
+    background-color: rgb(108, 148, 216);
+    border-radius: 0 104px 0 40px;
     padding: 3rem 3rem;
 
 
@@ -26,7 +31,7 @@
     text-align: justify;
     font-size: medium !important;
     word-break: break-all;
-    color: black;
+    color: white;
     font-weight: 500;
     opacity: 0.8;
 }
@@ -72,6 +77,14 @@
         font-size: 10px;
 
         padding: 1rem;
+
+
+    }
+
+    .testimonial {
+
+        border-radius: 14px;
+
 
 
     }

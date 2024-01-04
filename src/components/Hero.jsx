@@ -36,7 +36,7 @@ const Hero = () => {
                   Book An Appointment
                 </button>
                 <a
-                  href="tel:+9198209 52248"
+                  href="#not work"
                   className="btn AppointmentCall mx-3 px-4 btn-outline-light"
                 >
                   <span>

@@ -39,8 +39,6 @@ const Footer = () => {
                 <h1>
                   <div className="borderSet2"></div>
                 </h1>
-
-                <hr />
               </div>
 
               <div className="footMenu row">
@@ -67,8 +65,6 @@ const Footer = () => {
                 <h1>
                   <div className="borderSet2"></div>
                 </h1>
-
-                <hr />
               </div>
               <div className="row footMenu2">
                 <p>Term of use</p>
@@ -83,8 +79,6 @@ const Footer = () => {
                 <h1>
                   <div className="borderSet2"></div>
                 </h1>
-
-                <hr />
               </div>
               <div className="row lastDescription">
                 <p>

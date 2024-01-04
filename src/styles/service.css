@@ -5,20 +5,17 @@
 
 }
 
-.serviceHeading h5 {
-    color: rgb(91, 202, 186);
-    font-weight: 900;
-}
 
-.serviceSubHeading h1 {
+.serviceSubHeading h2 {
     font-weight: 700;
 }
 
 .box {
     padding: 10px;
     border-radius: 8px;
-    background-color: rgb(237, 249, 247);
+    background-color: white;
     transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .box .logo span {
@@ -42,17 +39,32 @@
 
 }
 
+.space {
+    margin: 10px 0;
+}
+
 .box:hover {
-    background-color: rgb(246, 252, 252);
+    background-color: rgb(108, 148, 216);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .box:hover .logo span {
-    color: rgb(31, 87, 162);
+    color: white;
+}
+
+.box:hover .heading h5 {
+    color: white;
+    font-weight: 600;
 }
 
 .box:hover .readMore span {
     display: block;
+    color: black;
+}
+
+.box:hover .SubHeading p {
+    color: whitesmoke;
+    opacity: initial;
 }
 
 @media screen and (max-width:525px) {

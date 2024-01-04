@@ -1,23 +1,15 @@
 import React from "react";
-import { FaHandHoldingMedical } from "react-icons/fa6";
-import { FaHeartbeat, FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { TbBrandSugarizer } from "react-icons/tb";
 const Service = () => {
   return (
-    <div className="service py-4 " id="service">
+    <div className="service py-5 " id="service">
       <div className="container ">
         <div className="row ">
-          <div className="row m-0 p-0 g-0 serviceHeading text-center pt-3 ">
-            <h5>
-              <span>
-                <FaHandHoldingMedical fontSize={25} />
-              </span>{" "}
-              <span>Medical Service</span>
-            </h5>
-          </div>
-          <div className="row m-0 p-0 g-0 serviceSubHeading text-center">
-            <h1>
-              Find Out More About <br /> Our Service
-            </h1>
+          <div className="row m-0 py-3 g-0 serviceSubHeading text-center">
+            <h2>
+              Different types of department we <br /> have for your health care
+            </h2>
           </div>
           {/* all services section */}
 
@@ -26,7 +18,7 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <FaHeartbeat />
+                    <TbBrandSugarizer />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -49,7 +41,7 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <FaHeartbeat />
+                    <TbBrandSugarizer />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -72,7 +64,7 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <FaHeartbeat />
+                    <TbBrandSugarizer />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -95,7 +87,7 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <FaHeartbeat />
+                    <TbBrandSugarizer />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -118,7 +110,7 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <FaHeartbeat />
+                    <TbBrandSugarizer />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -141,7 +133,7 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <FaHeartbeat />
+                    <TbBrandSugarizer />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">

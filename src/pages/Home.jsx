@@ -37,16 +37,16 @@ const Home = () => {
       <About />
       <HeroTwo />
 
-      {/* <Achivement />
+      <Achivement />
       <Service />
       <Review />
 
       <Facilities />
-      <Doctor /> */}
+      <Doctor />
       {showButton && (
         <div className="fixIcon">
           <div className="icon1">
-            <a href="tel:+9198209 52248">
+            <a href="#notWork">
               <MdAddIcCall fontSize={25} color="white" />
             </a>
           </div>
