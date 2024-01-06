@@ -9,12 +9,12 @@ const Facilities = () => {
     <div className="Facilities">
       <div className="container py-3">
         <div className="row m-0 g-0 p-0">
-          <div className="col-md-6  FacilitiesPaddingRemove">
+          <div className="col-md-6  FacilitiesPaddingRemove ">
             <div className="row    FacilitiesPaddingRemove">
-              <div className="row aboutSubheading">
+              <div className="row aboutSubheading   m-0 p-0">
                 <h1>Our Rehab Process</h1>
               </div>
-              <div className="row aboutDescription">
+              <div className="row aboutDescription m-0 p-0">
                 <ul>
                   <li>
                     <b>DIABETES REVERSAL PROGRAM </b>
@@ -68,7 +68,7 @@ const Facilities = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 ">
+          <div className="col-md-6 py-5 px-2">
             <div className="row">
               <div className="col-6 ">
                 <div className="row flex-column ">
@@ -77,7 +77,7 @@ const Facilities = () => {
                       <div className="row logoProcessFa text-center">
                         <span>
                           <IoMedkitSharp
-                            fontSize={30}
+                            fontSize={28}
                             color="rgb(31,87,162)"
                             className="logoSizeFac"
                           />
@@ -99,7 +99,7 @@ const Facilities = () => {
                       <div className="row logoProcessFa text-center">
                         <span>
                           <MdOutlineNoFood
-                            fontSize={30}
+                            fontSize={28}
                             color="rgb(31,87,162)"
                             className="logoSizeFac"
                           />
@@ -126,7 +126,7 @@ const Facilities = () => {
                       <div className="row logoProcessFa text-center">
                         <span>
                           <RiGuideLine
-                            fontSize={30}
+                            fontSize={28}
                             color="rgb(31,87,162)"
                             className="logoSizeFac"
                           />
@@ -148,7 +148,7 @@ const Facilities = () => {
                       <div className="row logoProcessFa text-center">
                         <span>
                           <GrYoga
-                            fontSize={30}
+                            fontSize={28}
                             color="rgb(31,87,162)"
                             className="logoSizeFac"
                           />

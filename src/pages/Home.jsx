@@ -12,7 +12,8 @@ import { MdAddIcCall } from "react-icons/md";
 import { BiSolidToTop } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Contact from "../components/Contact";
-import { AiFillInstagram } from "react-icons/ai";
+import ConditionWeTreat from "../components/ConditionWeTreat";
+// import { AiFillInstagram } from "react-icons/ai";
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {
@@ -46,6 +47,8 @@ const Home = () => {
 
       <Facilities />
       <Doctor />
+      <ConditionWeTreat />
+
       <Contact />
       {showButton && (
         <div className="fixIcon">

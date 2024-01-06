@@ -7,7 +7,7 @@ import Drjoshi from "../Images/drNamishJoshi.jpg";
 import Drtanish from "../Images/tanishKumar.jpg";
 import Drxy from "../Images/drxyz.JPG";
 
-// import profile from "../Images/doctorAbout.jpg";
+import profile from "../Images/doctorAbout.jpg";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -70,8 +70,8 @@ const Doctor = () => {
           <div className="row slider  m-0">
             <Swiper
               slidesPerView={slidesPerView}
-              centeredSlides={true}
-              spaceBetween={10}
+              centeredSlides={false}
+              spaceBetween={15}
               navigation={true}
               modules={[Pagination, Navigation]}
               className="mySwiper"
@@ -102,6 +102,30 @@ const Doctor = () => {
                   </div>
                 </SwiperSlide>
               ))}
+              <SwiperSlide>
+                <img src={profile} alt="profile" />
+                <div className="details row mx-2 py-3  text-center m-auto">
+                  <div className="row name text-center ">
+                    <h6>Dr Neha </h6>
+                  </div>
+                  <div className="department row text-center ">
+                    <p>Orthopaedist</p>
+                  </div>
+                  <div className="row social  m-0 p-0">
+                    <div className="socialId m-0 p-0">
+                      <span>
+                        <FaHandHoldingMedical fontSize={25} />
+                      </span>
+                      <span>
+                        <FaHandHoldingMedical fontSize={25} />
+                      </span>
+                      <span>
+                        <FaHandHoldingMedical fontSize={25} />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
           </div>
         </div>

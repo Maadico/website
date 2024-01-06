@@ -1,0 +1,16 @@
+.ConditionWeTreat {
+    height: auto;
+    width: 100%;
+    color: white;
+}
+
+.imgPic img {
+    height: 300px;
+    border-radius: 8px;
+}
+
+@media screen and (max-width:767px) {
+    .conditionTreat {
+        margin: 30px 0 !important;
+    }
+}
