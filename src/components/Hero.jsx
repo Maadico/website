@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="row pt-1">
           <div className="col-md-6 mt-5 pt-4 atSmall">
             <div className="row heroColor">
-              <p>⚕️ WELCOME TO MEDCARE</p>
+              <p>⚕️ Welcome to MaaDico Healthcare </p>
             </div>
             <div className="row heroColor ">
               <h1 className="largeDevice">
@@ -20,8 +20,9 @@ const Hero = () => {
             </div>
             <div className="row heroColor mt-2">
               <p className="description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
-                debitis vitae, dicta quasi veniam ex, magni omnis hic ea
+                MaaDico Healthcare: Committed to reversing lifestyle disorders
+                like diabetes, thyroid issues, obesity, PCOD/PCOS. Your beacon
+                of health and hope.
               </p>
             </div>
             <div className="row heroColor m-0 p-0 ">

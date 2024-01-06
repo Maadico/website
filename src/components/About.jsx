@@ -12,10 +12,11 @@ const About = () => {
             </div>
             <div className="row aboutDescription">
               <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-                deserunt pariatur perspiciatis quisquam nam totam, esse
-                consectetur officiis voluptas nulla? Rem minus odit blanditiis
-                veritatis alias deserunt quaerat eum quo?
+                At MaaDico Healthcare, we are dedicated to empowering
+                individuals on their journey towards holistic well-being.
+                Established with a profound commitment to reversing lifestyle
+                disorders, including diabetes, thyroid issues, obesity,
+                PCOD/PCOS, and more, we stand as a beacon of health and hope.
               </p>
             </div>
             <div className="row AboutPoint mt-2">
@@ -26,7 +27,7 @@ const About = () => {
                       <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
                     <span className="aboutSubPoint m-2">
-                      15+ Years Of Experience
+                      DIABETES REVERSAL PROGRAM
                     </span>
                   </p>
                 </div>
@@ -36,7 +37,7 @@ const About = () => {
                       <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
                     <span className="aboutSubPoint m-2">
-                      15+ Years Of Experience
+                      WEIGHT MANAGEMENT PROGRAM
                     </span>
                   </p>
                 </div>
@@ -49,7 +50,7 @@ const About = () => {
                       <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
                     <span className="aboutSubPoint m-2">
-                      15+ Years Of Experience
+                      THYROID REVERSAL PROGRAM
                     </span>
                   </p>
                 </div>
@@ -59,7 +60,7 @@ const About = () => {
                       <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
                     <span className="aboutSubPoint m-2">
-                      15+ Years Of Experience
+                      PCOD/PCOS REVERSAL PROGRAMS
                     </span>
                   </p>
                 </div>

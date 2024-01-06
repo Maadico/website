@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import logo from "../Images/logoDoctor.png";
+import logo from "../Images/secondDoctorlogo.png";
 const Header = () => {
   return (
     <div className="container-fluid" id="navbarColor">
@@ -8,8 +8,8 @@ const Header = () => {
         <nav className="navbar navbar-expand-lg p-0">
           <div className="container-fluid">
             <Link className="navbar-brand brandLogo logoDoctor" to="/">
-              {/* <img src={logo} alt="" /> */}
-              Doctor
+              <img src={logo} alt="logo" />
+              {/* Doctor */}
             </Link>
             <button
               className="navbar-toggler"

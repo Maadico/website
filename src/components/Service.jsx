@@ -22,12 +22,12 @@ const Service = () => {
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
-                  <h5>Heading</h5>
+                  <h5>DIABETES REVERSAL PROGRAM</h5>
                 </div>
                 <div className="row SubHeading m-0 p-0">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
-                    sit amet, consectetur Lorem ipsum dolor sit
+                    MaaDico's Diabetes Harmony: Naturopathy, personalized diets,
+                    yoga fusion.
                   </p>
                 </div>
                 <div className="row readMore m-0 p-0">
@@ -45,12 +45,12 @@ const Service = () => {
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
-                  <h5>Heading</h5>
+                  <h5>WEIGHT MANAGEMENT</h5>
                 </div>
                 <div className="row SubHeading m-0 p-0">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
-                    sit amet, consectetur Lorem ipsum dolor sit
+                    Tailored plans, expert consultations, and yoga for
+                    sustainable weight control.
                   </p>
                 </div>
                 <div className="row readMore m-0 p-0">
@@ -68,12 +68,12 @@ const Service = () => {
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
-                  <h5>Heading</h5>
+                  <h5>THYROID REVERSAL</h5>
                 </div>
                 <div className="row SubHeading m-0 p-0">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
-                    sit amet, consectetur Lorem ipsum dolor sit
+                    Naturopathy, diets, and yoga to restore thyroid health
+                    naturally.
                   </p>
                 </div>
                 <div className="row readMore m-0 p-0">
@@ -91,12 +91,11 @@ const Service = () => {
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
-                  <h5>Heading</h5>
+                  <h5>PCOD/PCOS REVERSAL</h5>
                 </div>
                 <div className="row SubHeading m-0 p-0">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
-                    sit amet, consectetur Lorem ipsum dolor sit
+                    Integrated approach targeting symptoms and hormonal balance.
                   </p>
                 </div>
                 <div className="row readMore m-0 p-0">
@@ -114,12 +113,12 @@ const Service = () => {
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
-                  <h5>Heading</h5>
+                  <h5>THERAPEUTIC YOGA</h5>
                 </div>
                 <div className="row SubHeading m-0 p-0">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
-                    sit amet, consectetur Lorem ipsum dolor sit
+                    Certified instructors for mental, emotional balance and
+                    flexibility.
                   </p>
                 </div>
                 <div className="row readMore m-0 p-0">
@@ -137,12 +136,12 @@ const Service = () => {
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
-                  <h5>Heading</h5>
+                  <h5>1-1 DIET WITH DOCTOR</h5>
                 </div>
                 <div className="row SubHeading m-0 p-0">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
-                    sit amet, consectetur Lorem ipsum dolor sit
+                    Personalized diet plans with doctor consultations for
+                    lasting well-being.
                   </p>
                 </div>
                 <div className="row readMore m-0 p-0">

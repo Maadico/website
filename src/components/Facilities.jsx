@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { MdEmergencyShare } from "react-icons/md";
+import { IoMedkitSharp } from "react-icons/io5";
 
 const Facilities = () => {
   return (
@@ -16,10 +17,10 @@ const Facilities = () => {
               </div>
               <div className="row aboutDescription">
                 <p className="mt-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquid deserunt pariatur perspiciatis quisquam nam totam,
-                  esse consectetur officiis voluptas nulla? Rem minus odit
-                  blanditiis veritatis alias deserunt quaerat eum quo?
+                  Discover wellness with MaaDico Healthcare. Our expert doctors
+                  lead you to vibrant well-being, using naturopathy, yoga, and a
+                  holistic approach. Join us on the path to a healthier, more
+                  vibrant life. Welcome to wellness redefined!
                 </p>
               </div>
               <div className="row FacilitiesBtn w-25 ml-1">
@@ -38,7 +39,7 @@ const Facilities = () => {
                     <div className="boxFacilities p-3 m-2">
                       <div className="row logoProcessFa text-center">
                         <span>
-                          <MdEmergencyShare
+                          <IoMedkitSharp
                             fontSize={30}
                             color="rgb(31,87,162)"
                             className="logoSizeFac"
@@ -46,12 +47,11 @@ const Facilities = () => {
                         </span>
                       </div>
                       <div className=" row title FacilitiesTitle sessionColor">
-                        <h5>Online Session</h5>
+                        <h5>Reversal Kits</h5>
                       </div>
                       <div className="row description FacilitiesDescription">
                         <p>
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          nulla tempore soluta
+                          Your unique health solution customized for success.
                         </p>
                       </div>
                     </div>
@@ -69,12 +69,12 @@ const Facilities = () => {
                         </span>
                       </div>
                       <div className="sessionColor row title FacilitiesTitle">
-                        <h5>Online Session</h5>
+                        <h5>Diet Plans</h5>
                       </div>
                       <div className="row description FacilitiesDescription">
                         <p>
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          nulla tempore soluta
+                          Personalized charts tailored for your holistic
+                          well-being.
                         </p>
                       </div>
                     </div>
@@ -96,12 +96,12 @@ const Facilities = () => {
                         </span>
                       </div>
                       <div className="sessionColor row title FacilitiesTitle">
-                        <h5>Online Session</h5>
+                        <h5>Consultation</h5>
                       </div>
                       <div className="row description FacilitiesDescription">
                         <p>
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          nulla tempore soluta
+                          Consult seasoned doctors for expert well-being
+                          guidance
                         </p>
                       </div>
                     </div>
@@ -118,12 +118,12 @@ const Facilities = () => {
                         </span>
                       </div>
                       <div className="sessionColor row title FacilitiesTitle">
-                        <h5>Online Session</h5>
+                        <h5>Yoga Modules</h5>
                       </div>
                       <div className="row description FacilitiesDescription">
                         <p>
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          nulla tempore soluta
+                          Individualized practices for a healthier, balanced
+                          you.
                         </p>
                       </div>
                     </div>

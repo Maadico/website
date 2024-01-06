@@ -14,8 +14,8 @@ const Footer = () => {
               </div>
               <div className="footDescription row">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                  numquam veniam mollitia, possimus nobis nam?
+                  Doctors will be assisting you throughout your journey of
+                  reversal and help achieve your goal of healthy wellbeing.
                 </p>
               </div>
               <div className="socialFoot row">
@@ -29,7 +29,10 @@ const Footer = () => {
                   <span>
                     <MdLocationOn color="rgb(129,240,224)" fontSize={25} />
                   </span>
-                  <span>1365,A56 Bihar</span>
+                  <span>
+                    MaaDico Healthcare E - 103 , Ramkutir Complex Surat, Gujurat
+                    - 395009
+                  </span>
                 </p>
               </div>
             </div>
@@ -82,8 +85,7 @@ const Footer = () => {
               </div>
               <div className="row lastDescription">
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  molestias?
+                  Connect with MaaDico on socials. Stay healthy, stay informed!"
                 </p>
               </div>
               <div className="row btnFoot">

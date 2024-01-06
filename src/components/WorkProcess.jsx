@@ -13,8 +13,9 @@ const WorkProcess = () => {
           <div className="row m-0 text-center">
             <div className="w-50 text-center m-auto process">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Soluta, eius. Et odio, fugit exercitationem dolor maiores, ad
+                Embark on your well-being journey at MaaDico Healthcare. Select
+                an expert, effortlessly book, and receive personalized care.
+                Simplifying your path to a healthier you.
               </p>
             </div>
           </div>
@@ -32,8 +33,8 @@ const WorkProcess = () => {
                 </div>
                 <div className="row SubHeading">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
-                    ipsum dolor sit
+                    Find experts tailored to your health needs – diabetes,
+                    thyroid issues, obesity, PCOD/PCOS.
                   </p>
                 </div>
               </div>
@@ -51,8 +52,8 @@ const WorkProcess = () => {
                 </div>
                 <div className="row SubHeading">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
-                    ipsum dolor sit
+                    Effortlessly schedule appointments at your convenience,
+                    ensuring hassle-free access to healthcare.
                   </p>
                 </div>
               </div>
@@ -70,8 +71,8 @@ const WorkProcess = () => {
                 </div>
                 <div className="row SubHeading">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur . Lorem ipsum dolor
-                    ipsum dolor sit
+                    Experience dedicated services and personalized plans,
+                    guiding you towards holistic well-being.
                   </p>
                 </div>
               </div>

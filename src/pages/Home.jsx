@@ -10,7 +10,9 @@ import Doctor from "../components/Doctor";
 import Review from "../components/Review";
 import { MdAddIcCall } from "react-icons/md";
 import { BiSolidToTop } from "react-icons/bi";
+import { IoLogoWhatsapp } from "react-icons/io";
 import Contact from "../components/Contact";
+import { AiFillInstagram } from "react-icons/ai";
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {
@@ -50,6 +52,17 @@ const Home = () => {
           <div className="icon1">
             <a href="#notWork">
               <MdAddIcCall fontSize={25} color="white" />
+            </a>
+          </div>
+
+          <div className="icon1">
+            <a href="https://chat.whatsapp.com/GNOwENb2FmoL1tMem8Hddl">
+              <IoLogoWhatsapp fontSize={25} color="white" />
+            </a>
+          </div>
+          <div className="icon1">
+            <a href=" https://www.instagram.com/maadico_1?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">
+              <AiFillInstagram fontSize={25} color="white" />
             </a>
           </div>
           <div className="icon1">

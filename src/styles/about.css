@@ -25,6 +25,10 @@
     font-size: 2.3rem;
 }
 
+.aboutSubPoint {
+    font-size: small;
+}
+
 .noneAtSmallAbout {
     border-radius: 0 190px 0 0;
     background-color: rgb(50, 78, 124);

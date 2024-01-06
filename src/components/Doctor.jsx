@@ -2,14 +2,38 @@ import React from "react";
 import { FaHandHoldingMedical } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useEffect } from "react";
-import profile from "../Images/doctorAbout.jpg";
+import DrGovind from "../Images/DrgovindKumar.jpeg";
+import Drjoshi from "../Images/drNamishJoshi.jpg";
+import Drtanish from "../Images/tanishKumar.jpg";
+import Drxy from "../Images/drxyz.JPG";
+
+// import profile from "../Images/doctorAbout.jpg";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
+
 import { Pagination, Navigation } from "swiper/modules";
+const doctor = [
+  {
+    name: "Dr Govind Kumar Trivedi",
+    imgLink: DrGovind,
+  },
+  {
+    name: "Dr Naimesh Joshi",
+    imgLink: Drjoshi,
+  },
+  {
+    name: "Dr Tanish",
+    imgLink: Drtanish,
+  },
+  {
+    name: "Dr XYZ",
+    imgLink: Drxy,
+  },
+];
 const Doctor = () => {
   const [slidesPerView, setSlidesPerView] = useState(5);
 
@@ -46,18 +70,18 @@ const Doctor = () => {
           <div className="row slider  m-0">
             <Swiper
               slidesPerView={slidesPerView}
-              centeredSlides={false}
+              centeredSlides={true}
               spaceBetween={10}
               navigation={true}
               modules={[Pagination, Navigation]}
               className="mySwiper"
             >
-              {[1, 2, 3, 4, 5, 6].map((X) => (
+              {doctor.map((d) => (
                 <SwiperSlide>
-                  <img src={profile} alt="" />
+                  <img src={d.imgLink} alt={d.name} />
                   <div className="details row mx-2 py-3  text-center m-auto">
                     <div className="row name text-center ">
-                      <h6>Dr. Tanish Gupta</h6>
+                      <h6>{d.name}</h6>
                     </div>
                     <div className="department row text-center ">
                       <p>Orthopaedist</p>
