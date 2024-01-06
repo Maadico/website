@@ -1,33 +1,70 @@
 import React from "react";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { MdEmergencyShare } from "react-icons/md";
+import { MdOutlineNoFood } from "react-icons/md";
 import { IoMedkitSharp } from "react-icons/io5";
+import { RiGuideLine } from "react-icons/ri";
+import { GrYoga } from "react-icons/gr";
 
 const Facilities = () => {
   return (
     <div className="Facilities">
-      <div className="container">
+      <div className="container py-3">
         <div className="row m-0 g-0 p-0">
-          <div className="col-md-6 py-5 FacilitiesPaddingRemove">
-            <div className="row h-50  py-5 FacilitiesPaddingRemove">
+          <div className="col-md-6  FacilitiesPaddingRemove">
+            <div className="row    FacilitiesPaddingRemove">
               <div className="row aboutSubheading">
-                <h1>
-                  Facilities That We <br /> Provide
-                </h1>
+                <h1>Our Rehab Process</h1>
               </div>
               <div className="row aboutDescription">
-                <p className="mt-2">
-                  Discover wellness with MaaDico Healthcare. Our expert doctors
-                  lead you to vibrant well-being, using naturopathy, yoga, and a
-                  holistic approach. Join us on the path to a healthier, more
-                  vibrant life. Welcome to wellness redefined!
-                </p>
-              </div>
-              <div className="row FacilitiesBtn w-25 ml-1">
-                <button type="button" class="btn ">
-                  View All
-                  <FaLongArrowAltRight />
-                </button>
+                <ul>
+                  <li>
+                    <b>DIABETES REVERSAL PROGRAM </b>
+                    <span>
+                      Lorem ipsum dolor sit amet Lorem ipsum dolor sit, amet
+                      consectetur adipisicing elit. Autem, debitis. Error
+                      ratione, facilis necessitatibus non
+                    </span>
+                  </li>
+                  <li>
+                    <b>WEIGHT MANAGEMENT PROGRAM </b>{" "}
+                    <span>
+                      Lorem ipsum dolor sit amet Lorem ipsum dolor sit, amet
+                      consectetur adipisicing elit. Autem, debitis. Error
+                      ratione, facilis necessitatibus non
+                    </span>
+                  </li>
+                  <li>
+                    <b>THYROID REVERSAL PROGRAM</b>{" "}
+                    <span>
+                      Lorem ipsum dolor sit amet Lorem ipsum dolor sit, amet
+                      consectetur adipisicing elit. Autem, debitis. Error
+                      ratione, facilis necessitatibus non
+                    </span>
+                  </li>
+                  <li>
+                    <b>PCOD/PCOS REVERSAL PROGRAMS</b>{" "}
+                    <span>
+                      Lorem ipsum dolor sit amet Lorem ipsum dolor sit, amet
+                      consectetur adipisicing elit. Autem, debitis. Error
+                      ratione, facilis necessitatibus non
+                    </span>
+                  </li>
+                  <li>
+                    <b>THERAPEUTIC YOGA CLASSES</b>{" "}
+                    <span>
+                      Lorem ipsum dolor sit amet Lorem ipsum dolor sit, amet
+                      consectetur adipisicing elit. Autem, debitis. Error
+                      ratione, facilis necessitatibus non
+                    </span>
+                  </li>
+                  <li>
+                    <b> 1-1 CUSTOMISED DIET PLAN WITH DOCTOR CONSULTATION </b>{" "}
+                    <span>
+                      Lorem ipsum dolor sit amet Lorem ipsum dolor sit, amet
+                      consectetur adipisicing elit. Autem, debitis. Error
+                      ratione, facilis necessitatibus non
+                    </span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -61,7 +98,7 @@ const Facilities = () => {
                     <div className="boxFacilities p-3 m-2">
                       <div className="row logoProcessFa text-center">
                         <span>
-                          <MdEmergencyShare
+                          <MdOutlineNoFood
                             fontSize={30}
                             color="rgb(31,87,162)"
                             className="logoSizeFac"
@@ -88,7 +125,7 @@ const Facilities = () => {
                     <div className="boxFacilities  p-3 m-2">
                       <div className="row logoProcessFa text-center">
                         <span>
-                          <MdEmergencyShare
+                          <RiGuideLine
                             fontSize={30}
                             color="rgb(31,87,162)"
                             className="logoSizeFac"
@@ -110,7 +147,7 @@ const Facilities = () => {
                     <div className="boxFacilities p-3 m-2">
                       <div className="row logoProcessFa text-center">
                         <span>
-                          <MdEmergencyShare
+                          <GrYoga
                             fontSize={30}
                             color="rgb(31,87,162)"
                             className="logoSizeFac"
