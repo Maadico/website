@@ -9,6 +9,10 @@
     border-radius: 8px;
 }
 
+.conditionTreat h1 {
+    font-weight: 700;
+}
+
 @media screen and (max-width:767px) {
     .conditionTreat {
         margin: 30px 0 !important;
