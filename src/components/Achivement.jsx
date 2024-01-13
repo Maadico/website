@@ -3,7 +3,7 @@ import { IoPersonSharp } from "react-icons/io5";
 import { IoIosPeople } from "react-icons/io";
 import {
   // MdOutlineWork,
-  MdGeneratingTokens,
+  // MdGeneratingTokens,
   MdRateReview,
 } from "react-icons/md";
 // import { BsAwardFill } from "react-icons/bs";
