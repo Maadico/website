@@ -18,11 +18,7 @@ const Achivement = () => {
               <IoPersonSharp />
             </span>
             <h5>6000+</h5>
-            <p>
-              Sugar Patient
-              <br />
-              Treated Successfully
-            </p>
+            <p>Sugar Patient</p>
           </div>
 
           <div className="achievementCat">

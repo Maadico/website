@@ -95,7 +95,7 @@
 
     .Hero {
         height: auto;
-        border-radius: 0 140px 0 0;
+        /* border-radius: 0 140px 0 0; */
         padding: 0;
     }
 
@@ -160,6 +160,20 @@
 
     .imgDoctor .secondDoctor {
         height: 300px;
+    }
+
+    .Hero {
+        height: 90vh !important;
+        /* border-radius: 0 140px 0 0; */
+        padding: 0;
+    }
+
+    .imgDoctor .secondDoctor {
+        display: block;
+        /* height: auto; */
+        object-fit: contain;
+        height: 90%;
+
     }
 }
 

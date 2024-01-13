@@ -117,6 +117,10 @@
 
     }
 
+    .aboutSubheading {
+        text-align: center;
+    }
+
     .department p {
         font-size: 1rem !important;
     }

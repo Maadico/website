@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Hero from "../components/Hero";
-import HeroTwo from "../components/HeroTwo";
+// import HeroTwo from "../components/HeroTwo";
 import About from "../components/About";
 import Achivement from "../components/Achivement";
 import Service from "../components/Service";
@@ -9,10 +9,11 @@ import Facilities from "../components/Facilities";
 import Doctor from "../components/Doctor";
 import Review from "../components/Review";
 import { MdAddIcCall } from "react-icons/md";
-import { BiSolidToTop } from "react-icons/bi";
+// import { BiSolidToTop } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Contact from "../components/Contact";
-import ConditionWeTreat from "../components/ConditionWeTreat";
+import { FaArrowUp } from "react-icons/fa6";
+// import ConditionWeTreat from "../components/ConditionWeTreat";
 // import { AiFillInstagram } from "react-icons/ai";
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
@@ -70,7 +71,7 @@ const Home = () => {
           </div> */}
           <div className="icon1">
             <a href="#heroSection">
-              <BiSolidToTop fontSize={35} color="white" />
+              <FaArrowUp fontSize={26} color="white" />
             </a>
           </div>
         </div>
