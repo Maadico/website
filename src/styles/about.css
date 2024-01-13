@@ -29,10 +29,10 @@
     font-size: small;
 }
 
-.noneAtSmallAbout {
+/* .noneAtSmallAbout {
     border-radius: 0 190px 0 0;
     background-color: rgb(50, 78, 124);
-}
+} */
 
 .aboutDescription p {
     opacity: 0.8;
@@ -57,8 +57,9 @@
 }
 
 .imgContainer img {
-    height: auto;
+    height: 80%;
     width: 100%;
+    object-fit: cover;
     border-radius: 0 190px 0 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -163,5 +164,24 @@
 
     .aboutBtnSmall {
         font-size: small;
+    }
+}
+
+@media screen and (min-width:1447px) {
+    .imgContainer img {
+        height: 300px;
+        width: 400px;
+        object-fit: cover;
+        border-radius: 0 190px 0 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media screen and (min-width:1470) {
+    .imgContainer img {
+        height: 250px !important;
+        width: 300px !important;
+        /* object-fit: cover; */
+
     }
 }
