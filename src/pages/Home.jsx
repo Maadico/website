@@ -70,7 +70,7 @@ const Home = () => {
             </a>
           </div> */}
           <div className="icon1">
-            <a href="#heroSection">
+            <a href="#">
               <FaArrowUp fontSize={26} color="white" />
             </a>
           </div>
