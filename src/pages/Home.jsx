@@ -39,7 +39,7 @@ const Home = () => {
       <Hero />
       <WorkProcess />
       <About />
-      <HeroTwo />
+      {/* <HeroTwo /> */}
 
       <Achivement />
       <Service />
@@ -47,7 +47,7 @@ const Home = () => {
 
       <Facilities />
       <Doctor />
-      <ConditionWeTreat />
+      {/* <ConditionWeTreat /> */}
 
       <Contact />
       {showButton && (
