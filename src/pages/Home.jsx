@@ -70,7 +70,7 @@ const Home = () => {
             </a>
           </div> */}
           <div className="icon1">
-            <a href="#">
+            <a href="#navbarColor">
               <FaArrowUp fontSize={26} color="white" />
             </a>
           </div>
