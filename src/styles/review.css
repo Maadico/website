@@ -20,7 +20,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     font-size: 18px;
-    background-color: rgb(108, 148, 216);
+    background-color: rgb(116, 145, 196);
     border-radius: 0 104px 0 40px;
     padding: 3rem 3rem;
 
@@ -58,12 +58,11 @@
 }
 
 .detailsPatient h6 {
-    color: blue;
+    color: rgb(31, 87, 162);
 }
 
 .detailsPatient p {
-    color: grey;
-    opacity: 0.9;
+    color: white;
     font-weight: 300;
     font-size: small;
 

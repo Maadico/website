@@ -5,7 +5,7 @@
 
 }
 
-.contactHeading .headingContact {
+/* .contactHeading .headingContact {
     color: black;
     font-size: 2rem;
     display: inline-block;
@@ -93,4 +93,69 @@
     .imagContainerContact {
         display: none;
     }
+} */
+
+.leftContactList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.leftContactList .l {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(158, 245, 216);
+}
+
+.l span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px !important;
+}
+
+.r p {
+    line-height: 4px;
+    opacity: 0.8;
+}
+
+.rightContactList {
+    background-color: white;
+    padding: 20px 10px;
+}
+
+@media screen and (max-width:767px) {
+    .leftContactList {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .removeMarginAt767 {
+        margin: initial !important;
+        padding: initial !important;
+
+    }
+
+    .rightContactList {
+        background-color: white;
+        padding: 10px 10px !important;
+        margin: 0 auto !important;
+        width: 99.99%;
+    }
+
+    .sizeDecCon p {
+        font-size: small;
+        text-align: justify;
+
+    }
+
 }

@@ -159,13 +159,15 @@
     }
 
     .imgDoctor .secondDoctor {
-        height: 300px;
+        height: auto;
+        margin-top: 70px !important;
     }
 
     .Hero {
-        height: 90vh !important;
+        height: auto !important;
         /* border-radius: 0 140px 0 0; */
-        padding: 0;
+        padding: 0 !important;
+        overflow: hidden !important;
     }
 
     .imgDoctor .secondDoctor {

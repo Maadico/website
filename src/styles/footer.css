@@ -48,6 +48,10 @@
     opacity: 0.8;
 }
 
+.footMenu a:hover {
+    color: rgba(255, 255, 255, 0.863) !important;
+}
+
 .footMenu2 p {
     color: white;
     font-size: medium;

@@ -1,6 +1,5 @@
 import React from "react";
 import { MdEmail, MdLocationOn } from "react-icons/md";
-import { Link } from "react-router-dom";
 import { IoCall } from "react-icons/io5";
 const Footer = () => {
   return (
@@ -54,9 +53,9 @@ const Footer = () => {
                 <a href="#doctor">
                   <p>Our Doctors</p>
                 </a>
-                <Link to="/contact">
+                <a href="#contacts">
                   <p>Contact</p>
-                </Link>
+                </a>
                 <a href="#service">
                   <p>Review</p>
                 </a>
