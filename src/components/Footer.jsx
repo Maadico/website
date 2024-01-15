@@ -99,6 +99,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="row my-2 text-center developer">
+        <p>
+          Copyright ©️ 2024 Maadico | Developed by{" "}
+          <a href="https://coderharsh.in" target="blank">
+            CodeHarsh
+          </a>
+        </p>
+      </div>
     </div>
   );
 };

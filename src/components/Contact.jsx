@@ -153,8 +153,8 @@ const Contact = () => {
         <div className="container">
           <div className="row p-2  ">
             <div className="col-md-3">
-              <div className="row">
-                <div className="leftContactList">
+              <div className="row mt-4">
+                <div className="leftContactList ">
                   <div className="l text-center">
                     <span>
                       <IoMdCall color="rgb(3,69,209)" />

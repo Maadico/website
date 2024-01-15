@@ -33,3 +33,16 @@ a {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.developer p {
+  color: white;
+  font-weight: bold;
+}
+
+.developer p a {
+  color: white;
+}
+
+.developer p a:hover {
+  color: rgba(255, 255, 255, 0.808) !important;
+}
