@@ -2,12 +2,12 @@ import React from "react";
 import { FaHandHoldingMedical } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useEffect } from "react";
-import DrGovind from "../Images/DrgovindKumar.jpeg";
-import Drjoshi from "../Images/drNamishJoshi.jpg";
-import Drtanish from "../Images/tanishKumar.jpg";
-import Drxy from "../Images/drxyz.JPG";
+import kunal from "../Images/Dr_kunal_Vijay_Bagade.jpg";
+import tanish from "../Images/Dr_Tanish_shah.jpeg";
+import komal from "../Images/Dr. Komal.jpg";
+import govind from "../Images/Dr_govind.JPG";
+import joshi from "../Images/Dr_joshi.jpg";
 
-import profile from "../Images/doctorAbout.jpg";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -19,19 +19,23 @@ import { Pagination, Navigation } from "swiper/modules";
 const doctor = [
   {
     name: "Dr Govind Kumar Trivedi",
-    imgLink: DrGovind,
+    imgLink: govind,
   },
   {
-    name: "Dr Naimesh Joshi",
-    imgLink: Drjoshi,
+    name: "Dr Komal Kumari",
+    imgLink: komal,
   },
   {
-    name: "Dr Tanish",
-    imgLink: Drtanish,
+    name: "Dr Tanish Shah",
+    imgLink: tanish,
   },
   {
-    name: "Dr XYZ",
-    imgLink: Drxy,
+    name: "Dr Kunal Vijay Bagade",
+    imgLink: kunal,
+  },
+  {
+    name: "Dr Naimesh Joshi ",
+    imgLink: joshi,
   },
 ];
 const Doctor = () => {
@@ -76,8 +80,8 @@ const Doctor = () => {
               modules={[Pagination, Navigation]}
               className="mySwiper"
             >
-              {doctor.map((d) => (
-                <SwiperSlide>
+              {doctor.map((d, i) => (
+                <SwiperSlide key={i}>
                   <img src={d.imgLink} alt={d.name} />
                   <div className="details row mx-2 py-3  text-center m-auto">
                     <div className="row name text-center ">
@@ -102,30 +106,6 @@ const Doctor = () => {
                   </div>
                 </SwiperSlide>
               ))}
-              <SwiperSlide>
-                <img src={profile} alt="profile" />
-                <div className="details row mx-2 py-3  text-center m-auto">
-                  <div className="row name text-center ">
-                    <h6>Dr Neha </h6>
-                  </div>
-                  <div className="department row text-center ">
-                    <p>Orthopaedist</p>
-                  </div>
-                  <div className="row social  m-0 p-0">
-                    <div className="socialId m-0 p-0">
-                      <span>
-                        <FaHandHoldingMedical fontSize={25} />
-                      </span>
-                      <span>
-                        <FaHandHoldingMedical fontSize={25} />
-                      </span>
-                      <span>
-                        <FaHandHoldingMedical fontSize={25} />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
             </Swiper>
           </div>
         </div>
