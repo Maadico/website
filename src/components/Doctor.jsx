@@ -20,22 +20,27 @@ const doctor = [
   {
     name: "Dr Govind Kumar Trivedi",
     imgLink: govind,
+    dep: "BNYS , MD",
   },
   {
     name: "Dr Komal Kumari",
     imgLink: komal,
+    dep: "BNYS",
   },
   {
     name: "Dr Tanish Shah",
     imgLink: tanish,
+    dep: "Physiotherapist",
   },
   {
     name: "Dr Kunal Vijay Bagade",
     imgLink: kunal,
+    dep: "BNYS",
   },
   {
     name: "Dr Naimesh Joshi ",
     imgLink: joshi,
+    dep: "BNYS",
   },
 ];
 const Doctor = () => {
@@ -85,10 +90,10 @@ const Doctor = () => {
                   <img src={d.imgLink} alt={d.name} />
                   <div className="details row mx-2 py-3  text-center m-auto">
                     <div className="row name text-center ">
-                      <h6>{d.name}</h6>
+                      <h6 style={{ fontSize: "small" }}>{d.name}</h6>
                     </div>
                     <div className="department row text-center ">
-                      <p>Orthopaedist</p>
+                      <span>{d.dep}</span>
                     </div>
                     <div className="row social  m-0 p-0">
                       <div className="socialId m-0 p-0">
