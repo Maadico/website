@@ -25,7 +25,6 @@ const Contact = () => {
       Name: contact.name,
       Email: contact.email,
       Phone: contact.phone,
-      message: contact.message,
     };
     setLoading(true);
     axios
@@ -255,22 +254,7 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="col my-2">
-                        <textarea
-                          class="form-control"
-                          id="exampleFormControlTextarea1"
-                          rows="3"
-                          placeholder="message"
-                          onChange={(e) => {
-                            setContact((prevContact) => ({
-                              ...prevContact,
-                              message: e.target.value,
-                            }));
-                          }}
-                        ></textarea>
-                      </div>
-                    </div>
+
                     <div className="row">
                       <div className="col-md-6">
                         <button
