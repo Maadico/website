@@ -1,25 +1,23 @@
 import React from "react";
-import { TbBrandBooking } from "react-icons/tb";
-import { BsHospital } from "react-icons/bs";
-import { MdOutlineMedicalServices } from "react-icons/md";
+// import { TbBrandBooking } from "react-icons/tb";
+// import { BsHospital } from "react-icons/bs";
+// import { MdOutlineMedicalServices } from "react-icons/md";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { MdOutlineVerified } from "react-icons/md";
 const WorkProcess = () => {
   return (
     <div className="processWork py-4 ">
       <div className="container ">
         <div className="row ">
           <div className="row  m-0 serviceSubHeading text-center">
-            <h1>How It Works!</h1>
+            <h6>How Does It Works ?</h6>
           </div>
           <div className="row m-0 text-center">
             <div className="w-50 text-center m-auto process">
-              <p>
-                Embark on your well-being journey at MaaDico Healthcare. Select
-                an expert, effortlessly book, and receive personalized care.
-                Simplifying your path to a healthier you.
-              </p>
+              <h5>Process Flow at Maadico</h5>
             </div>
           </div>
-          <div className="row m-0 ourServices mt-4">
+          {/* <div className="row m-0 ourServices mt-4">
             <div className="col-md-4 ">
               <div className=" boxProcess m-1 text-center ">
                 <div className="row logoProcess m-auto text-center">
@@ -73,6 +71,170 @@ const WorkProcess = () => {
                   <p>
                     Experience dedicated services and personalized plans,
                     guiding you towards holistic well-being.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div> */}
+          <div className="row m-o p-0 g-0">
+            <div className="processing">
+              <div className="processPart">
+                <div className="row">
+                  <div className="processUp">
+                    <div className="text">
+                      <h6>STEP 01</h6>
+                      <p>We Collect Your Data</p>
+                    </div>
+                    <div className="icons1">
+                      <FaLongArrowAltRight fontSize={25} />
+                    </div>
+                  </div>
+                </div>
+                <div className="borderProcess"></div>
+                <div className="row processPoint">
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Fitness</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Exercise</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>weighLoss</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Yoga</span>
+                  </p>
+                </div>
+              </div>
+              <div className="processPart">
+                <div className="row">
+                  <div className="processUp">
+                    <div className="text">
+                      <h6>STEP 01</h6>
+                      <p>We Collect Your Data</p>
+                    </div>
+                    <div className="icons1">
+                      <FaLongArrowAltRight fontSize={25} />
+                    </div>
+                  </div>
+                </div>
+                <div className="borderProcess"></div>
+                <div className="row processPoint">
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Fitness</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Exercise</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>weighLoss</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Yoga</span>
+                  </p>
+                </div>
+              </div>
+              <div className="processPart">
+                <div className="row">
+                  <div className="processUp">
+                    <div className="text">
+                      <h6>STEP 01</h6>
+                      <p>We Collect Your Data</p>
+                    </div>
+                    <div className="icons1">
+                      <FaLongArrowAltRight fontSize={25} />
+                    </div>
+                  </div>
+                </div>
+                <div className="borderProcess"></div>
+                <div className="row processPoint">
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Fitness</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Exercise</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>weighLoss</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Yoga</span>
+                  </p>
+                </div>
+              </div>
+              <div className="processPart">
+                <div className="row">
+                  <div className="processUp">
+                    <div className="text">
+                      <h6>STEP 01</h6>
+                      <p>We Collect Your Data</p>
+                    </div>
+                    <div className="icons1">
+                      <FaLongArrowAltRight fontSize={25} />
+                    </div>
+                  </div>
+                </div>
+                <div className="borderProcess"></div>
+                <div className="row processPoint">
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Fitness</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Exercise</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>weighLoss</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
+                    <span>Yoga</span>
                   </p>
                 </div>
               </div>
