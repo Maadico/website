@@ -3,6 +3,7 @@ import doctor from "../Images/doctor2.png";
 import doctor2 from "../Images/mobileDoctopr2.png";
 // import { IoCall } from "react-icons/io5";
 import { MdAddIcCall } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -14,9 +15,7 @@ const Hero = () => {
               <p>⚕️ Welcome to MaaDico Healthcare </p>
             </div>
             <div className="row heroColor ">
-              <h1 className="largeDevice">
-                Book Your Doctor <br /> Appointment <br /> Online
-              </h1>
+              <h1 className="largeDevice">REVOLUTION IS REVERSAL</h1>
             </div>
             <div className="row heroColor mt-2">
               <p className="description">
@@ -28,7 +27,16 @@ const Hero = () => {
             <div className="row heroColor m-0 p-0 ">
               <div className="btnHero m-0 p-0 ">
                 <a href="#contacts" className="btn Appointment ">
-                  Book An Appointment
+                  <span>
+                    <FaWhatsapp fontSize={16} />
+                  </span>
+
+                  <span
+                    className="mx-2 "
+                    style={{ fontSize: "small", fontWeight: "400" }}
+                  >
+                    Whatsapp us
+                  </span>
                 </a>
                 <a
                   href="#not work"

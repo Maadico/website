@@ -83,7 +83,7 @@ const WorkProcess = () => {
                   <div className="processUp">
                     <div className="text">
                       <h6>STEP 01</h6>
-                      <p>We Collect Your Data</p>
+                      <p>DOCTOR CONSULTATION</p>
                     </div>
                     <div className="icons1">
                       <FaLongArrowAltRight fontSize={25} />
@@ -96,25 +96,25 @@ const WorkProcess = () => {
                     <span className="mx-2">
                       <MdOutlineVerified />
                     </span>
+                    <span>Nutations</span>
+                  </p>
+                  <p>
+                    <span className="mx-2">
+                      <MdOutlineVerified />
+                    </span>
                     <span>Fitness</span>
                   </p>
                   <p>
                     <span className="mx-2">
                       <MdOutlineVerified />
                     </span>
-                    <span>Exercise</span>
+                    <span>Stress</span>
                   </p>
                   <p>
                     <span className="mx-2">
                       <MdOutlineVerified />
                     </span>
-                    <span>weighLoss</span>
-                  </p>
-                  <p>
-                    <span className="mx-2">
-                      <MdOutlineVerified />
-                    </span>
-                    <span>Yoga</span>
+                    <span>Sleep</span>
                   </p>
                 </div>
               </div>
@@ -122,8 +122,8 @@ const WorkProcess = () => {
                 <div className="row">
                   <div className="processUp">
                     <div className="text">
-                      <h6>STEP 01</h6>
-                      <p>We Collect Your Data</p>
+                      <h6>STEP 02</h6>
+                      <p>We Analyse Our Consultation Call </p>
                     </div>
                     <div className="icons1">
                       <FaLongArrowAltRight fontSize={25} />
@@ -136,25 +136,19 @@ const WorkProcess = () => {
                     <span className="mx-2">
                       <MdOutlineVerified />
                     </span>
-                    <span>Fitness</span>
+                    <span>Meal Mapping</span>
                   </p>
                   <p>
                     <span className="mx-2">
                       <MdOutlineVerified />
                     </span>
-                    <span>Exercise</span>
+                    <span>Macro And Micronutrients Reports</span>
                   </p>
                   <p>
                     <span className="mx-2">
                       <MdOutlineVerified />
                     </span>
-                    <span>weighLoss</span>
-                  </p>
-                  <p>
-                    <span className="mx-2">
-                      <MdOutlineVerified />
-                    </span>
-                    <span>Yoga</span>
+                    <span>Yoga Exercise Analysis</span>
                   </p>
                 </div>
               </div>
@@ -162,8 +156,8 @@ const WorkProcess = () => {
                 <div className="row">
                   <div className="processUp">
                     <div className="text">
-                      <h6>STEP 01</h6>
-                      <p>We Collect Your Data</p>
+                      <h6>STEP 03</h6>
+                      <p>Personalised Kits Your Door Steps</p>
                     </div>
                     <div className="icons1">
                       <FaLongArrowAltRight fontSize={25} />
@@ -176,65 +170,25 @@ const WorkProcess = () => {
                     <span className="mx-2">
                       <MdOutlineVerified />
                     </span>
-                    <span>Fitness</span>
+                    <span>Personalised Herbal Remedy</span>
                   </p>
                   <p>
                     <span className="mx-2">
                       <MdOutlineVerified />
                     </span>
-                    <span>Exercise</span>
+                    <span>Personalised Pack/Compress</span>
                   </p>
                   <p>
                     <span className="mx-2">
                       <MdOutlineVerified />
                     </span>
-                    <span>weighLoss</span>
+                    <span>Personalised Diet Charts</span>
                   </p>
                   <p>
                     <span className="mx-2">
                       <MdOutlineVerified />
                     </span>
-                    <span>Yoga</span>
-                  </p>
-                </div>
-              </div>
-              <div className="processPart">
-                <div className="row">
-                  <div className="processUp">
-                    <div className="text">
-                      <h6>STEP 01</h6>
-                      <p>We Collect Your Data</p>
-                    </div>
-                    <div className="icons1">
-                      <FaLongArrowAltRight fontSize={25} />
-                    </div>
-                  </div>
-                </div>
-                <div className="borderProcess"></div>
-                <div className="row processPoint">
-                  <p>
-                    <span className="mx-2">
-                      <MdOutlineVerified />
-                    </span>
-                    <span>Fitness</span>
-                  </p>
-                  <p>
-                    <span className="mx-2">
-                      <MdOutlineVerified />
-                    </span>
-                    <span>Exercise</span>
-                  </p>
-                  <p>
-                    <span className="mx-2">
-                      <MdOutlineVerified />
-                    </span>
-                    <span>weighLoss</span>
-                  </p>
-                  <p>
-                    <span className="mx-2">
-                      <MdOutlineVerified />
-                    </span>
-                    <span>Yoga</span>
+                    <span>Special Yoga Sessions</span>
                   </p>
                 </div>
               </div>

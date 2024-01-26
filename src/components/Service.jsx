@@ -7,9 +7,7 @@ const Service = () => {
       <div className="container ">
         <div className="row ">
           <div className="row m-0 py-3 g-0 serviceSubHeading text-center">
-            <h2>
-              Different types of department we <br /> have for your health care
-            </h2>
+            <h2>Our Programmers</h2>
           </div>
           {/* all services section */}
 
@@ -22,7 +20,7 @@ const Service = () => {
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
-                  <h5>DIABETES REVERSAL PROGRAM</h5>
+                  <h5>DIABETES REVERSAL </h5>
                 </div>
                 <div className="row SubHeading m-0 p-0">
                   <p>
@@ -113,7 +111,7 @@ const Service = () => {
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
-                  <h5>THERAPEUTIC YOGA</h5>
+                  <h5>Personalised Yoga Sessions</h5>
                 </div>
                 <div className="row SubHeading m-0 p-0">
                   <p>
@@ -136,7 +134,7 @@ const Service = () => {
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
-                  <h5>1-1 DIET WITH DOCTOR</h5>
+                  <h5>1-1 Doctor Consultation for Personalised Diet Plans</h5>
                 </div>
                 <div className="row SubHeading m-0 p-0">
                   <p>

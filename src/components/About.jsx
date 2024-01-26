@@ -26,9 +26,7 @@ const About = () => {
                     <span>
                       <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
-                    <span className="aboutSubPoint m-2">
-                      DIABETES REVERSAL PROGRAM
-                    </span>
+                    <span className="aboutSubPoint m-2">DIABETES REVERSAL</span>
                   </p>
                 </div>
                 <div className="col-sm-6">
@@ -36,9 +34,7 @@ const About = () => {
                     <span>
                       <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
-                    <span className="aboutSubPoint m-2">
-                      WEIGHT MANAGEMENT PROGRAM
-                    </span>
+                    <span className="aboutSubPoint m-2">WEIGHT MANAGEMENT</span>
                   </p>
                 </div>
               </div>
@@ -49,9 +45,7 @@ const About = () => {
                     <span>
                       <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
-                    <span className="aboutSubPoint m-2">
-                      THYROID REVERSAL PROGRAM
-                    </span>
+                    <span className="aboutSubPoint m-2">THYROID REVERSAL</span>
                   </p>
                 </div>
                 <div className="col-sm-6">
@@ -60,7 +54,7 @@ const About = () => {
                       <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
                     </span>
                     <span className="aboutSubPoint m-2">
-                      PCOD/PCOS REVERSAL PROGRAMS
+                      PCOD/PCOS REVERSAL
                     </span>
                   </p>
                 </div>
@@ -68,7 +62,10 @@ const About = () => {
             </div>
             <div className="bookAppointMentBtn mt-2">
               <div className="btnHero m-0 p-0">
-                <a href="#contacts" className="btn Appointment2 aboutBtnSmall">
+                <a
+                  href="#contacts"
+                  className="m-auto mt-2 btn Appointment2 aboutBtnSmall"
+                >
                   Book An Appointment
                 </a>
               </div>

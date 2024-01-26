@@ -12,8 +12,8 @@
 }
 
 .Appointment2:hover {
-    background-color: rgb(4, 82, 206);
-    color: white;
+    background-color: rgb(4, 82, 206) !important;
+    color: white !important;
 }
 
 .aboutHeading h5 {
@@ -26,7 +26,7 @@
 }
 
 .aboutSubPoint {
-    font-size: small;
+    font-size: medium;
 }
 
 /* .noneAtSmallAbout {
@@ -37,6 +37,7 @@
 .aboutDescription p {
     opacity: 0.8;
     text-align: justify;
+    font-size: small;
 }
 
 .AboutPoint {

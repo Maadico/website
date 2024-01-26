@@ -93,7 +93,7 @@ const Doctor = () => {
                       <h6 style={{ fontSize: "small" }}>{d.name}</h6>
                     </div>
                     <div className="department row text-center ">
-                      <span>{d.dep}</span>
+                      <span style={{ fontSize: "small" }}>{d.dep}</span>
                     </div>
                     <div className="row social  m-0 p-0">
                       <div className="socialId m-0 p-0">
