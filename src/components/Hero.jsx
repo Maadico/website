@@ -45,7 +45,11 @@ const Hero = () => {
             </div>
             <div className="row heroColor m-0 p-0 ">
               <div className="btnHero m-0 p-0 ">
-                <a href="#contacts" className="btn Appointment ">
+                <a
+                  href="https://wa.me/919833429932"
+                  target="blank"
+                  className="btn Appointment "
+                >
                   <span>
                     <FaWhatsapp fontSize={16} />
                   </span>
@@ -58,7 +62,7 @@ const Hero = () => {
                   </span>
                 </a>
                 <a
-                  href="#not work"
+                  href="tel:+919833429932"
                   className="btn AppointmentCall mx-3 px-4 btn-outline-light"
                 >
                   <span>

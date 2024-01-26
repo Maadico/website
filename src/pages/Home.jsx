@@ -54,7 +54,7 @@ const Home = () => {
       {showButton && (
         <div className="fixIcon">
           <div className="icon1">
-            <a href="#notWork">
+            <a href="tel:+919833429932">
               <MdAddIcCall fontSize={25} color="white" />
             </a>
           </div>
