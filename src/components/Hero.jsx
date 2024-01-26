@@ -1,10 +1,10 @@
 import React from "react";
-import doctor from "../Images/doctor2.png";
-import doctor2 from "../Images/mobileDoctopr2.png";
+import doctor from "../Images/Online Doctor-bro.png";
+import doctor2 from "../Images/Online Doctor-bro.png";
 // import { IoCall } from "react-icons/io5";
 import { MdAddIcCall } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
-
+import Typewriter from "typewriter-effect";
 const Hero = () => {
   return (
     <div className="Hero">
@@ -16,6 +16,25 @@ const Hero = () => {
             </div>
             <div className="row heroColor ">
               <h1 className="largeDevice">REVOLUTION IS REVERSAL</h1>
+            </div>
+            <div className="row subtitle heroTitle  flex-wrap-reverse">
+              <h5>
+                <Typewriter
+                  className="text-center"
+                  options={{
+                    strings: [
+                      "Diabetes Reversal",
+                      "Thyroid Reversal",
+                      "PCOD/PCOS Reversal",
+                      "Weight Loss",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    cursor: "",
+                    wrapperClassName: "typewriterpara",
+                  }}
+                />
+              </h5>
             </div>
             <div className="row heroColor mt-2">
               <p className="description">

@@ -56,7 +56,7 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <a href="#contacts" className="btn  navAppointment mx-2 py-2">
-                    Make Appointment
+                    Book An Appointment
                   </a>
                 </li>
               </ul>

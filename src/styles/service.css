@@ -5,9 +5,12 @@
 
 }
 
+.heroTitle h5 {
+    color: white;
+}
 
 .serviceSubHeading h2 {
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .box {

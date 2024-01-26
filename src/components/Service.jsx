@@ -7,7 +7,7 @@ const Service = () => {
       <div className="container ">
         <div className="row ">
           <div className="row m-0 py-3 g-0 serviceSubHeading text-center">
-            <h2>Our Programmers</h2>
+            <h2>Our Programs</h2>
           </div>
           {/* all services section */}
 
