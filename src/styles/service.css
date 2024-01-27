@@ -1,5 +1,6 @@
 .service {
-    background-color: white;
+
+    background-color: rgb(246, 252, 252) !important;
     height: 100%;
     width: 100%;
 
