@@ -102,6 +102,7 @@
     background-color: white;
     padding: 10px 0;
     margin: 10px 0;
+    /* width: 300px; */
 }
 
 .leftContactList .l {
@@ -112,6 +113,10 @@
     align-items: center;
     border-radius: 50%;
     background-color: rgb(158, 245, 216);
+}
+
+.r {
+    width: 200px;
 }
 
 .l span {
@@ -129,6 +134,13 @@
 .rightContactList {
     background-color: white;
     padding: 20px 10px;
+}
+
+@media screen and (max-width:991px) {
+    .r {
+        width: 200px;
+        font-size: small !important;
+    }
 }
 
 @media screen and (max-width:767px) {

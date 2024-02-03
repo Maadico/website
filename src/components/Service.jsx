@@ -1,6 +1,11 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { TbBrandSugarizer } from "react-icons/tb";
+import { FaWeight } from "react-icons/fa";
+import { GiFeatherNecklace } from "react-icons/gi";
+import { TbReport } from "react-icons/tb";
+import { GrYoga } from "react-icons/gr";
+import { SiGooglemeet } from "react-icons/si";
 const Service = () => {
   return (
     <div className="service py-5 " id="service">
@@ -39,7 +44,7 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <TbBrandSugarizer />
+                    <FaWeight />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -62,7 +67,7 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <TbBrandSugarizer />
+                    <GiFeatherNecklace />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -85,7 +90,7 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <TbBrandSugarizer />
+                    <TbReport />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -107,7 +112,7 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <TbBrandSugarizer />
+                    <GrYoga />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -130,7 +135,7 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <TbBrandSugarizer />
+                    <SiGooglemeet />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">

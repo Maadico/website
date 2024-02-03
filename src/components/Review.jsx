@@ -4,11 +4,43 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import profile from "../Images/heroDoctor-hd.png";
+import profile from "../Images/MaaDico Logo - Monogram_2.png";
 // import required modules
 import { Keyboard, Pagination, Navigation, Autoplay } from "swiper/modules";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { IoIosStarHalf } from "react-icons/io";
+const patients = [
+  {
+    message:
+      "I’ve had the pleasure of engaging with Maadico for Diabetes and I must say, their commitment to excellence is evident in every aspect. The team at Maadico exemplifies professionalism, delivering top-notch solutions tailored to individual needs.",
+    name: "-Mukesh Bansal",
+  },
+  {
+    message:
+      "From the moment I started working with them, I felt a genuine concern for my well-being. Maadico’s expertise and innovative approaches have had a positive impact on my health journey. Their dedication to client satisfaction and the seamless integration of technology make them a standout choice in the realm of health and wellness.",
+    name: "-Ranjana Arora",
+  },
+  {
+    message:
+      "I wholeheartedly recommend Maadico to anyone seeking a reliable partner on their path to better health.",
+    name: "-Satish Aggarwal",
+  },
+  {
+    message:
+      "Embarking on a weight loss journey with Maadico has been a game-changer for me. The personalized approach and comprehensive programs they offer are not only effective but also sustainable.",
+    name: "-Kavita Thakkar",
+  },
+  {
+    message:
+      "Experiencing improvements in my thyroid health has been a testament to the effectiveness of Maadico’s strategies. I highly recommend their services to anyone seeking a holistic and successful path to thyroid reversal.",
+    name: "-Deepika Jain",
+  },
+  {
+    message:
+      "I am immensely grateful for the life-changing experience I’ve had with Maadico’s diabetes reversal programs. Their approach goes beyond managing symptoms, delving into the root causes of diabetes with precision and care.",
+    name: "Vandana Goenka",
+  },
+];
 const Review = () => {
   return (
     <div className="review">
@@ -33,17 +65,14 @@ const Review = () => {
               modules={[Keyboard, Pagination, Navigation, Autoplay]}
               className="mySwiper reviewSection"
             >
-              {[1, 2, 3, 4, 5, 6].map((x) => (
-                <SwiperSlide className="testimonial">
+              {patients?.map((x, i) => (
+                <SwiperSlide className="testimonial" key={i}>
                   <div className="row descriptionReview">
                     <p>
                       <span className="mx-2">
                         <FaQuoteLeft fontSize={20} />
                       </span>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Ipsum amet consectetur porro quia. Nihil aperiam deserunt
-                      commodi fugiat, accusantium ea delectus soluta fuga, ipsa
-                      quod aut blanditiis error at ullam.{" "}
+                      {x.message}
                       <span className="mx-1">
                         <FaQuoteRight fontSize={20} />
                       </span>
@@ -78,7 +107,7 @@ const Review = () => {
                         <img src={profile} alt="" />
                       </div>
                       <div className="detailsPatient p-2">
-                        <h6>Neha Sharma</h6>
+                        <h6>{x.name}</h6>
                         <p>Patients</p>
                       </div>
                     </div>
@@ -94,10 +123,10 @@ const Review = () => {
               </div>
               <div className="row aboutDescription atSmallScreenReview">
                 <p className="mt-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquid deserunt pariatur perspiciatis quisquam nam totam,
-                  esse consectetur officiis voluptas nulla? Rem minus odit
-                  blanditiis veritatis alias deserunt quaerat eum quo?
+                  I am immensely grateful for the life-changing experience I’ve
+                  had with Maadico’s diabetes reversal programs. Their approach
+                  goes beyond managing symptoms, delving into the root causes of
+                  diabetes with precision and care.
                 </p>
               </div>
             </div>

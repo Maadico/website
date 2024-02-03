@@ -151,7 +151,7 @@ const Contact = () => {
       <div className="contacts" id="contacts">
         <div className="container">
           <div className="row p-2  ">
-            <div className="col-md-3">
+            <div className="col-md-4">
               <div className="row mt-4">
                 <div className="leftContactList ">
                   <div className="l text-center">
@@ -161,7 +161,7 @@ const Contact = () => {
                   </div>
                   <div className="r mx-1">
                     <h6>Phone Number</h6>
-                    <p>+9878655567</p>
+                    <p> 9833429932</p>
                   </div>
                 </div>
                 <div className="leftContactList">
@@ -172,7 +172,7 @@ const Contact = () => {
                   </div>
                   <div className="r mx-1">
                     <h6>Email Address</h6>
-                    <p>inf0@gmail.com</p>
+                    <p>maadicohealthcare@gmail.com</p>
                   </div>
                 </div>
                 <div className="leftContactList">
@@ -188,7 +188,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-8  mx-2 my-2 removeMarginAt767 ">
+            <div className="col-md-7  mx-2 my-2 removeMarginAt767 ">
               <div className="row m-0 my-4 py-2 px-2 g-0">
                 <div className="rightContactList">
                   <div className="row ">
@@ -197,13 +197,13 @@ const Contact = () => {
                     </h4>
                   </div>
                   <div className="row sizeDecCon">
-                    <p>
+                    {/* <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Distinctio nulla asperiores minima quo, sunt est voluptate
-                    </p>
+                    </p> */}
                   </div>
                   <form onSubmit={handleSubmit}>
-                    <div className="row">
+                    <div className="row py-2">
                       <div className="col-md-6 mb-2">
                         <input
                           type="text"
@@ -258,7 +258,11 @@ const Contact = () => {
                     <div className="row">
                       <div className="col-md-6">
                         <button
-                          className="btn btn-primary"
+                          className="btn"
+                          style={{
+                            backgroundColor: " rgb(24, 50, 91)",
+                            color: "white",
+                          }}
                           default={loading}
                           type="submit"
                         >

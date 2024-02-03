@@ -22,7 +22,7 @@ const Footer = () => {
                   <span>
                     <MdEmail color="rgb(129,240,224)" fontSize={25} />
                   </span>
-                  <span>inf0@gmail.com</span>
+                  <span>maadicohealthcare@gmail.com</span>
                 </p>
                 <p>
                   <span>

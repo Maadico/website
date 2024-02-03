@@ -2,9 +2,10 @@
     height: auto;
     width: 100%;
     overflow: hidden !important;
-    /* background-color: rgb(29, 99, 211); */
-    background-image: linear-gradient(to right, rgb(4, 82, 206), rgb(29, 99, 211));
+    background-color: rgb(24, 50, 91);
+    /* background-image: linear-gradient(to right, rgb(4, 82, 206), rgb(29, 99, 211)); */
     /* border-radius: 0 190px 0 0; */
+
 }
 
 .heroColor p {

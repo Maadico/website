@@ -27,14 +27,14 @@ a {
 }
 
 a:hover {
-    color: rgb(4, 82, 206) !important;
+    color: rgb(24, 50, 91) !important;
 }
 
 .navAppointment {
     color: white;
     font-weight: 400 !important;
     font-size: medium !important;
-    background-color: rgb(14, 113, 194);
+    background-color: rgb(24, 50, 91);
     border: 0 !important;
     outline: 0 !important;
 }
@@ -42,5 +42,5 @@ a:hover {
 .navAppointment:hover {
     color: white !important;
     font-size: medium !important;
-    background-color: rgb(4, 137, 247) !important;
+    background-color: rgb(24, 50, 91);
 }

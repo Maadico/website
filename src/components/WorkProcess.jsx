@@ -78,7 +78,7 @@ const WorkProcess = () => {
           </div> */}
           <div className="row m-o p-0 g-0">
             <div className="processing">
-              <div className="processPart">
+              <div className="processPart colPlate_1">
                 <div className="row">
                   <div className="processUp">
                     <div className="text">
@@ -96,7 +96,7 @@ const WorkProcess = () => {
                     <span className="mx-2">
                       <MdOutlineVerified />
                     </span>
-                    <span>Nutations</span>
+                    <span>Nutrition</span>
                   </p>
                   <p>
                     <span className="mx-2">
@@ -118,7 +118,7 @@ const WorkProcess = () => {
                   </p>
                 </div>
               </div>
-              <div className="processPart">
+              <div className="processPart colPlate_2">
                 <div className="row">
                   <div className="processUp">
                     <div className="text">
@@ -152,16 +152,16 @@ const WorkProcess = () => {
                   </p>
                 </div>
               </div>
-              <div className="processPart">
+              <div className="processPart colPlate_3">
                 <div className="row">
                   <div className="processUp">
                     <div className="text">
                       <h6>STEP 03</h6>
                       <p>Personalised Kits Your Door Steps</p>
                     </div>
-                    <div className="icons1">
+                    {/* <div className="icons1">
                       <FaLongArrowAltRight fontSize={25} />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="borderProcess"></div>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Brolimo:wght@400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -45,4 +47,25 @@ a {
 
 .developer p a:hover {
   color: rgba(255, 255, 255, 0.808) !important;
+}
+
+
+
+/* Apply Brolimo font to all elements */
+body {
+  font-family: 'Brolimo', sans-serif;
+}
+
+/* Example for applying Brolimo font to specific elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+span,
+p {
+  font-family: 'Brolimo', sans-serif;
+  font-weight: 400;
+  /* Regular */
 }

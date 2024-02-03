@@ -17,23 +17,23 @@ const Achivement = () => {
             <span className="achiveIcon">
               <IoPersonSharp />
             </span>
-            <h5>6000+</h5>
-            <p>Sugar Patient</p>
+            <h5>3000+</h5>
+            <p>Patients</p>
           </div>
 
           <div className="achievementCat">
             <span className="achiveIcon">
               <BiWorld />
             </span>
-            <h5>345+</h5>
-            <p>Cities Patients</p>
+            <h5>15+</h5>
+            <p>Cities </p>
           </div>
 
           <div className="achievementCat">
             <span className="achiveIcon">
               <IoIosPeople />
             </span>
-            <h5>100+</h5>
+            <h5>10+</h5>
             <p>Expert Doctor</p>
           </div>
 

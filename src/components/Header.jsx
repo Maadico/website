@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../Images/secondDoctorlogo.png";
+import logo from "../Images/MaaDico Logo - Monogram_2.png";
 const Header = () => {
   return (
     <div className="container-fluid" id="navbarColor">
