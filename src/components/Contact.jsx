@@ -11,15 +11,16 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    message: "",
   });
   const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if (!contact.name || !contact.phone) {
+      return;
+    }
     // console.table(contact);
     const apiUrl =
-      "https://sheet.best/api/sheets/6827987d-0edf-42c0-bbd7-1870c59712c3";
+      "https://sheet.best/api/sheets/9da7de45-3917-4592-99e9-a04634108b8b";
     console.log("alert", contact);
     const contactDetaiils = {
       Name: contact.name,
@@ -37,10 +38,6 @@ const Contact = () => {
           name: "",
           email: "",
           phone: "",
-
-          gender: "",
-
-          appointmentDate: "",
         });
         // alert("data is submitted");
       })
