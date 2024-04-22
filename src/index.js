@@ -2,13 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-
+import AppointMent from "./context/AppointMent";
+import UserProvider from "./context/UserProvider";
+import Order from "./context/Order";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppointMent>
+      <UserProvider>
+        <Order>
+          <App />
+        </Order>
+      </UserProvider>
+    </AppointMent>
   </React.StrictMode>
 );
-
-reportWebVitals();

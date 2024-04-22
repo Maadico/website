@@ -6,7 +6,10 @@ import { GiFeatherNecklace } from "react-icons/gi";
 import { TbReport } from "react-icons/tb";
 import { GrYoga } from "react-icons/gr";
 import { SiGooglemeet } from "react-icons/si";
+import { useNavigate } from "react-router-dom";
+
 const Service = () => {
+  const navigate = useNavigate();
   return (
     <div className="service py-5 " id="service">
       <div className="container ">
@@ -17,7 +20,10 @@ const Service = () => {
           {/* all services section */}
 
           <div className="row m-0 p-0 g-0 ourServices">
-            <div className="col-md-4 space">
+            <div
+              className="col-md-4 space"
+              onClick={() => navigate("/program/1")}
+            >
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
@@ -40,7 +46,10 @@ const Service = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 space">
+            <div
+              className="col-md-4 space"
+              onClick={() => navigate("/program/2")}
+            >
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
@@ -63,7 +72,10 @@ const Service = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 space">
+            <div
+              className="col-md-4 space"
+              onClick={() => navigate("/program/3")}
+            >
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
@@ -86,7 +98,10 @@ const Service = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 space">
+            <div
+              className="col-md-4 space"
+              onClick={() => navigate("/program/4")}
+            >
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
@@ -125,9 +140,7 @@ const Service = () => {
                   </p>
                 </div>
                 <div className="row readMore m-0 p-0">
-                  <span>
-                    Read More <FaLongArrowAltRight />
-                  </span>
+                  <span>{/* Read More <FaLongArrowAltRight /> */}</span>
                 </div>
               </div>
             </div>
@@ -148,9 +161,7 @@ const Service = () => {
                   </p>
                 </div>
                 <div className="row readMore m-0 p-0">
-                  <span>
-                    Read More <FaLongArrowAltRight />
-                  </span>
+                  <span>{/* Read More <FaLongArrowAltRight /> */}</span>
                 </div>
               </div>
             </div>

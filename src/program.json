@@ -1,0 +1,93 @@
+[
+  {
+    "id": "66225d59782246eb603b44b7",
+    "title": "What is Diabetes Program ?",
+    "Description": "All that you need to reverse diabetes and maintain your health in the long-term",
+    "Components": [
+      "1:1 Live Coaching",
+      "Personalised Diet Charts Customised According to Your Daily Routine",
+      "Personalised Diabetic Kit at Your Doorstep which includes:",
+      {
+        "Items": ["Pancreatic Pack", "Diabetic Care Tea", "Yogasana Module"]
+      },
+      "Daily Diabetes Yoga Sessions Conducted by Our Trained Doctors",
+      "Continuous Doctor Observation and Blood-Sugar Level Monitoring"
+    ],
+     "images": [
+      "https://img.freepik.com/free-photo/doctor-offering-medical-teleconsultation_23-2149328979.jpg?t=st=1713539869~exp=1713543469~hmac=1c26df67b8a0597898b395f816c107e1133a5ad6ae8fdce46abcd04c0c366b39&w=740",
+      "https://img.freepik.com/free-photo/flat-lay-charts-organic-food-lunch-boxes_23-2148515964.jpg?t=st=1713541835~exp=1713545435~hmac=0c15bcc90a6ae7affc114b495e3a68bd28634a2900563c106202d276e921969e&w=740",
+      "https://img.freepik.com/premium-photo/blood-pressure-monitor-blood-glucose-monitor-insulin-syringe-pens-blue-heartshaped-bowl-light-gray-concrete-table-medical-equipment-health-monitoring-therapy_327813-1187.jpg?w=740",
+      "https://img.freepik.com/free-photo/pregnant-women-practicing-yoga-together_23-2150316772.jpg?t=st=1713540377~exp=1713543977~hmac=7daebfc99ed0e688adb44a7889e135047c52a29d2fdc5b68add9c5711aa0dfb0&w=740",
+      "https://img.freepik.com/free-photo/focused-doctor-working-his-desk_23-2147646746.jpg?t=st=1713540489~exp=1713544089~hmac=30eabe8a7120fe612787cb58c9f734fc8a17f509f08f3714c2b9e271b8f70665&w=740"
+    ]
+  },
+  {
+    "title": "What is Thyroid Program ?",
+    "id": "66225d75782246eb603b44ba",
+
+    "Description": "All that you need to reverse thyroid and maintain your health in the long-term",
+    "Components": [
+      "1:1 Live Coaching",
+      "Personalised Diet Charts Customised According to Your Daily Routine",
+      "Personalised Thyroid Kit at Your Doorstep which includes:",
+      {
+        "Items": ["Thyroid Pack", "Thyroid Care Tea", "Yogasana Module"]
+      },
+      "Daily Thyroid Yoga Sessions Conducted by Our Trained Doctors",
+      "Continuous Doctor Observation and Thyroid Level Monitoring"
+    ],
+    "images": [
+      "https://img.freepik.com/free-photo/doctor-offering-medical-teleconsultation_23-2149328979.jpg?t=st=1713539869~exp=1713543469~hmac=1c26df67b8a0597898b395f816c107e1133a5ad6ae8fdce46abcd04c0c366b39&w=740",
+      "https://img.freepik.com/free-photo/flat-lay-charts-organic-food-lunch-boxes_23-2148515964.jpg?t=st=1713541835~exp=1713545435~hmac=0c15bcc90a6ae7affc114b495e3a68bd28634a2900563c106202d276e921969e&w=740",
+      "https://img.freepik.com/premium-photo/blood-pressure-monitor-blood-glucose-monitor-insulin-syringe-pens-blue-heartshaped-bowl-light-gray-concrete-table-medical-equipment-health-monitoring-therapy_327813-1187.jpg?w=740",
+      "https://img.freepik.com/free-photo/pregnant-women-practicing-yoga-together_23-2150316772.jpg?t=st=1713540377~exp=1713543977~hmac=7daebfc99ed0e688adb44a7889e135047c52a29d2fdc5b68add9c5711aa0dfb0&w=740",
+      "https://img.freepik.com/free-photo/focused-doctor-working-his-desk_23-2147646746.jpg?t=st=1713540489~exp=1713544089~hmac=30eabe8a7120fe612787cb58c9f734fc8a17f509f08f3714c2b9e271b8f70665&w=740"
+    ]
+  },
+  {
+    "title": "What is Weight Loss Program ?",
+    "id": "66226a604ba388d69b7728c6",
+
+    "Description": "All that you need to reverse diabetes and maintain your health in the long-term",
+    "Components": [
+      "1:1 Live Coaching",
+      "Personalised Diet Charts Customised According to Your Daily Routine",
+      "Personalised Weight Loss Kit at Your Doorstep which includes:",
+      {
+        "Items": ["Obesity Pack", "Weight Loss Tea", "Yogasana Module"]
+      },
+      "Daily Dynamic Yoga Sessions Conducted by Our Trained Doctors",
+      "Continuous Doctor Observation and Calorie Intake Monitoring"
+    ],
+    "images": [
+      "https://img.freepik.com/free-photo/doctor-offering-medical-teleconsultation_23-2149328979.jpg?t=st=1713539869~exp=1713543469~hmac=1c26df67b8a0597898b395f816c107e1133a5ad6ae8fdce46abcd04c0c366b39&w=740",
+      "https://img.freepik.com/free-photo/flat-lay-charts-organic-food-lunch-boxes_23-2148515964.jpg?t=st=1713541835~exp=1713545435~hmac=0c15bcc90a6ae7affc114b495e3a68bd28634a2900563c106202d276e921969e&w=740",
+      "https://img.freepik.com/premium-photo/blood-pressure-monitor-blood-glucose-monitor-insulin-syringe-pens-blue-heartshaped-bowl-light-gray-concrete-table-medical-equipment-health-monitoring-therapy_327813-1187.jpg?w=740",
+      "https://img.freepik.com/free-photo/pregnant-women-practicing-yoga-together_23-2150316772.jpg?t=st=1713540377~exp=1713543977~hmac=7daebfc99ed0e688adb44a7889e135047c52a29d2fdc5b68add9c5711aa0dfb0&w=740",
+      "https://img.freepik.com/free-photo/focused-doctor-working-his-desk_23-2147646746.jpg?t=st=1713540489~exp=1713544089~hmac=30eabe8a7120fe612787cb58c9f734fc8a17f509f08f3714c2b9e271b8f70665&w=740"
+    ]
+  },
+  {
+    "title": "What is PCOD/PCOS Reversal Program",
+    "id": "66226a6c4ba388d69b7728c9",
+
+    "Description": "All that you need to reverse PCOD/PCOS and maintain your health in the long-term",
+    "Components": [
+      "1:1 Live Coaching",
+      "Personalised Diet Charts Customised According to Your Daily Routine",
+      "Personalised Diabetic Kit at Your Doorstep which includes:",
+      {
+        "Items": ["PCOD/PCOS Pack", "PCOD Care Tea", "Yogasana Module"]
+      },
+      "Daily PCOD/PCOS Yoga Sessions Conducted by Our Trained Doctors",
+      "Continuous Doctor Observation"
+    ],
+    "images": [
+      "https://img.freepik.com/free-photo/doctor-offering-medical-teleconsultation_23-2149328979.jpg?t=st=1713539869~exp=1713543469~hmac=1c26df67b8a0597898b395f816c107e1133a5ad6ae8fdce46abcd04c0c366b39&w=740",
+      "https://img.freepik.com/free-photo/flat-lay-charts-organic-food-lunch-boxes_23-2148515964.jpg?t=st=1713541835~exp=1713545435~hmac=0c15bcc90a6ae7affc114b495e3a68bd28634a2900563c106202d276e921969e&w=740",
+      "https://img.freepik.com/premium-photo/blood-pressure-monitor-blood-glucose-monitor-insulin-syringe-pens-blue-heartshaped-bowl-light-gray-concrete-table-medical-equipment-health-monitoring-therapy_327813-1187.jpg?w=740",
+      "https://img.freepik.com/free-photo/pregnant-women-practicing-yoga-together_23-2150316772.jpg?t=st=1713540377~exp=1713543977~hmac=7daebfc99ed0e688adb44a7889e135047c52a29d2fdc5b68add9c5711aa0dfb0&w=740",
+      "https://img.freepik.com/free-photo/focused-doctor-working-his-desk_23-2147646746.jpg?t=st=1713540489~exp=1713544089~hmac=30eabe8a7120fe612787cb58c9f734fc8a17f509f08f3714c2b9e271b8f70665&w=740"
+    ]
+  }
+]

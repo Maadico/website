@@ -1,5 +1,5 @@
 #navbarColor {
-    background-color: rgb(255, 255, 255) !important;
+    background-color: rgb(255, 255, 255);
     /* padding: 0 !important; */
     /* padding: 1rem 0; */
 }
@@ -8,6 +8,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     color: rgb(61, 59, 81);
+
 }
 
 .logoDoctor img {
@@ -43,4 +44,13 @@ a:hover {
     color: white !important;
     font-size: medium !important;
     background-color: rgb(24, 50, 91);
+}
+
+.priceSet p {
+    font-weight: 600;
+}
+
+.priceSet p .price {
+    text-decoration: line-through;
+    font-weight: 900;
 }

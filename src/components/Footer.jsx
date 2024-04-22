@@ -1,7 +1,11 @@
 import React from "react";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
+import { useLocation } from "react-router-dom";
 const Footer = () => {
+  const { pathname } = useLocation();
+  const isVisible = ["/profile", "/program/2"].includes(pathname);
+
   return (
     <div className="footer ">
       <div className="container ">
@@ -35,32 +39,35 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="foot  ">
-              <div className="footSecondHeading row ">
-                <h4>Quick Links</h4>
-                <h1>
-                  <div className="borderSet2"></div>
-                </h1>
-              </div>
 
-              <div className="footMenu row">
-                <a href="#about">
-                  <p>About us</p>
-                </a>
-                <a href="#service">
-                  <p>Our Service</p>
-                </a>
-                <a href="#doctor">
-                  <p>Our Doctors</p>
-                </a>
-                <a href="#contacts">
-                  <p>Contact</p>
-                </a>
-                <a href="#service">
-                  <p>Review</p>
-                </a>
+            {!isVisible && (
+              <div className="foot  ">
+                <div className="footSecondHeading row ">
+                  <h4>Quick Links</h4>
+                  <h1>
+                    <div className="borderSet2"></div>
+                  </h1>
+                </div>
+                <div className="footMenu row">
+                  <a href="#about">
+                    <p>About us</p>
+                  </a>
+                  <a href="#service">
+                    <p>Our Service</p>
+                  </a>
+                  <a href="#doctor">
+                    <p>Our Doctors</p>
+                  </a>
+                  <a href="#contacts">
+                    <p>Contact</p>
+                  </a>
+                  <a href="#service">
+                    <p>Review</p>
+                  </a>
+                </div>
               </div>
-            </div>
+            )}
+
             <div className="foot">
               <div className="footSecondHeading row">
                 <h4>Our Services</h4>
@@ -87,14 +94,16 @@ const Footer = () => {
                   Connect with MaaDico on socials. Stay healthy, stay informed!"
                 </p>
               </div>
-              <div className="row btnFoot">
-                <a href="#contacts" className="btn btn-outline-light">
-                  <span>
-                    <IoCall fontSize={20} color="rgb(129,240,224)" />
-                  </span>
-                  <span className="mx-2">Book An Appointment</span>
-                </a>
-              </div>
+              {!isVisible && (
+                <div className="row btnFoot">
+                  <a href="#contacts" className="btn btn-outline-light">
+                    <span>
+                      <IoCall fontSize={20} color="rgb(129,240,224)" />
+                    </span>
+                    <span className="mx-2">Book An Appointment</span>
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>

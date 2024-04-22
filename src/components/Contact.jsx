@@ -1,149 +1,70 @@
 import React from "react";
 // import { PiNotebookFill } from "react-icons/pi";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
 // import doctor from "../Images/contactDoctor2.jpg";
 import { IoMdCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
+import { AppointMentContext } from "../context/Mycontext";
+import { DatePicker } from "antd";
+import dayjs from "dayjs";
+import { TimePicker } from "antd";
+
+import customParseFormat from "dayjs/plugin/customParseFormat";
+dayjs.extend(customParseFormat);
+const dateFormat = "YYYY-MM-DD";
+
+dayjs.extend(customParseFormat);
 const Contact = () => {
+  const { handleAppointment, loader } = useContext(AppointMentContext);
+
   const [contact, setContact] = useState({
     name: "",
     email: "",
     phone: "",
+    appointmentTime: "",
+    time: "",
   });
-  const [loading, setLoading] = useState(false);
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!contact.name || !contact.phone) {
+    if (
+      !contact.name ||
+      !contact.phone ||
+      !contact.appointmentTime ||
+      !contact.time
+    ) {
+      alert("all fields necessary");
       return;
     }
-    // console.table(contact);
-    const apiUrl =
-      "https://sheet.best/api/sheets/9da7de45-3917-4592-99e9-a04634108b8b";
-    console.log("alert", contact);
-    const contactDetaiils = {
-      Name: contact.name,
-      Email: contact.email,
-      Phone: contact.phone,
-    };
-    setLoading(true);
-    axios
-      .post(apiUrl, contactDetaiils)
-      .then(function (response) {
-        // Handle successful response
-        // console.log("Response:", response);
-        setLoading(false);
-        setContact({
-          name: "",
-          email: "",
-          phone: "",
-        });
-        // alert("data is submitted");
-      })
-      .catch(function (error) {
-        // Handle error
-        console.error("Error:", error);
-        setLoading(false);
+
+    try {
+      const data = await handleAppointment(contact);
+      alert(data);
+      setContact({
+        name: "",
+        email: "",
+        phone: "",
+        appointmentTime: "",
       });
+    } catch (e) {
+      console.log(e.message);
+      console.log(e);
+    }
+  };
+  const handleDate = (e) => {
+    if (e) {
+      const date = e?.$d;
+      setContact((p) => ({ ...p, appointmentTime: date }));
+      console.log(e.$d);
+    }
+  };
+  const onChange = (time, timeString) => {
+    console.log(time, timeString);
+    setContact((p) => ({ ...p, time: timeString }));
   };
   return (
-    // <div className="contacts" id="contacts">
-    //   <div className="container">
-    //     <div className="row">
-    //       <div className="col-md-6">
-    //         <div className="row colSetContact px-4">
-    //           <div className="row contactHeading ">
-    //             <div className="d-flex flex-row">
-    //               <span className="contactIcon">
-    //                 <PiNotebookFill />
-    //               </span>
-    //               <span className="headingContact mt-1">
-    //                 Make An Appointment
-    //               </span>
-    //             </div>
-    //           </div>
-    //           <div className="row  px-4 ">
-    //             <form onSubmit={handleSubmit}>
-    //               <div className="row">
-    //                 <div className="form-group ">
-    //                   <label htmlFor="inputEmail4">Name</label>
-    //                   <input
-    //                     type="text"
-    //                     value={contact.name}
-    //                     className="form-control"
-    //                     id="inputEmail4"
-    //                     placeholder="Name"
-    //                     onChange={(e) => {
-    //                       setContact((prevContact) => ({
-    //                         ...prevContact,
-    //                         name: e.target.value,
-    //                       }));
-    //                     }}
-    //                     required
-    //                   />
-    //                 </div>
-    //                 <div className="form-group ">
-    //                   <label htmlFor="inputPassword4">Email</label>
-    //                   <input
-    //                     type="email"
-    //                     className="form-control"
-    //                     id="inputPassword4"
-    //                     placeholder="Email"
-    //                     value={contact.email}
-    //                     onChange={(e) => {
-    //                       setContact((prevContact) => ({
-    //                         ...prevContact,
-    //                         email: e.target.value,
-    //                       }));
-    //                     }}
-    //                   />
-    //                 </div>
-    //               </div>
-
-    //               <div className="row">
-    //                 <div className="form-group ">
-    //                   <label htmlFor="inputEmail4">Phone</label>
-    //                   <input
-    //                     type="number"
-    //                     className="form-control"
-    //                     id="inputEmail4"
-    //                     placeholder="phone"
-    //                     value={contact.phone}
-    //                     onChange={(e) => {
-    //                       setContact((prevContact) => ({
-    //                         ...prevContact,
-    //                         phone: e.target.value,
-    //                       }));
-    //                     }}
-    //                     required
-    //                   />
-    //                 </div>
-    //               </div>
-
-    //               <div className="row m-auto py-4">
-    //                 <button
-    //                   type="submit"
-    //                   className="btn btn-primary w-50 atSmall991FullContact"
-    //                   default={loading}
-    //                 >
-    //                   {loading ? "Loading..." : "Book Appointment"}
-    //                 </button>
-    //               </div>
-    //             </form>
-    //           </div>
-    //         </div>
-    //       </div>
-    //       <div className="col-md-6">
-    //         <div className="row">
-    //           <div className="imagContainerContact m-0 p-0">
-    //             <img src={doctor} alt="doctor" />
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <>
       <div className="contacts" id="contacts">
         <div className="container">
@@ -185,7 +106,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-7  mx-2 my-2 removeMarginAt767 ">
+            <div className="col-md-7  mx-2 my-1 removeMarginAt767 ">
               <div className="row m-0 my-4 py-2 px-2 g-0">
                 <div className="rightContactList">
                   <div className="row ">
@@ -193,12 +114,7 @@ const Contact = () => {
                       <b> Make An Appointment</b>{" "}
                     </h4>
                   </div>
-                  <div className="row sizeDecCon">
-                    {/* <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Distinctio nulla asperiores minima quo, sunt est voluptate
-                    </p> */}
-                  </div>
+                  <div className="row sizeDecCon"></div>
                   <form onSubmit={handleSubmit}>
                     <div className="row py-2">
                       <div className="col-md-6 mb-2">
@@ -250,8 +166,24 @@ const Contact = () => {
                           required
                         />
                       </div>
-                    </div>
 
+                      <div className="col-md-6 my-2">
+                        <DatePicker
+                          defaultValue={dayjs("2024-04-19", dateFormat)}
+                          minDate={dayjs("2024-04-18", dateFormat)}
+                          maxDate={dayjs("2024-12-31", dateFormat)}
+                          onChange={handleDate}
+                        />
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-6 my-2">
+                        <TimePicker
+                          onChange={onChange}
+                          defaultOpenValue={dayjs("00:00:00", "HH:mm:ss")}
+                        />
+                      </div>
+                    </div>
                     <div className="row">
                       <div className="col-md-6">
                         <button
@@ -260,10 +192,10 @@ const Contact = () => {
                             backgroundColor: " rgb(24, 50, 91)",
                             color: "white",
                           }}
-                          default={loading}
+                          default={loader}
                           type="submit"
                         >
-                          {loading ? "Loading..." : "Book Appointment"}
+                          {loader ? "Loading..." : "Book Appointment"}
                         </button>
                       </div>
                     </div>
