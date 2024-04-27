@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import programInfos from "../program.json";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Loader from "../components/Loader";
 import { UserContext, OrderContext } from "../context/Mycontext";
@@ -9,7 +9,7 @@ const ProgramView = () => {
   const { id } = useParams();
   const { auth, isAuthenticate } = useContext(UserContext);
   const { handleOrderProgramPlane } = useContext(OrderContext);
-
+  const navigate = useNavigate();
   const programInfo = programInfos[id - 1];
   const [programPrice, setProgramPrice] = useState({});
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,7 +24,6 @@ const ProgramView = () => {
           {
             headers: {
               "Content-Type": "application/json",
-              Authorization: auth?.token,
             },
           }
         );
@@ -59,12 +58,20 @@ const ProgramView = () => {
         pageNo: id,
       };
       console.log(orderDetails);
-      await handleOrderProgramPlane(orderDetails, auth);
+      if (auth && auth?.token) {
+        if (auth?.user?.address) {
+          await handleOrderProgramPlane(orderDetails, auth);
+        } else {
+          console.log("first filled address");
+        }
+      } else {
+        navigate("/login");
+      }
     } catch (e) {
       console.log(e);
     }
   };
-  return loader || !isAuthenticate ? (
+  return loader ? (
     <Loader />
   ) : (
     <div className="container">

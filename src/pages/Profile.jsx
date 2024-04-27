@@ -1,16 +1,27 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import UserProfile from "../components/UserProfile";
 import Service from "../components/Service";
 import { Link, useNavigate } from "react-router-dom";
 import Purchase from "../components/Purchase";
-import { UserContext } from "../context/Mycontext";
+import { OrderContext, UserContext } from "../context/Mycontext";
 import Loader from "../components/Loader";
 
 const Profile = () => {
   const navigate = useNavigate();
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const { auth, setAuth, setIsAuthenticated, isAuthenticate } =
-    useContext(UserContext);
+  const {
+    auth,
+    setAuth,
+    setIsAuthenticated,
+    isAuthenticate,
+    currentIndex,
+    setCurrentIndex,
+  } = useContext(UserContext);
+  const { order } = useContext(OrderContext);
+  useEffect(() => {
+    if (order.length > 0) {
+      setCurrentIndex(2);
+    }
+  }, []);
   const handleLogout = () => {
     setAuth({ ...auth, user: null, token: "" });
     setIsAuthenticated(false);

@@ -10,6 +10,8 @@ const UserProvider = ({ children }) => {
           token: "",
         }
   );
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const [Lprofile, setLprofile] = useState(true);
   const [isAuthenticate, setIsAuthenticated] = useState(false);
   const [address, setAddress] = useState({
@@ -89,6 +91,8 @@ const UserProvider = ({ children }) => {
         address,
         setAddress,
         addressLoader,
+        currentIndex,
+        setCurrentIndex,
       }}
     >
       {children}

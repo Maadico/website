@@ -35,8 +35,8 @@ const Contact = () => {
       !contact.appointmentTime ||
       !contact.time
     ) {
-      alert("all fields necessary");
-      return;
+      // alert("all fields necessary");
+      // return;
     }
 
     try {

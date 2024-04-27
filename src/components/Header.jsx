@@ -11,7 +11,7 @@ const Header = () => {
   const isVisible = ["/profile", "/program/"].includes(pathname);
   const isVisibles =
     pathname.startsWith("/profile") || pathname.startsWith("/program/");
-
+  // console.log(isVisibles);
   return (
     <div
       className="container-fluid"
@@ -23,6 +23,8 @@ const Header = () => {
           <div className="container-fluid">
             <Link className="navbar-brand brandLogo logoDoctor" to="/">
               <img src={logo} alt="logo" />
+              {/* <span>Maadico</span> */}
+
               {/* Doctor */}
             </Link>
             <button
@@ -46,7 +48,7 @@ const Header = () => {
                     Home
                   </Link>
                 </li>
-                {!isVisible && (
+                {!isVisibles && (
                   <>
                     <li className="nav-item">
                       <a className="nav-link" href="#about">
@@ -91,19 +93,23 @@ const Header = () => {
                       className="nav-link"
                       aria-disabled="true"
                     >
+                      <span className="mx-1">
+                        <CgProfile fontSize={30} />
+                      </span>
                       <span>
                         <strong>{auth?.user?.name}</strong>
-                      </span>
-                      <span className="mx-1">
-                        <CgProfile fontSize={35} />
                       </span>
                     </Link>
                   </li>
                 ) : (
                   <li className="nav-item">
                     <Link to="/login" className="nav-link" aria-disabled="true">
+                      {/* <span>
+                        <b> Login</b>
+                      </span> */}
                       <span className="mx-1">
-                        <CgProfile fontSize={35} />
+                        {/* <CgProfile fontSize={25} /> */}
+                        Login
                       </span>
                     </Link>
                   </li>

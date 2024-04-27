@@ -4,8 +4,9 @@ import { IoCall } from "react-icons/io5";
 import { useLocation } from "react-router-dom";
 const Footer = () => {
   const { pathname } = useLocation();
-  const isVisible = ["/profile", "/program/2"].includes(pathname);
-
+  // const isVisible = ["/profile", "/program/2"].includes(pathname);
+  const isVisibles =
+    pathname.startsWith("/profile") || pathname.startsWith("/program/");
   return (
     <div className="footer ">
       <div className="container ">
@@ -40,7 +41,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {!isVisible && (
+            {!isVisibles && (
               <div className="foot  ">
                 <div className="footSecondHeading row ">
                   <h4>Quick Links</h4>
@@ -94,7 +95,7 @@ const Footer = () => {
                   Connect with MaaDico on socials. Stay healthy, stay informed!"
                 </p>
               </div>
-              {!isVisible && (
+              {!isVisibles && (
                 <div className="row btnFoot">
                   <a href="#contacts" className="btn btn-outline-light">
                     <span>

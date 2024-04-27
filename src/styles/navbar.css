@@ -15,6 +15,7 @@
     height: 80px;
     width: 100px;
     object-fit: contain;
+    /* background-color: aqua; */
 }
 
 .nav-item {
