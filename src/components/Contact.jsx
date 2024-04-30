@@ -10,6 +10,7 @@ import { AppointMentContext } from "../context/Mycontext";
 import { DatePicker } from "antd";
 import dayjs from "dayjs";
 import { TimePicker } from "antd";
+import toast from "react-hot-toast";
 
 import customParseFormat from "dayjs/plugin/customParseFormat";
 dayjs.extend(customParseFormat);
@@ -35,18 +36,31 @@ const Contact = () => {
       !contact.appointmentTime ||
       !contact.time
     ) {
-      // alert("all fields necessary");
-      // return;
+      toast("all fields necessary", {
+        style: {
+          borderRadius: "10px",
+          background: " rgb(24, 50, 91)",
+          color: "#fff",
+        },
+      });
+      return;
     }
 
     try {
       const data = await handleAppointment(contact);
-      alert(data);
+      toast(data, {
+        style: {
+          borderRadius: "10px",
+          background: " rgb(24, 50, 91)",
+          color: "#fff",
+        },
+      });
       setContact({
         name: "",
         email: "",
         phone: "",
         appointmentTime: "",
+        time: "",
       });
     } catch (e) {
       console.log(e.message);
@@ -55,14 +69,13 @@ const Contact = () => {
   };
   const handleDate = (e) => {
     if (e) {
-      const date = e?.$d;
-      setContact((p) => ({ ...p, appointmentTime: date }));
+      setContact((p) => ({ ...p, appointmentTime: e }));
       console.log(e.$d);
     }
   };
-  const onChange = (time, timeString) => {
-    console.log(time, timeString);
-    setContact((p) => ({ ...p, time: timeString }));
+  const onChange = (t) => {
+    // console.log(timeString);
+    setContact((p) => ({ ...p, time: t }));
   };
   return (
     <>
@@ -173,6 +186,7 @@ const Contact = () => {
                           minDate={dayjs("2024-04-18", dateFormat)}
                           maxDate={dayjs("2024-12-31", dateFormat)}
                           onChange={handleDate}
+                          value={contact.appointmentTime}
                         />
                       </div>
                     </div>
@@ -180,7 +194,8 @@ const Contact = () => {
                       <div className="col-md-6 my-2">
                         <TimePicker
                           onChange={onChange}
-                          defaultOpenValue={dayjs("00:00:00", "HH:mm:ss")}
+                          // defaultOpenValue={dayjs("00:00:00", "HH:mm:ss")}
+                          value={contact?.time}
                         />
                       </div>
                     </div>
@@ -209,14 +224,14 @@ const Contact = () => {
             <div className="row text-center ">
               <h3>Find Us on Google Maps</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ab
-                labore ut nobis saepe cupiditate, perspiciatis voluptatum
+                Chatrapati Shivaji Marg, Adajan Gam, Adajan, Surat, Gujarat
+                395009
               </p>
             </div>
             <div className="row my-2">
               <iframe
                 title="Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3719.8054487302466!2d72.78721437393946!3d21.199886181881496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMaaDico%20Healthcare%20E%20-%20103%20%2C%20Ramkutir%20Complex%20Surat%2C%20Gujurat%20-%20395009!5e0!3m2!1sen!2sin!4v1705352340716!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7439.693557604641!2d72.79415279181822!3d21.19824485150673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c32918cc96b%3A0xb818680ac8b4bbae!2sChatrapati%20Shivaji%20Marg%2C%20Adajan%20Gam%2C%20Adajan%2C%20Surat%2C%20Gujarat%20395009!5e0!3m2!1sen!2sin!4v1714470470357!5m2!1sen!2sin"
                 width="600"
                 height="450"
                 style={{ border: "0" }}

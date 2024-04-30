@@ -10,7 +10,9 @@ const Header = () => {
     useContext(UserContext);
   const isVisible = ["/profile", "/program/"].includes(pathname);
   const isVisibles =
-    pathname.startsWith("/profile") || pathname.startsWith("/program/");
+    pathname.startsWith("/profile") ||
+    pathname.startsWith("/program/") ||
+    pathname.startsWith("/resetpassword/");
   // console.log(isVisibles);
   return (
     <div
@@ -23,7 +25,7 @@ const Header = () => {
           <div className="container-fluid">
             <Link className="navbar-brand brandLogo logoDoctor" to="/">
               <img src={logo} alt="logo" />
-              {/* <span>Maadico</span> */}
+              <span>Maadico</span>
 
               {/* Doctor */}
             </Link>
@@ -46,6 +48,26 @@ const Header = () => {
                 <li className="nav-item">
                   <Link className="nav-link active" aria-current="page" to="/">
                     Home
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="https://shop.maadico.in"
+                    target="blank"
+                  >
+                    Shop
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="https://liveyoga.maadico.in"
+                    target="blank"
+                  >
+                    Yoga
                   </Link>
                 </li>
                 {!isVisibles && (
@@ -97,7 +119,11 @@ const Header = () => {
                         <CgProfile fontSize={30} />
                       </span>
                       <span>
-                        <strong>{auth?.user?.name}</strong>
+                        <strong>
+                          {auth?.user?.name &&
+                            auth.user.name.charAt(0).toUpperCase() +
+                              auth.user.name.slice(1)}
+                        </strong>
                       </span>
                     </Link>
                   </li>

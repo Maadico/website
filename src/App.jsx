@@ -26,17 +26,22 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import PrivateRoute from "./router/PrivateRoute";
 import ProgramView from "./pages/ProgramView";
+import toast, { Toaster } from "react-hot-toast";
+import ForgetPassword from "./pages/ForgetPassword";
+import ResetPassword from "./pages/ResetPassword";
+
 const App = () => {
   return (
     <BrowserRouter>
       <Main />
+      <Toaster position="top-center" reverseOrder={false} />
     </BrowserRouter>
   );
 };
 
 const Main = () => {
   const { pathname } = useLocation();
-  const isVisible = ["/login", "/register"].includes(pathname);
+  const isVisible = ["/login", "/register", "/forget"].includes(pathname);
   return (
     <div>
       {!isVisible && <Header />}
@@ -44,6 +49,10 @@ const Main = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+
+        <Route path="/forget" element={<ForgetPassword />} />
+        <Route path="/resetpassword/:id" element={<ResetPassword />} />
+
         <Route path="/register" element={<Register />} />
         <Route path="/program/:id" element={<ProgramView />} />
 

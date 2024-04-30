@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../context/Mycontext";
+import toast from "react-hot-toast";
 
 const UserProfile = () => {
   const { auth, handleUpdateAddress, address, setAddress, addressLoader } =
@@ -30,7 +31,24 @@ const UserProfile = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     console.log("currect path", address);
-    await handleUpdateAddress(address);
+    try {
+      await handleUpdateAddress(address);
+      toast("address is updated", {
+        style: {
+          borderRadius: "10px",
+          background: " rgb(24, 50, 91)",
+          color: "#fff",
+        },
+      });
+    } catch (e) {
+      toast("Something went wrong", {
+        style: {
+          borderRadius: "10px",
+          background: " rgb(24, 50, 91)",
+          color: "#fff",
+        },
+      });
+    }
   };
   return (
     <div className="row">

@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Loader from "../components/Loader";
 import { UserContext, OrderContext } from "../context/Mycontext";
+import toast from "react-hot-toast";
 
 const ProgramView = () => {
   const { id } = useParams();
@@ -63,6 +64,13 @@ const ProgramView = () => {
           await handleOrderProgramPlane(orderDetails, auth);
         } else {
           console.log("first filled address");
+          toast("first filled address", {
+            style: {
+              borderRadius: "10px",
+              background: " rgb(24, 50, 91)",
+              color: "#fff",
+            },
+          });
         }
       } else {
         navigate("/login");

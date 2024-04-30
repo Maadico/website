@@ -27,15 +27,15 @@ const Footer = () => {
                   <span>
                     <MdEmail color="rgb(129,240,224)" fontSize={25} />
                   </span>
-                  <span>maadicohealthcare@gmail.com</span>
+                  <span> maadico.in@gmail.com</span>
                 </p>
                 <p>
                   <span>
                     <MdLocationOn color="rgb(129,240,224)" fontSize={25} />
                   </span>
                   <span>
-                    MaaDico Healthcare E - 103 , Ramkutir Complex Surat, Gujurat
-                    - 395009
+                    Chatrapati Shivaji Marg, Adajan Gam, Adajan, Surat, Gujarat
+                    395009
                   </span>
                 </p>
               </div>
@@ -77,10 +77,14 @@ const Footer = () => {
                 </h1>
               </div>
               <div className="row footMenu2">
+                <a href="https://shop.maadico.in" target="blank">
+                  <p>Shop</p>
+                </a>
+                <a href="https://liveyoga.maadico.in" target="blank">
+                  <p>Yoga</p>
+                </a>
                 <p>Term of use</p>
                 <p>Privacy policy</p>
-                <p>contact support</p>
-                <p>Carrers</p>
               </div>
             </div>
             <div className="foot ">
@@ -112,8 +116,8 @@ const Footer = () => {
       <div className="row my-2 text-center developer">
         <p>
           Copyright ©️ 2024 Maadico | Developed by{" "}
-          <a href="https://coderharsh.in" target="blank">
-            CodeHarsh
+          <a href="https://disneygraphics.com/" target="blank">
+            Disney Graphics
           </a>
         </p>
       </div>

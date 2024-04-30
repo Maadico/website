@@ -103,7 +103,7 @@ const Login = () => {
               </div>
 
               <div className="d-flex justify-content-between align-items-center">
-                <Link to="#!" className="text-body">
+                <Link to="/forget" className="text-body">
                   Forgot password?
                 </Link>
               </div>
