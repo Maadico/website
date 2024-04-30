@@ -81,6 +81,9 @@ const ResetPassword = () => {
               </div>
 
               <div data-mdb-input-init className="row  mb-1">
+                <label className="form-label" htmlFor="form3Example3">
+                  password address
+                </label>
                 <input
                   type="password"
                   id="form3Example3"
@@ -90,9 +93,6 @@ const ResetPassword = () => {
                   className="form-control form-control"
                   placeholder="Enter a valid password address"
                 />
-                <label className="form-label" htmlFor="form3Example3">
-                  password address
-                </label>
               </div>
 
               <div className="row my-1">

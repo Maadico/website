@@ -70,6 +70,9 @@ const ForgetPassword = () => {
               </div>
 
               <div data-mdb-input-init className="row  mb-1">
+                <label className="form-label" htmlFor="form3Example3">
+                  Email address
+                </label>
                 <input
                   type="email"
                   id="form3Example3"
@@ -79,9 +82,6 @@ const ForgetPassword = () => {
                   className="form-control form-control"
                   placeholder="Enter a valid email address"
                 />
-                <label className="form-label" htmlFor="form3Example3">
-                  Email address
-                </label>
               </div>
 
               <div className="row my-1">

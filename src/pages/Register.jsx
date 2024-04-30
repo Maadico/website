@@ -226,6 +226,9 @@ const Register = () => {
                 </h5>
               </div>
               <div data-mdb-input-init className="form-outline mb-1">
+                <label className="form-label" htmlFor="form3Example3">
+                  Your Name
+                </label>
                 <input
                   type="text"
                   id="form3Example3"
@@ -236,11 +239,11 @@ const Register = () => {
                   placeholder="Enter a Name"
                   required
                 />
-                <label className="form-label" htmlFor="form3Example3">
-                  Your Name
-                </label>
               </div>
               <div data-mdb-input-init className="form-outline mb-1">
+                <label className="form-label" htmlFor="form3Example3">
+                  Email address
+                </label>
                 <div className="d-flex justify-content-between align-items-center">
                   <input
                     type="email"
@@ -262,12 +265,12 @@ const Register = () => {
                     {btnLoad ? "verifying..." : "verify"}
                   </button>
                 </div>
-                <label className="form-label" htmlFor="form3Example3">
-                  Email address
-                </label>
               </div>
 
               <div data-mdb-input-init className="form-outline mb-1">
+                <label className="form-label" htmlFor="form3Example3">
+                  Otp
+                </label>
                 <div className="d-flex justify-content-between align-items-center">
                   <input
                     type="otp"
@@ -290,12 +293,12 @@ const Register = () => {
                     {btnLoad1 ? "verifying..." : "verify"}
                   </button>
                 </div>
-                <label className="form-label" htmlFor="form3Example3">
-                  Otp
-                </label>
               </div>
 
               <div data-mdb-input-init className="form-outline mb-1">
+                <label className="form-label" htmlFor="form3Example4">
+                  Password
+                </label>
                 <input
                   type="password"
                   id="form3Example4"
@@ -305,11 +308,11 @@ const Register = () => {
                   onChange={handleSignUpChange}
                   placeholder="Enter password"
                 />
-                <label className="form-label" htmlFor="form3Example4">
-                  Password
-                </label>
               </div>
               <div data-mdb-input-init className="form-outline mb-1">
+                <label className="form-label" htmlFor="form3Example4">
+                  confirm Password
+                </label>
                 <input
                   type="password"
                   id="form3Example4"
@@ -319,9 +322,6 @@ const Register = () => {
                   onChange={handleSignUpChange}
                   placeholder="Enter confirm Password"
                 />
-                <label className="form-label" htmlFor="form3Example4">
-                  confirm Password
-                </label>
               </div>
               <div className="text-center text-lg-start mt-4 pt-2">
                 <button
