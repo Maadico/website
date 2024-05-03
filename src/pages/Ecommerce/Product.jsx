@@ -1,13 +1,15 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import EcommerceLayout from "../../components/Ecommerce/EcommerceLayout";
+import HomeCarousel from "../../components/Ecommerce/HomeCarousel";
 
 const Product = () => {
   const navigate = useNavigate();
   return (
     <EcommerceLayout>
       <div className="product">
-        <div className="container mt-100">
+        <HomeCarousel />
+        <div className="container-fluid mt-100">
           <h1 className="py-2">Our Products</h1>
           <div className="row">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((p, i) => (

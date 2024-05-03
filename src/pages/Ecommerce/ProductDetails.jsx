@@ -41,8 +41,8 @@ const ProductDetails = () => {
     <EcommerceLayout>
       <div className="product">
         <div
-          className="container m-0 p-0 g-0 m-auto"
-          style={{ backgroundColor: "white" }}
+          className="container-fluid  p-0 g-0 m-auto"
+          style={{ backgroundColor: "rgb(246,252,252)" }}
         >
           {products.map((item) => (
             <div className="details1" key={item._id}>

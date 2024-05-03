@@ -11,17 +11,14 @@ const ShopHeader = () => {
   const { pathname } = useLocation();
   const { auth, setAuth, setIsAuthenticated, isAuthenticate } =
     useContext(UserContext);
-  //   const isVisible = ["/profile", "/program/"].includes(pathname);
-  //   const isVisibles =
-  //     pathname.startsWith("/profile") ||
-  //     pathname.startsWith("/program/") ||
-  //     pathname.startsWith("/resetpassword/");
+  //   const isVisible = ["/product"].includes(pathname);
+  const isVisible = pathname.startsWith("/product");
 
   return (
     <div
       className="container-fluid"
       id="navbarColor"
-      style={{ backgroundColor: "rgb(246, 252, 252)" }}
+      style={{ backgroundColor: isVisible ? "" : "rgb(246, 252, 252)" }}
     >
       <div className="container p-0">
         <nav className="navbar navbar-expand-lg p-0">
