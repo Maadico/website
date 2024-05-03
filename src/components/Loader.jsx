@@ -5,7 +5,7 @@ const Loader = () => {
     <div className="loader">
       <div className="imgSetUpForLoader">
         <img
-          src="https://maadico.in/static/media/MaaDico%20Logo%20-%20Monogram_2.c6ebacbb93417c35db75.png"
+          src="https://www.maadico.in/static/media/MaaDico%20Logo%20-%20Monogram_2.c6ebacbb93417c35db75.png"
           alt="Company Logo"
         />
       </div>

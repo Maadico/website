@@ -1,10 +1,20 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../context/Mycontext";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const UserProfile = () => {
-  const { auth, handleUpdateAddress, address, setAddress, addressLoader } =
-    useContext(UserContext);
+  const {
+    setAuth,
+    setIsAuthenticated,
+    auth,
+    handleUpdateAddress,
+    address,
+    setAddress,
+    addressLoader,
+  } = useContext(UserContext);
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (auth?.user?.address) {
       setAddress({
@@ -50,6 +60,13 @@ const UserProfile = () => {
       });
     }
   };
+  const handleLogout = () => {
+    setAuth({ ...auth, user: null, token: "" });
+    setIsAuthenticated(false);
+    localStorage.removeItem("auth");
+    navigate("/");
+    return;
+  };
   return (
     <div className="row">
       <div className="col-xl-4">
@@ -65,9 +82,13 @@ const UserProfile = () => {
               <h6>{auth?.user?.name}</h6>
               <p>{auth?.user?.email}</p>
             </div>
-            {/* <button className="btn btn-primary" type="button">
-              Upload new image
-            </button> */}
+            <button
+              className="btn btn-primary"
+              type="button"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
           </div>
         </div>
       </div>

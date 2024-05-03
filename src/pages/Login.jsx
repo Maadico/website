@@ -4,6 +4,8 @@ import loginWall from "../Images/loginWall.jpg";
 import { useContext } from "react";
 import { UserContext } from "../context/Mycontext";
 import axios from "axios";
+import toast from "react-hot-toast";
+
 const Login = () => {
   const navigate = useNavigate();
 
@@ -44,12 +46,24 @@ const Login = () => {
         navigate("/profile");
       } else {
         setLoader(false);
-
+        toast("something went", {
+          style: {
+            borderRadius: "10px",
+            background: " rgb(24, 50, 91)",
+            color: "#fff",
+          },
+        });
         console.log("error some went wrong");
       }
     } catch (error) {
       setLoader(false);
-
+      toast(error.response.data.message, {
+        style: {
+          borderRadius: "10px",
+          background: " rgb(24, 50, 91)",
+          color: "#fff",
+        },
+      });
       console.log(error);
     }
   };

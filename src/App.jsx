@@ -18,6 +18,7 @@ import "./styles/contacts.css";
 import "./styles/conditionWeTreat.css";
 import "./styles/auth.css";
 import "./styles/Purchase.css";
+import "./styles/product.css";
 
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
@@ -29,6 +30,10 @@ import ProgramView from "./pages/ProgramView";
 import toast, { Toaster } from "react-hot-toast";
 import ForgetPassword from "./pages/ForgetPassword";
 import ResetPassword from "./pages/ResetPassword";
+import Product from "./pages/Ecommerce/Product";
+import ShopHeader from "./components/ShopHeader";
+import ProductDetails from "./pages/Ecommerce/ProductDetails";
+import Cart from "./pages/Ecommerce/Cart";
 
 const App = () => {
   return (
@@ -41,10 +46,18 @@ const App = () => {
 
 const Main = () => {
   const { pathname } = useLocation();
-  const isVisible = ["/login", "/register", "/forget"].includes(pathname);
+  const isVisible = [
+    "/login",
+    "/register",
+    "/forget",
+    "/product",
+    "/cart",
+  ].includes(pathname);
+  const dynamicIsVisible = pathname.startsWith("/product/");
+  console.log(isVisible, dynamicIsVisible);
   return (
     <div>
-      {!isVisible && <Header />}
+      {!isVisible && !dynamicIsVisible && <Header />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -64,8 +77,12 @@ const Main = () => {
             </PrivateRoute>
           }
         />
+        <Route path="/product" element={<Product />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
-      {!isVisible && <Footer />}
+
+      {!isVisible && !dynamicIsVisible && <Footer />}
     </div>
   );
 };

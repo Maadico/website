@@ -4,21 +4,24 @@ import logo from "../Images/MaaDico Logo - Monogram_2.png";
 import { CgProfile } from "react-icons/cg";
 import { useLocation } from "react-router-dom";
 import { UserContext } from "../context/Mycontext";
-const Header = () => {
+import { FiShoppingCart } from "react-icons/fi";
+import { CiMedicalClipboard } from "react-icons/ci";
+import { IoMdLogIn } from "react-icons/io";
+const ShopHeader = () => {
   const { pathname } = useLocation();
   const { auth, setAuth, setIsAuthenticated, isAuthenticate } =
     useContext(UserContext);
-  const isVisible = ["/profile", "/program/"].includes(pathname);
-  const isVisibles =
-    pathname.startsWith("/profile") ||
-    pathname.startsWith("/program/") ||
-    pathname.startsWith("/resetpassword/");
-  // console.log(isVisibles);
+  //   const isVisible = ["/profile", "/program/"].includes(pathname);
+  //   const isVisibles =
+  //     pathname.startsWith("/profile") ||
+  //     pathname.startsWith("/program/") ||
+  //     pathname.startsWith("/resetpassword/");
+
   return (
     <div
       className="container-fluid"
       id="navbarColor"
-      style={{ backgroundColor: isVisible && "rgb(246,252,252)" }}
+      style={{ backgroundColor: "rgb(246, 252, 252)" }}
     >
       <div className="container p-0">
         <nav className="navbar navbar-expand-lg p-0">
@@ -50,64 +53,32 @@ const Header = () => {
                     Home
                   </Link>
                 </li>
+
                 <li className="nav-item">
                   <Link
                     className="nav-link active"
                     aria-current="page"
                     to="/product"
-                    target="blank"
                   >
-                    Shop
+                    <span className="mx-1">
+                      <CiMedicalClipboard fontSize={30} />
+                    </span>
+                    <span> Medical Kit</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="nav-link active"
+                    className="nav-link active shopCartPos"
                     aria-current="page"
-                    to="https://liveyoga.maadico.in"
-                    target="blank"
+                    to="/cart"
                   >
-                    Yoga
+                    <span className="mx-1 shopCartPos">
+                      <FiShoppingCart fontSize={30} />
+                    </span>
+                    <div className="shopCartRel bg-danger">1</div>
+                    <span>Cart</span>
                   </Link>
                 </li>
-                {!isVisibles && (
-                  <>
-                    <li className="nav-item">
-                      <a className="nav-link" href="#about">
-                        About
-                      </a>
-                    </li>
-
-                    <li className="nav-item">
-                      <a
-                        className="nav-link"
-                        aria-disabled="true"
-                        href="#service"
-                      >
-                        Service
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        className="nav-link"
-                        aria-disabled="true"
-                        href="#doctor"
-                      >
-                        Doctor
-                      </a>
-                    </li>
-
-                    <li className="nav-item">
-                      <a
-                        href="#contacts"
-                        className="nav-link"
-                        aria-disabled="true"
-                      >
-                        Contact
-                      </a>
-                    </li>
-                  </>
-                )}
                 {isAuthenticate ? (
                   <li className="nav-item">
                     <Link
@@ -137,6 +108,9 @@ const Header = () => {
                         {/* <CgProfile fontSize={25} /> */}
                         Login
                       </span>
+                      <span>
+                        <IoMdLogIn className="mx-1" />
+                      </span>
                     </Link>
                   </li>
                 )}
@@ -149,4 +123,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default ShopHeader;

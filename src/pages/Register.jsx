@@ -111,10 +111,24 @@ const Register = () => {
         // toast.success(res.data && res.data.message);
         navigate("/");
       } else {
+        toast("something went wrong", {
+          style: {
+            borderRadius: "10px",
+            background: " rgb(24, 50, 91)",
+            color: "#fff",
+          },
+        });
         console.log("error some went wrong");
       }
     } catch (error) {
-      console.log(error);
+      toast(error.response.data.message, {
+        style: {
+          borderRadius: "10px",
+          background: " rgb(24, 50, 91)",
+          color: "#fff",
+        },
+      });
+      // console.log(error);
     }
   };
   const handleVeriyEmail = async () => {
