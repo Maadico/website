@@ -5,7 +5,11 @@ import axios from "axios";
 import Loader from "../components/Loader";
 import { UserContext, OrderContext } from "../context/Mycontext";
 import toast from "react-hot-toast";
-
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import CustomersReview from "../components/Ecommerce/CustomersReview";
 const ProgramView = () => {
   const { id } = useParams();
   const { auth, isAuthenticate } = useContext(UserContext);
@@ -79,128 +83,142 @@ const ProgramView = () => {
       console.log(e);
     }
   };
+
+  const [thumbsSwiper, setThumbsSwiper] = useState(0);
+
+  const imagesProducts = programInfo?.images;
+  const handleRightArrow = () => {
+    if (thumbsSwiper < imagesProducts.length - 1) {
+      setThumbsSwiper(thumbsSwiper + 1);
+    }
+  };
+
+  const handleLeftArrow = () => {
+    if (thumbsSwiper > 0) {
+      setThumbsSwiper(thumbsSwiper - 1);
+    }
+  };
   return loader ? (
     <Loader />
   ) : (
-    <div className="container">
-      <h1 className="my-4">{programInfo?.title}</h1>
-
-      <div className="row">
-        <div className="col-md-8">
-          <img
-            className="img-fluid rounded"
-            src={programInfo?.images[currentIndex]}
-            alt="image1"
-          />
-        </div>
-
-        <div className="col-md-4">
-          <h3 className="">Program Description</h3>
-          <p>{programInfo?.Description}</p>
-          <h3 className="my-3">Programs Components</h3>
-          <ol>
-            {programInfo?.Components?.map((c, i) => {
-              if (i !== 3) {
-                const index = i > 2 ? i - 1 : i;
-                return (
-                  <li
-                    className="my-1"
-                    key={i}
-                    onMouseEnter={() => setCurrentIndex(index)}
-                  >
-                    {c}
-                  </li>
-                );
-              }
-
-              if (i === 3) {
-                return c.Items.map((item, j) => (
-                  <div classNames="mx-5" key={j}>
-                    {j + 1}. {item}
-                  </div>
-                ));
-              }
-            })}
-          </ol>
-        </div>
-      </div>
-
-      <h3 className="my-4">Project Images</h3>
-
-      <div className="row">
-        <div
-          className="col-md-3 col-sm-6 mb-4"
-          onMouseEnter={() => setCurrentIndex(1)}
-        >
-          <img
-            className="img-fluid rounded"
-            src={programInfo?.images[1]}
-            alt="image2"
-          />
-        </div>
-
-        <div
-          className="col-md-3 col-sm-6 mb-4"
-          onMouseEnter={() => setCurrentIndex(2)}
-        >
-          <img
-            className="img-fluid rounded"
-            src={programInfo?.images[2]}
-            alt="image3"
-          />
-        </div>
-
-        <div
-          className="col-md-3 col-sm-6 mb-4 "
-          onMouseEnter={() => setCurrentIndex(3)}
-        >
-          <img
-            className="img-fluid rounded"
-            src={programInfo?.images[3]}
-            alt="image4"
-          />
-        </div>
-
-        <div
-          className="col-md-3 col-sm-6 mb-4"
-          onMouseEnter={() => setCurrentIndex(4)}
-        >
-          <img
-            className="img-fluid rounded"
-            src={programInfo?.images[4]}
-            alt="image5"
-          />
-        </div>
-      </div>
+    <div className="container-fluid">
       <div
-        className="row my-1"
-        style={{
-          backgroundColor: "rgb(246,252,252)",
-          borderRadius: "10px",
-          padding: "5px",
-        }}
+        className="productDetailsContainerMiddle"
+        style={{ backgroundColor: "rgb(246,252,252)" }}
       >
-        <div className="d-flex justify-content-between align-items-center">
-          <div className="priceSet">
-            <h3>Program Plane</h3>
-            <p className="my-1">
-              Price: ₹ <span className="price">{programPrice?.price}</span>
-            </p>
-            <p className="my-1 text-danger">
-              Discount :{programPrice?.discount}% OFF
-            </p>
-            <p className="text-success">
-              Price: ₹{" "}
-              {calculateNewPrice(programPrice?.price, programPrice?.discount)}
-            </p>
-          </div>
-          <div className="priceBtn">
-            <div className="btn btn-primary" onClick={handleBuyProgram}>
-              Buy Now
+        <div className="productsDetailsMarginWidth97">
+          <div className="row ">
+            <div className="col-md-5 my-2">
+              <div className="productsDetailsImage">
+                <img src={imagesProducts[thumbsSwiper]} alt="" />
+                <span
+                  className="detailsLeft_arrow"
+                  onClick={() => handleLeftArrow()}
+                >
+                  <MdOutlineKeyboardArrowLeft fontSize={25} color="white" />
+                </span>
+                <span
+                  className="detailsRight_arrow"
+                  onClick={() => handleRightArrow()}
+                >
+                  <MdOutlineKeyboardArrowRight fontSize={25} color="white" />
+                </span>
+              </div>
+              <div className="productsDetailsImageChild">
+                {imagesProducts.map((p, i) => (
+                  <div
+                    className="productsDetailsImageChildImages"
+                    onMouseEnter={() => setThumbsSwiper(i)}
+                  >
+                    <img src={p} alt="products" />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="col-md-6 my-2">
+              <div className="row headingOfProduct">
+                <p>Most nutrient-rich & revitalising go-to-green</p>
+                <h1>{programInfo?.title}</h1>
+              </div>
+              <div className="row my-3">
+                <div className="d-flex justify-content-between productsDetailsMarginWidth97price">
+                  <a href="#reviews">
+                    <p>Sell All Reviews</p>
+                  </a>
+                  <div className="priceWithDiscount">
+                    <div className="prices">
+                      <span>₹</span>
+
+                      <span className="mt-5">
+                        {/* {" "}
+                        {calculateNewPrice(
+                          programPrice?.price,
+                          programPrice?.discount
+                        ) - 100} */}
+                        979
+                      </span>
+                      <div className="discountParent">
+                        <div className="discount">
+                          <span>₹</span>
+                          <span className="mt-5">
+                            {/* {programPrice?.price} */}
+                            3999
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="row productsDetailsMarginWidth97quantity">
+                <h6>Programs Components</h6>
+                <button className="btn  px-4 mx-2">200gm</button>
+              </div> */}
+              <div className="ProgramDetailsMarginWidth97instruction mt-2">
+                <h1>Programs Components</h1>
+
+                {programInfo?.Components?.map((c, i) => {
+                  if (i !== 3) {
+                    const index = i > 2 ? i - 1 : i;
+                    return (
+                      <p className="my-1" key={i}>
+                        ⚫ {c}
+                      </p>
+                    );
+                  }
+
+                  if (i === 3) {
+                    return c.Items.map((item, j) => (
+                      <p key={j}>
+                        {j + 1}. {item}
+                      </p>
+                    ));
+                  }
+                })}
+              </div>
+
+              <div className="row">
+                <div className="addToCartProductsDetails mt-4 d-flex justify-content-end">
+                  <button className="btn px-5 mx-2" onClick={handleBuyProgram}>
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+              <div className="row products_details_description mt-4">
+                <h1>DESCRIPTION</h1>
+                <p>{programInfo?.Description}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div
+        id="reviews"
+        className="customersReview my-5  d-flex justify-content-center align-items-center"
+      >
+        <h1>Customer Reviews</h1>
+      </div>
+      <CustomersReview />
     </div>
   );
 };

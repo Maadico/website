@@ -63,22 +63,15 @@ const Profile = () => {
         </nav>
         <hr className="mt-0 mb-4" />
 
-        {
-          currentIndex === 0 ? (
-            <UserProfile />
-          ) : currentIndex === 1 ? (
-            <Service />
-          ) : currentIndex === 2 ? (
-            <Purchase />
-          ) : (
-            <Order />
-          )
-
-          // (
-
-          //   <Purchase />
-          // )
-        }
+        {currentIndex === 0 ? (
+          <UserProfile />
+        ) : currentIndex === 1 ? (
+          <Service />
+        ) : currentIndex === 2 ? (
+          <Purchase />
+        ) : (
+          <Order />
+        )}
       </div>
     </div>
   );

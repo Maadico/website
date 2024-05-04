@@ -7,7 +7,7 @@ function HomeCarousel() {
       className="carousel slide"
       data-ride="carousel"
     >
-      <ol className="carousel-indicators">
+      {/* <ol className="carousel-indicators">
         <li
           data-target="#carouselExampleIndicators"
           data-slide-to="0"
@@ -15,7 +15,7 @@ function HomeCarousel() {
         ></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
+      </ol> */}
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
@@ -44,13 +44,13 @@ function HomeCarousel() {
         </div>
       </div>
       <a
-        className="carousel-control-prev"
+        className="carousel-control-prev text-primary"
         href="#carouselExampleIndicators"
         role="button"
         data-slide="prev"
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="sr-only">Previous</span>
+        {/* <span className="sr-only">Previous</span> */}
       </a>
       <a
         className="carousel-control-next"
@@ -59,7 +59,7 @@ function HomeCarousel() {
         data-slide="next"
       >
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="sr-only">Next</span>
+        {/* <span className="sr-only">Next</span> */}
       </a>
     </div>
   );

@@ -5,6 +5,7 @@ import doctor2 from "../Images/Online Doctor-bro.png";
 import { MdAddIcCall } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
+import mainHero from "../Images/maadicoheroLive.png";
 const Hero = () => {
   return (
     <div className="Hero">

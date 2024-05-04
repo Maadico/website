@@ -1,6 +1,6 @@
 .product {
     min-height: 100vh;
-    background-color: rgb(246, 252, 252);
+    /* background-color: rgb(246, 252, 252); */
 }
 
 
@@ -76,129 +76,189 @@
 }
 
 /* productDetails page */
+.productsDetailsMarginWidth97 {
+    width: 97%;
+    margin: auto;
+}
 
-.details1 {
+.productsDetailsImage {
+    height: 430px;
+    /* background-color: white; */
+    border-radius: 8px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    width: 100%;
-
-
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.details1 .big-img {
-    max-width: 500px;
-    min-width: 290px;
-    overflow: hidden;
-    margin: 25px;
+.detailsLeft_arrow {
+    background-color: rgb(67, 204, 184);
+    position: absolute;
+    left: 0;
 }
 
-.big-img img {
+.detailsRight_arrow {
+    background-color: rgb(67, 204, 184);
+    position: absolute;
+    right: 0;
+}
+
+.productsDetailsImage img {
     width: 100%;
     height: 100%;
-    max-height: 400px;
-    display: block;
-    object-fit: contain;
+    border-radius: 8px;
+    object-fit: cover !important;
 }
 
-.details1 .box1 {
-    max-width: 500px;
-    min-width: 290px;
-    margin: 25px;
-}
-
-.box1 .row {
+.productsDetailsImageChild {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    align-items: center;
 }
 
-.box1 .row h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.box1 .row span {
-    color: crimson;
-}
-
-.box1 .colors button {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #333;
-    outline: none;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.box1 p {
-    line-height: 1.5;
-    margin: 15px 0;
-}
-
-.thumb {
-    width: 100%;
-    height: 100px;
+.productsDetailsImageChildImages {
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 5px;
     display: flex;
-    cursor: pointer;
-    margin: 10px 0;
+    justify-content: baseline;
 }
 
-.thumb img {
-    width: 90px;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    border: 1px solid #ddd;
-    margin-right: 5px;
-    opacity: 0.7;
-    border-radius: 5px;
+.productsDetailsImageChildImages img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    object-fit: cover !important;
+
 }
 
-.thumb img.active {
-    opacity: 1;
-    border: 1px solid lightseagreen;
+.headingOfProduct p {
+    color: rgb(148, 148, 148);
 }
 
-.box1 .cart {
-
-    color: white;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px 25px;
-    margin-top: 15px;
+.headingOfProduct h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2px;
 }
 
-@media (max-width: 500px) {
-    .thumb {
-        height: 50px;
-    }
+.productsDetailsMarginWidth97price p {
+    text-decoration: underline;
 
-    .thumb img {
-        width: 50px;
-    }
+    font-size: small;
+    color: rgb(24, 50, 91);
 }
 
-.cutLinePrice {
+.priceWithDiscount .prices {
+    position: relative;
+    right: 100px;
+}
+
+.priceWithDiscount .prices span:nth-child(1) {
+    font-weight: 800;
+    font-size: 1.7rem;
+}
+
+.priceWithDiscount .prices span:nth-child(2) {
+    font-weight: 800;
+    font-size: 2.9rem;
+    position: absolute;
+    top: -50px;
+    left: 13px;
+}
+
+.priceWithDiscount .discount {
+    position: relative;
+}
+
+.priceWithDiscount .discount span:nth-child(1) {
+    font-weight: 800;
+    font-size: 1rem;
+    color: grey;
+}
+
+.priceWithDiscount .discount span:nth-child(2) {
+    font-weight: 600;
+    font-size: 1.5rem;
+    position: absolute;
+    top: -50px;
+    left: 13px;
+    color: grey;
     text-decoration: line-through;
 }
 
-.instructionList p {
+.discountParent {
+    position: absolute;
+    top: 25px;
+    left: 110px;
+}
+
+.productsDetailsMarginWidth97quantity h6 {
+    font-weight: 700;
+}
+
+.productsDetailsMarginWidth97quantity button {
+    width: fit-content;
+    background-color: rgb(24, 50, 91);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.productsDetailsMarginWidth97quantity button:hover {
+    background-color: rgb(24, 50, 91);
+    color: white;
+}
+
+.productsDetailsMarginWidth97instruction h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+
+}
+
+.productsDetailsMarginWidth97instruction p {
     line-height: 10px;
 }
 
+.addToCartProductsDetails button {
+    width: fit-content;
+    background-color: rgb(24, 50, 91);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.products_details_description h1 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 2px;
+}
+
+.products_details_description p {
+    color: rgb(148, 148, 148);
+}
+
 /* comment section */
+.customersReview {
+    background-color: white !important;
+    width: 100%;
+}
+
+
+
+.customersReview h1 {
+    font-weight: 900;
+    font-size: 2rem;
+}
 
 .comment-wrapper .panel-body {
     max-height: 650px;
     overflow: auto;
 }
 
-/* .comment-wrapper .media-list .media{
-    list-style-type: none;
-} */
+
 .comment-wrapper .media-list .media img {
     width: 64px;
     height: 64px;
@@ -237,11 +297,6 @@
 }
 
 /* cart */
-
-
-
-
-
 
 .card-body {
     -ms-flex: 1 1 auto;
@@ -356,4 +411,67 @@ a {
 
 .ordersPage {
     background-color: white;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0da9ef !important;
+}
+
+/*ProductsDetailsCompTwo  */
+.productDetailsParent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productName {
+    align-self: center;
+}
+
+.whyItsAwesome {
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(24, 50, 91);
+}
+
+/* WhyItsAwesomeComp */
+.WhyItsAwesomeComp {
+    background-color: white;
+
+}
+
+.WhyItsAwesomeCompParent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.WhyItsAwesomeCompChild {
+    width: 350px;
+    padding: 10px;
+    background-color: rgb(246, 252, 252);
+    margin: 10px 4px;
+    border-radius: 8px;
+}
+
+.WhyItsAwesomeCompPic {
+    text-align: center;
+}
+
+.WhyItsAwesomeCompPic img {
+    object-fit: contain;
+}
+
+.WhyItsAwesomeCompText h6 {
+    color: rgb(126, 126, 126);
+    font-size: large;
+    font-weight: 800;
+}
+
+.WhyItsAwesomeCompText p {
+    font-weight: 100;
+    opacity: 0.6;
 }

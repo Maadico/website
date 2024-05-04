@@ -7,6 +7,8 @@ import { UserContext } from "../context/Mycontext";
 import { FiShoppingCart } from "react-icons/fi";
 import { CiMedicalClipboard } from "react-icons/ci";
 import { IoMdLogIn } from "react-icons/io";
+import { TbFirstAidKitOff } from "react-icons/tb";
+import { CiHome } from "react-icons/ci";
 const ShopHeader = () => {
   const { pathname } = useLocation();
   const { auth, setAuth, setIsAuthenticated, isAuthenticate } =
@@ -47,7 +49,11 @@ const ShopHeader = () => {
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link className="nav-link active" aria-current="page" to="/">
-                    Home
+                    {/* Home */}
+                    <span className="mx-1">
+                      <CiHome fontSize={30} />
+                    </span>
+                    <span> Home</span>
                   </Link>
                 </li>
 
@@ -58,9 +64,9 @@ const ShopHeader = () => {
                     to="/product"
                   >
                     <span className="mx-1">
-                      <CiMedicalClipboard fontSize={30} />
+                      <TbFirstAidKitOff fontSize={30} />
                     </span>
-                    <span> Medical Kit</span>
+                    <span> Maadico Kit</span>
                   </Link>
                 </li>
                 <li className="nav-item">
