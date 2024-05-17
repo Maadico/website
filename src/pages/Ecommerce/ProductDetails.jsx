@@ -226,7 +226,9 @@ const ProductDetails = () => {
                   </div>
                   <div className="row productsDetailsMarginWidth97quantity">
                     <h6>NET QUANTITY</h6>
-                    <button className="btn  px-4 mx-2">200gm</button>
+                    <button className="btn  px-4 mx-2">
+                      {pDetails?.totalGram}
+                    </button>
                   </div>
                   <div className="productsDetailsMarginWidth97instruction mt-2">
                     <h1>Instructions</h1>
