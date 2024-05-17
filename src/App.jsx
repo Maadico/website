@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
@@ -34,6 +34,9 @@ import Product from "./pages/Ecommerce/Product";
 import ShopHeader from "./components/ShopHeader";
 import ProductDetails from "./pages/Ecommerce/ProductDetails";
 import Cart from "./pages/Ecommerce/Cart";
+import Privacy from "./pages/rule/Privicy";
+import Terms from "./pages/rule/Terms";
+import { productContext, UserContext } from "./context/Mycontext";
 
 const App = () => {
   return (
@@ -55,6 +58,21 @@ const Main = () => {
   ].includes(pathname);
   const dynamicIsVisible = pathname.startsWith("/product/");
   console.log(isVisible, dynamicIsVisible);
+  const { auth } = useContext(UserContext);
+
+  const { cartGet } = useContext(productContext);
+  useEffect(() => {
+    const fetchedProduct = async () => {
+      if (auth?.user && auth?.token) {
+        try {
+          await cartGet(auth);
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    };
+    fetchedProduct();
+  }, [auth]);
   return (
     <div>
       {!isVisible && !dynamicIsVisible && <Header />}
@@ -78,6 +96,10 @@ const Main = () => {
           }
         />
         <Route path="/product" element={<Product />} />
+        <Route path="/privicy" element={<Privacy />} />
+
+        <Route path="/terms" element={<Terms />} />
+
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>

@@ -3,7 +3,11 @@ import programInfos from "../program.json";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Loader from "../components/Loader";
-import { UserContext, OrderContext } from "../context/Mycontext";
+import {
+  UserContext,
+  OrderContext,
+  productContext,
+} from "../context/Mycontext";
 import toast from "react-hot-toast";
 import {
   MdOutlineKeyboardArrowLeft,
@@ -14,10 +18,13 @@ const ProgramView = () => {
   const { id } = useParams();
   const { auth, isAuthenticate } = useContext(UserContext);
   const { handleOrderProgramPlane } = useContext(OrderContext);
+  const { handleFeedbackProgramm } = useContext(productContext);
   const navigate = useNavigate();
   const programInfo = programInfos[id - 1];
   const [programPrice, setProgramPrice] = useState({});
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [comments, setComments] = useState([]);
+
   const [loader, setLoader] = useState(true);
   useEffect(() => {
     const handleFetchProgramm = async () => {
@@ -53,7 +60,7 @@ const ProgramView = () => {
     const newPrice = originalPrice - discountAmount;
     return Math.floor(newPrice);
   }
-
+  console.log(programInfo?.id);
   const handleBuyProgram = async () => {
     try {
       const orderDetails = {
@@ -98,6 +105,25 @@ const ProgramView = () => {
       setThumbsSwiper(thumbsSwiper - 1);
     }
   };
+
+  const handleSubmitComment = async (comment) => {
+    if (auth?.token) {
+      const newComment = {
+        programId: programInfo?.id,
+        reviews: comment,
+      };
+      try {
+        const data = await handleFeedbackProgramm(auth, newComment);
+        console.log(data);
+        setComments(data?.review);
+      } catch (e) {
+        console.log(e);
+      }
+    } else {
+      alert("please login first");
+    }
+  };
+
   return loader ? (
     <Loader />
   ) : (
@@ -150,19 +176,19 @@ const ProgramView = () => {
                       <span>₹</span>
 
                       <span className="mt-5">
-                        {/* {" "}
+                        {" "}
                         {calculateNewPrice(
                           programPrice?.price,
                           programPrice?.discount
-                        ) - 100} */}
-                        979
+                        ) - 100}
+                        {/* 979 */}
                       </span>
                       <div className="discountParent">
                         <div className="discount">
                           <span>₹</span>
                           <span className="mt-5">
-                            {/* {programPrice?.price} */}
-                            3999
+                            {programPrice?.price}
+                            {/* 3999 */}
                           </span>
                         </div>
                       </div>
@@ -218,7 +244,10 @@ const ProgramView = () => {
       >
         <h1>Customer Reviews</h1>
       </div>
-      <CustomersReview />
+      <CustomersReview
+        comments={comments}
+        onSubmitComment={handleSubmitComment}
+      />
     </div>
   );
 };

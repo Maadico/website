@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import EcommerceLayout from "../../components/Ecommerce/EcommerceLayout";
 import DetailsThumb from "../../components/Ecommerce/DetailsThumb";
 import CustomersReview from "../../components/Ecommerce/CustomersReview";
@@ -8,6 +8,10 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
+import { useNavigate, useParams } from "react-router-dom";
+import { productContext, UserContext } from "../../context/Mycontext";
+import toast from "react-hot-toast";
+import Loader from "../../components/Loader";
 const ProductDetails = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(0);
 
@@ -29,21 +33,129 @@ const ProductDetails = () => {
       setThumbsSwiper(thumbsSwiper - 1);
     }
   };
-  return (
+
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const {
+    handleDetailsProduct,
+    cartLoad,
+    handleAdToCart,
+    cart,
+    handleFeedback,
+  } = useContext(productContext);
+  const { auth } = useContext(UserContext);
+  const [comments, setComments] = useState([]);
+  const [pDetails, setPdetails] = useState(null);
+  const [currentProduct, setCurrentProduct] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [dLoader, setDLoader] = useState(true);
+
+  useEffect(() => {
+    const fetchedProduct = async () => {
+      setDLoader(true);
+      try {
+        const data = await handleDetailsProduct(auth, id);
+        console.log(data);
+        setPdetails(data);
+        setComments(data?.review);
+        setDLoader(false);
+      } catch (e) {
+        setDLoader(false);
+
+        console.log(e);
+      }
+    };
+    fetchedProduct();
+  }, []);
+
+  const isPresent = (id) => {
+    const isCart = cart.find((c) => c?._id === id);
+    if (isCart) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+  const handleAddCart = async (id) => {
+    if (auth?.token && auth?.user) {
+      if (isPresent(id)) {
+        try {
+          const data = await handleAdToCart(id, auth);
+          toast(data, {
+            style: {
+              borderRadius: "10px",
+              background: " rgb(24, 50, 91)",
+              color: "#fff",
+            },
+          });
+          console.log(data);
+          navigate("/cart");
+        } catch (e) {
+          console.log(e);
+          toast(e, {
+            style: {
+              borderRadius: "10px",
+              background: " rgb(24, 50, 91)",
+              color: "#fff",
+            },
+          });
+          return;
+        }
+      } else {
+        toast("Already present", {
+          style: {
+            borderRadius: "10px",
+            background: " rgb(24, 50, 91)",
+            color: "#fff",
+          },
+        });
+
+        return;
+      }
+    } else {
+      toast("please first login", {
+        style: {
+          borderRadius: "10px",
+          background: " rgb(24, 50, 91)",
+          color: "#fff",
+        },
+      });
+    }
+  };
+  const handleSubmitComment = async (comment) => {
+    if (auth?.token) {
+      const newComment = {
+        productId: pDetails?._id,
+        reviews: comment,
+      };
+      try {
+        const data = await handleFeedback(auth, newComment);
+        console.log(data);
+        setComments(data?.review);
+      } catch (e) {
+        console.log(e);
+      }
+    } else {
+      alert("please login first");
+    }
+  };
+
+  return dLoader ? (
+    <Loader />
+  ) : (
     <EcommerceLayout>
       <div className="product">
-        <div className="container-fluid  p-0 g-0 m-auto">
+        <div className="container-fluid  p-0 g-0 m-auto w-767w100">
           <div
             className="productDetailsContainerMiddle"
             style={{ backgroundColor: "rgb(246,252,252)" }}
           >
-            {/* products details */}
-
             <div className="productsDetailsMarginWidth97">
               <div className="row ">
                 <div className="col-md-5 my-2">
                   <div className="productsDetailsImage">
-                    <img src={imagesProducts[thumbsSwiper]} alt="" />
+                    <img src={pDetails?.productPic[thumbsSwiper]} alt="" />
                     <span
                       className="detailsLeft_arrow"
                       onClick={() => handleLeftArrow()}
@@ -61,7 +173,7 @@ const ProductDetails = () => {
                     </span>
                   </div>
                   <div className="productsDetailsImageChild">
-                    {imagesProducts.map((p, i) => (
+                    {pDetails?.productPic?.map((p, i) => (
                       <div
                         className="productsDetailsImageChildImages"
                         onMouseEnter={() => setThumbsSwiper(i)}
@@ -73,8 +185,8 @@ const ProductDetails = () => {
                 </div>
                 <div className="col-md-6 my-2">
                   <div className="row headingOfProduct">
-                    <p>Most nutrient-rich & revitalising go-to-green</p>
-                    <h1>Moringa Powder</h1>
+                    <p>{pDetails?.company}</p>
+                    <h1> {pDetails?.name}</h1>
                   </div>
                   <div className="row my-3">
                     <div className="d-flex justify-content-between productsDetailsMarginWidth97price">
@@ -84,11 +196,15 @@ const ProductDetails = () => {
                       <div className="priceWithDiscount">
                         <div className="prices">
                           <span>₹</span>
-                          <span className="mt-5">299</span>
+                          <span className="mt-5">
+                            {Math.floor(
+                              pDetails?.price / (1 - pDetails?.discount / 100)
+                            )}
+                          </span>
                           <div className="discountParent">
                             <div className="discount">
                               <span>₹</span>
-                              <span className="mt-5">3999</span>
+                              <span className="mt-5">{pDetails?.price}</span>
                             </div>
                           </div>
                         </div>
@@ -101,33 +217,26 @@ const ProductDetails = () => {
                   </div>
                   <div className="productsDetailsMarginWidth97instruction mt-2">
                     <h1>Instructions</h1>
-                    {[
-                      "Take Medicine Daily",
-                      "Brush Daily",
-                      "Clean Your Nail",
-                      "Follow Doctors Guidance",
-                    ].map((ins, i) => (
+                    {pDetails?.instruction.map((ins, i) => (
                       <p className="my-2">
-                        {i + 1} {ins}
+                        {i + 1} {ins?.text}
                       </p>
                     ))}
                   </div>
 
                   <div className="row">
                     <div className="addToCartProductsDetails mt-4 d-flex justify-content-end">
-                      <button className="btn px-5 mx-2">ADD TO CART</button>
+                      <button
+                        className="btn px-5 mx-2"
+                        onClick={() => handleAddCart(pDetails?._id)}
+                      >
+                        ADD TO CART
+                      </button>
                     </div>
                   </div>
                   <div className="row products_details_description mt-4">
                     <h1>DESCRIPTION</h1>
-                    <p>
-                      Packed with antioxidants, calcium, iron, fibre, vitamins &
-                      plant protein, 1 tsp of our moringa leaves powder
-                      naturally energises you throughout the day. It is
-                      ready-to-use, caffeine-free and blends well with your
-                      smoothies & snacks. Enjoy the sweetish-bitter flavour that
-                      grows on you!
-                    </p>
+                    <p>{pDetails?.description}</p>
                   </div>
                 </div>
               </div>
@@ -144,14 +253,17 @@ const ProductDetails = () => {
             <button className="btn bg-light ">WHY IT`S AWESOME</button>
           </div>
         </div>
-        <WhyItsAwesome />
+        <WhyItsAwesome extraInfo={pDetails} />
         <div
           id="reviews"
           className="customersReview   d-flex justify-content-center align-items-center"
         >
           <h1>Customer Reviews</h1>
         </div>
-        <CustomersReview />
+        <CustomersReview
+          comments={comments}
+          onSubmitComment={handleSubmitComment}
+        />
       </div>
     </EcommerceLayout>
   );

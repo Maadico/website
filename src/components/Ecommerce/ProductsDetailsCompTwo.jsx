@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductsDetailsCompTwo = () => {
   return (
-    <div className="container py-3">
+    <div className="container-fluid py-3 ">
       <div className="productDetailsParent">
         <div className="productDetailsParentChild d-flex">
           <div className="productCircle">

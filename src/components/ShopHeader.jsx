@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../Images/MaaDico Logo - Monogram_2.png";
 import { CgProfile } from "react-icons/cg";
 import { useLocation } from "react-router-dom";
-import { UserContext } from "../context/Mycontext";
+import { productContext, UserContext } from "../context/Mycontext";
 import { FiShoppingCart } from "react-icons/fi";
 import { CiMedicalClipboard } from "react-icons/ci";
 import { IoMdLogIn } from "react-icons/io";
@@ -15,7 +15,7 @@ const ShopHeader = () => {
     useContext(UserContext);
   //   const isVisible = ["/product"].includes(pathname);
   const isVisible = pathname.startsWith("/product");
-
+  const { cart } = useContext(productContext);
   return (
     <div
       className="container-fluid"
@@ -78,7 +78,9 @@ const ShopHeader = () => {
                     <span className="mx-1 shopCartPos">
                       <FiShoppingCart fontSize={30} />
                     </span>
-                    <div className="shopCartRel bg-danger">1</div>
+                    <div className="shopCartRel bg-danger">
+                      {cart?.length ? cart?.length : 0}
+                    </div>
                     <span>Cart</span>
                   </Link>
                 </li>

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { orderContext, UserContext } from "../../context/Mycontext";
 
 const Order = () => {
   const navigate = useNavigate();
+  const { handleGetOrders, oLoader, order } = useContext(orderContext);
+  const { auth } = useContext(UserContext);
+  useEffect(() => {
+    const fetchOrders = async () => {
+      await handleGetOrders(auth);
+    };
+    fetchOrders();
+  }, []);
   return (
     <div className="product">
-      {true ? (
+      {order?.length !== 0 ? (
         <div className="ordersPage">
-          {[1, 2].map((or, i) => (
+          {order?.map((or, i) => (
             <table class="table">
               <thead>
                 <tr>
@@ -16,27 +25,31 @@ const Order = () => {
                   <th scope="col">Name</th>
                   <th scope="col">Quantity</th>
                   <th scope="col">Price</th>
+                  <th scope="col">status</th>
+
                   <th scope="col">
                     <button className="btn btn-primary">View</button>
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {[1, 2].map((o, i) => (
+                {or?.products?.map((o, i) => (
                   <tr>
                     <th scope="row">{i + 1}</th>
                     <td>
                       <img
-                        src="https://i.imgur.com/1eq5kmC.png"
-                        alt="product"
+                        src={o?.product?.productPic[0]}
+                        alt={o?.product?.name}
                         height="100"
                         width="100"
                       />
                     </td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
+                    <td> {o?.name}</td>
+                    <td> {o?.qty}</td>
+                    <td>{o?.product?.price}</td>
+
+                    <td> {or?.status}</td>
+                    <td>view</td>
                   </tr>
                 ))}
               </tbody>

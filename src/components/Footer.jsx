@@ -1,7 +1,7 @@
 import React from "react";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const Footer = () => {
   const { pathname } = useLocation();
   // const isVisible = ["/profile", "/program/2"].includes(pathname);
@@ -83,8 +83,13 @@ const Footer = () => {
                 <a href="https://liveyoga.maadico.in" target="blank">
                   <p>Yoga</p>
                 </a>
-                <p>Term of use</p>
-                <p>Privacy policy</p>
+                <Link to="/privicy">
+                  <p>Privacy policy</p>
+                </Link>
+                <Link to="/terms">
+                  {" "}
+                  <p>Term of use</p>
+                </Link>
               </div>
             </div>
             <div className="foot ">

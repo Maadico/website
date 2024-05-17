@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
-const CustomersReview = () => {
+const CustomersReview = ({ comments, onSubmitComment }) => {
+  const [comment, setComment] = useState("");
+
+  const handleCommentChange = (event) => {
+    setComment(event.target.value);
+  };
+
+  const handleSubmitComment = () => {
+    onSubmitComment(comment);
+    setComment("");
+  };
   return (
     <div>
       <div className="container customersReview my-2">
@@ -12,11 +22,17 @@ const CustomersReview = () => {
                 <div className="panel-body">
                   <textarea
                     className="form-control"
-                    placeholder="write a Review..."
+                    value={comment}
+                    onChange={handleCommentChange}
+                    placeholder="Write your Review here..."
                     rows="3"
                   ></textarea>
                   <br />
-                  <button type="button" className="btn btn-primary pull-right">
+                  <button
+                    type="button"
+                    className="btn btn-primary pull-right"
+                    onClick={handleSubmitComment}
+                  >
                     Post
                   </button>
                   <div className="clearfix"></div>
@@ -24,28 +40,26 @@ const CustomersReview = () => {
 
                   <ul className="media-list">
                     <div className="row">
-                      <h6 className="mt-1">Total Review 6</h6>
+                      <h6 className="mt-1">Total Review {comments.length}</h6>
                       <hr />
                     </div>
-
-                    <li className="media">
-                      <div className="media-body">
-                        <div className="commenterName">
-                          <span>
-                            <strong className="text-success">
-                              @MartinoMont
-                            </strong>
-                          </span>
-                          <span className="text-muted pull-right">
-                            <small className="text-muted">30 min ago</small>
-                          </span>
+                    {comments?.map((c, i) => (
+                      <li className="media" key={c?._id}>
+                        <div className="media-body">
+                          <div className="commenterName">
+                            <span>
+                              <strong className="text-success">
+                                {c?.reviewByUser?.name}
+                              </strong>
+                            </span>
+                            <span className="text-muted pull-right">
+                              <small className="text-muted">30 min ago</small>
+                            </span>
+                          </div>
+                          <p>{c.reviews}</p>
                         </div>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Lorem ipsum dolor sit amet,{" "}
-                        </p>
-                      </div>
-                    </li>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

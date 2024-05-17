@@ -1,19 +1,22 @@
 import React from "react";
 import medicine from "../../Images/maadiucoMedicine.png";
-const WhyItsAwesome = () => {
+const WhyItsAwesome = ({ extraInfo }) => {
   return (
     <div className="container-fluid WhyItsAwesomeComp py-4">
       <div className="WhyItsAwesomeCompParent container">
-        {[1, 2, 3, 4, 5, 6].map((a, i) => (
+        {extraInfo?.productOther.map((a, i) => (
           <div className="WhyItsAwesomeCompChild">
             <div className="WhyItsAwesomeCompPic">
-              <img src={medicine} alt="medicine" height="100" width="100" />
+              <img src={a?.imageUrl} alt="medicine" height="100" width="100" />
             </div>
             <div className="WhyItsAwesomeCompText">
-              <h6>Natural nutritional supplement</h6>
+              <h6>{a?.title}</h6>
               <p>
-                It contains protein, vitamins, iron, and other all-natural
-                nutrients that are excellent for your health.
+                {a?.description}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo in
+                atque reiciendis, quis tenetur placeat voluptates, ex corporis
+                consectetur molestiae neque earum. Nam facere recusandae quasi
+                ea nostrum, aliquam vel!
               </p>
             </div>
           </div>
