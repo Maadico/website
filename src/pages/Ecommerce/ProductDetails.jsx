@@ -140,7 +140,13 @@ const ProductDetails = () => {
       alert("please login first");
     }
   };
-
+  function calculateNewPrice(originalPrice, discountPercentage) {
+    const dis = discountPercentage ? discountPercentage : 0;
+    console.log(originalPrice, dis);
+    const discountAmount = originalPrice * (dis / 100);
+    const newPrice = originalPrice - discountAmount;
+    return Math.floor(newPrice);
+  }
   return dLoader ? (
     <Loader />
   ) : (
@@ -197,16 +203,23 @@ const ProductDetails = () => {
                         <div className="prices">
                           <span>₹</span>
                           <span className="mt-5">
-                            {Math.floor(
-                              pDetails?.price / (1 - pDetails?.discount / 100)
+                            {calculateNewPrice(
+                              pDetails?.price,
+                              pDetails?.discount
                             )}
                           </span>
-                          <div className="discountParent">
-                            <div className="discount">
-                              <span>₹</span>
-                              <span className="mt-5">{pDetails?.price}</span>
+                          {pDetails?.price !==
+                            calculateNewPrice(
+                              pDetails?.price,
+                              pDetails?.discount
+                            ) && (
+                            <div className="discountParent">
+                              <div className="discount">
+                                <span>₹</span>
+                                <span className="mt-5">{pDetails?.price}</span>
+                              </div>
                             </div>
-                          </div>
+                          )}
                         </div>
                       </div>
                     </div>

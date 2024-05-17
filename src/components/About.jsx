@@ -24,7 +24,7 @@ const About = () => {
                 <div className="col-sm-6">
                   <p>
                     <span>
-                      <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
+                      <MdOutlineVerified fontSize={20} color="rgb(24,50,91)" />
                     </span>
                     <span className="aboutSubPoint m-2">DIABETES REVERSAL</span>
                   </p>
@@ -32,7 +32,7 @@ const About = () => {
                 <div className="col-sm-6">
                   <p>
                     <span>
-                      <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
+                      <MdOutlineVerified fontSize={20} color="rgb(24,50,91)" />
                     </span>
                     <span className="aboutSubPoint m-2">WEIGHT MANAGEMENT</span>
                   </p>
@@ -43,7 +43,7 @@ const About = () => {
                 <div className="col-sm-6">
                   <p>
                     <span>
-                      <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
+                      <MdOutlineVerified fontSize={20} color="rgb(24,50,91)" />
                     </span>
                     <span className="aboutSubPoint m-2">THYROID REVERSAL</span>
                   </p>
@@ -51,7 +51,7 @@ const About = () => {
                 <div className="col-sm-6">
                   <p>
                     <span>
-                      <MdOutlineVerified fontSize={20} color="rgb(29,99,211)" />
+                      <MdOutlineVerified fontSize={20} color="rgb(24,50,91)" />
                     </span>
                     <span className="aboutSubPoint m-2">
                       PCOD/PCOS REVERSAL

@@ -56,10 +56,13 @@ const ProgramView = () => {
     handleFetchProgramm();
   }, [programInfo]);
   function calculateNewPrice(originalPrice, discountPercentage) {
-    const discountAmount = originalPrice * (discountPercentage / 100);
+    const dis = discountPercentage ? discountPercentage : 0;
+    console.log(originalPrice, dis);
+    const discountAmount = originalPrice * (dis / 100);
     const newPrice = originalPrice - discountAmount;
     return Math.floor(newPrice);
   }
+
   console.log(programInfo?.id);
   const handleBuyProgram = async () => {
     try {
@@ -164,7 +167,7 @@ const ProgramView = () => {
             <div className="col-md-6 my-2">
               <div className="row headingOfProduct">
                 <p>Most nutrient-rich & revitalising go-to-green</p>
-                <h1>{programInfo?.title}</h1>
+                <h1>{programPrice?.name}</h1>
               </div>
               <div className="row my-3">
                 <div className="d-flex justify-content-between productsDetailsMarginWidth97price">
@@ -180,18 +183,22 @@ const ProgramView = () => {
                         {calculateNewPrice(
                           programPrice?.price,
                           programPrice?.discount
-                        ) - 100}
+                        )}
                         {/* 979 */}
                       </span>
-                      <div className="discountParent">
-                        <div className="discount">
-                          <span>₹</span>
-                          <span className="mt-5">
-                            {programPrice?.price}
-                            {/* 3999 */}
-                          </span>
+
+                      {programPrice?.price !==
+                        calculateNewPrice(
+                          programPrice?.price,
+                          programPrice?.discount
+                        ) && (
+                        <div className="discountParent">
+                          <div className="discount">
+                            <span>₹</span>
+                            <span className="mt-5">{programPrice?.price}</span>
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -87,7 +87,7 @@ const Contact = () => {
                 <div className="leftContactList ">
                   <div className="l text-center">
                     <span>
-                      <IoMdCall color="rgb(3,69,209)" />
+                      <IoMdCall color="white" />
                     </span>
                   </div>
                   <div className="r mx-1">
@@ -98,7 +98,7 @@ const Contact = () => {
                 <div className="leftContactList">
                   <div className="l text-center">
                     <span>
-                      <MdEmail color="rgb(3,69,209)" />
+                      <MdEmail color="white" />
                     </span>
                   </div>
                   <div className="r mx-1">
@@ -109,7 +109,7 @@ const Contact = () => {
                 <div className="leftContactList">
                   <div className="l text-center">
                     <span>
-                      <ImLocation color="rgb(3,69,209)" />
+                      <ImLocation color="white" />
                     </span>
                   </div>
                   <div className="r mx-1">

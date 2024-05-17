@@ -1,5 +1,5 @@
 import React from "react";
-
+import banner1 from "../../Images/Happy Gut - Maadico - Front (1).png";
 function HomeCarousel() {
   return (
     <div
@@ -7,28 +7,20 @@ function HomeCarousel() {
       className="carousel slide"
       data-ride="carousel"
     >
-      {/* <ol className="carousel-indicators">
-        <li
-          data-target="#carouselExampleIndicators"
-          data-slide-to="0"
-          className="active"
-        ></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol> */}
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
-            className="d-block w-100"
-            src="//www.anveshan.farm/cdn/shop/files/anv_april__banner.jpg?v=1714740884&width=2400"
+            className="d-block w-100  img-fluid"
+            src="//www.anveshan.farm/cdn/shop/files/anveshan-oils-banner.jpg?v=1706685459&width=2400"
             alt="First slide"
           />
-          <div class="carousel-caption d-none d-md-block">
+
+          {/* <div class="carousel-caption d-none d-md-block">
             <h5>this is slider of maadico</h5>
             <p>vishal kumar</p>
-          </div>
+          </div> */}
         </div>
-        <div className="carousel-item">
+        {/* <div className="carousel-item">
           <img
             className="d-block w-100"
             src="//www.anveshan.farm/cdn/shop/files/anveshan-oils-banner.jpg?v=1706685459&width=2400"
@@ -41,7 +33,7 @@ function HomeCarousel() {
             src="//www.anveshan.farm/cdn/shop/files/anveshan-popcoinsbanner.jpg?v=1705558185&width=2400"
             alt="Third slide"
           />
-        </div>
+        </div> */}
       </div>
       <a
         className="carousel-control-prev text-primary"

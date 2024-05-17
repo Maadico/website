@@ -6,13 +6,13 @@
 }
 
 .Appointment2 {
-    background-color: rgb(4, 82, 206);
+    background-color: rgb(24, 50, 91);
     color: white;
     font-weight: 400;
 }
 
 .Appointment2:hover {
-    background-color: rgb(4, 82, 206) !important;
+    background-color: rgb(24, 50, 91) !important;
     color: white !important;
 }
 
