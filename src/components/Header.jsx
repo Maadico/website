@@ -72,15 +72,15 @@ const Header = () => {
                 </li>
                 {!isVisibles && (
                   <>
-                    <li className="nav-item">
-                      <a className="nav-link" href="#about">
+                    <li className="nav-item ">
+                      <a className="nav-link active" href="#about">
                         About
                       </a>
                     </li>
 
-                    <li className="nav-item">
+                    <li className="nav-item ">
                       <a
-                        className="nav-link"
+                        className="nav-link active"
                         aria-disabled="true"
                         href="#service"
                       >
@@ -89,7 +89,7 @@ const Header = () => {
                     </li>
                     <li className="nav-item">
                       <a
-                        className="nav-link"
+                        className="nav-link active"
                         aria-disabled="true"
                         href="#doctor"
                       >
@@ -100,7 +100,7 @@ const Header = () => {
                     <li className="nav-item">
                       <a
                         href="#contacts"
-                        className="nav-link"
+                        className="nav-link active"
                         aria-disabled="true"
                       >
                         Contact
