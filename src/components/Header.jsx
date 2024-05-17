@@ -13,7 +13,7 @@ const Header = () => {
     pathname.startsWith("/profile") ||
     pathname.startsWith("/program/") ||
     pathname.startsWith("/resetpassword/");
-  // console.log(isVisibles);
+
   return (
     <div
       className="container-fluid"
