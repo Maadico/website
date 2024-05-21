@@ -37,6 +37,8 @@ import Cart from "./pages/Ecommerce/Cart";
 import Privacy from "./pages/rule/Privicy";
 import Terms from "./pages/rule/Terms";
 import { productContext, UserContext } from "./context/Mycontext";
+import Refund from "./pages/rule/Refund";
+import ShippingPolicy from "./pages/rule/ShippingPolicy";
 
 const App = () => {
   return (
@@ -99,6 +101,8 @@ const Main = () => {
         <Route path="/privicy" element={<Privacy />} />
 
         <Route path="/terms" element={<Terms />} />
+        <Route path="/refund" element={<Refund />} />
+        <Route path="/shipping-policy" element={<ShippingPolicy />} />
 
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />

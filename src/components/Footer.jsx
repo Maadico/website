@@ -86,9 +86,14 @@ const Footer = () => {
                 <Link to="/privicy">
                   <p>Privacy policy</p>
                 </Link>
-                <Link to="/terms">
+
+                <Link to="/refund">
                   {" "}
-                  <p>Term of use</p>
+                  <p>Refund and Cancellation Policy</p>
+                </Link>
+                <Link to="/shipping-policy">
+                  {" "}
+                  <p>Shipping Policy</p>
                 </Link>
               </div>
             </div>
