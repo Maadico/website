@@ -18,12 +18,13 @@ const Order = ({ children }) => {
         }
       );
       if (data?.success) {
-        console.log(data);
+        // console.log(data);
 
         if (data && data?.data?.data?.instrumentResponse?.redirectInfo?.url) {
           console.log(data?.data?.data?.instrumentResponse?.redirectInfo?.url);
           window.location.href =
             data?.data?.data?.instrumentResponse?.redirectInfo?.url;
+          return;
         }
       }
     } catch (e) {
