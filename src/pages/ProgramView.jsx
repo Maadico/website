@@ -67,8 +67,11 @@ const ProgramView = () => {
   const handleBuyProgram = async () => {
     try {
       const orderDetails = {
-        ProgramId: programInfo?.id,
-        totalAmount: programPrice?.price,
+        // ProgramId: programInfo?.id,
+        ProgramId: "66225d59782246eb603b44b7",
+
+        // totalAmount: programPrice?.price,
+        totalAmount: 999,
         address: auth?.user?.address,
         pageNo: id,
       };
@@ -180,11 +183,11 @@ const ProgramView = () => {
 
                       <span className="mt-5">
                         {" "}
-                        {calculateNewPrice(
+                        {/* {calculateNewPrice(
                           programPrice?.price,
                           programPrice?.discount
-                        )}
-                        {/* 979 */}
+                        )} */}
+                        979
                       </span>
 
                       {programPrice?.price !==

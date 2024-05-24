@@ -15,7 +15,7 @@ const Purchase = () => {
       }
     };
     fetchProgramOrder();
-  });
+  }, []);
 
   const handleBack = () => {
     setCurrentIndex(1);
