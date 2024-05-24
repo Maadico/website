@@ -183,11 +183,10 @@ const ProgramView = () => {
 
                       <span className="mt-5">
                         {" "}
-                        {/* {calculateNewPrice(
+                        {calculateNewPrice(
                           programPrice?.price,
                           programPrice?.discount
-                        )} */}
-                        979
+                        )}
                       </span>
 
                       {programPrice?.price !==
