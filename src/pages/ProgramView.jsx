@@ -67,11 +67,10 @@ const ProgramView = () => {
   const handleBuyProgram = async () => {
     try {
       const orderDetails = {
-        // ProgramId: programInfo?.id,
-        ProgramId: "66225d59782246eb603b44b7",
+        ProgramId: programInfo?.id,
 
-        // totalAmount: programPrice?.price,
-        totalAmount: 999,
+        totalAmount: programPrice?.price,
+
         address: auth?.user?.address,
         pageNo: id,
       };
