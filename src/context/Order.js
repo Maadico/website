@@ -26,8 +26,10 @@ const Order = ({ children }) => {
           //   data?.data?.data?.instrumentResponse?.redirectInfo?.url;
           const redirectUrl =
             data?.data?.data?.instrumentResponse?.redirectInfo?.url;
+          if (window.open) {
+            window.open(redirectUrl, "_blank");
+          }
 
-          window.open(redirectUrl, "_blank");
           return;
         }
       }
