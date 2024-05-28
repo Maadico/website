@@ -25,6 +25,8 @@ import Login from "./pages/Login";
 import { useLocation } from "react-router-dom";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
+import ProgramPurChase from "./pages/ProgramPurChase";
+
 import PrivateRoute from "./router/PrivateRoute";
 import ProgramView from "./pages/ProgramView";
 import toast, { Toaster } from "react-hot-toast";
@@ -94,6 +96,14 @@ const Main = () => {
           element={
             <PrivateRoute>
               <Profile />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/program-purChase"
+          element={
+            <PrivateRoute>
+              <ProgramPurChase />
             </PrivateRoute>
           }
         />

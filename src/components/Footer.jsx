@@ -6,7 +6,9 @@ const Footer = () => {
   const { pathname } = useLocation();
   // const isVisible = ["/profile", "/program/2"].includes(pathname);
   const isVisibles =
-    pathname.startsWith("/profile") || pathname.startsWith("/program/");
+    pathname.startsWith("/program-purchase") ||
+    pathname.startsWith("/profile") ||
+    pathname.startsWith("/program/");
   return (
     <div className="footer ">
       <div className="container ">
