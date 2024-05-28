@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { UserContext, OrderContext } from "../context/Mycontext";
 import { Link } from "react-router-dom";
-
+import pcod from "../Images/pcod.PNG";
 const Purchase = () => {
   const { auth, setCurrentIndex } = useContext(UserContext);
   const { handleGetOrderProgramPlane, order } = useContext(OrderContext);
@@ -83,7 +83,7 @@ const Purchase = () => {
                     <div>
                       <img
                         className="align-self-center img-fluid"
-                        src="https://img.freepik.com/premium-photo/first-aid-kit-white-background_893610-26711.jpg?w=740"
+                        src={pcod}
                         width="250"
                         alt=""
                       />
