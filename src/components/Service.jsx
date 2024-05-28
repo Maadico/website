@@ -7,6 +7,11 @@ import { TbReport } from "react-icons/tb";
 import { GrYoga } from "react-icons/gr";
 import { SiGooglemeet } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
+import pcod from "../Images/pcod.PNG";
+import thyroid from "../Images/thyroid.PNG";
+import diabetes from "../Images/diabetes.PNG";
+import weightLoss from "../Images/weightLoss.PNG";
+import yoga from "../Images/yoga.JPG";
 
 const Service = () => {
   const navigate = useNavigate();
@@ -27,7 +32,17 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <TbBrandSugarizer />
+                    {/* <TbBrandSugarizer /> */}
+                    <img
+                      src={diabetes}
+                      alt="diabetes"
+                      className="img-fluid"
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        objectFit: "contain",
+                      }}
+                    />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -53,7 +68,17 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <FaWeight />
+                    {/* <FaWeight /> */}
+                    <img
+                      src={weightLoss}
+                      alt="diabetes"
+                      className="img-fluid"
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        objectFit: "contain",
+                      }}
+                    />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -79,7 +104,17 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <GiFeatherNecklace />
+                    {/* <GiFeatherNecklace /> */}
+                    <img
+                      src={thyroid}
+                      alt="thyroid"
+                      className="img-fluid"
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        objectFit: "contain",
+                      }}
+                    />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -105,7 +140,17 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <TbReport />
+                    {/* <TbReport /> */}
+                    <img
+                      src={pcod}
+                      alt="pcod"
+                      className="img-fluid"
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        objectFit: "contain",
+                      }}
+                    />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
@@ -127,7 +172,17 @@ const Service = () => {
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    <GrYoga />
+                    {/* <GrYoga /> */}
+                    <img
+                      src={yoga}
+                      alt="yoga"
+                      className="img-fluid"
+                      style={{
+                        width: "100px",
+                        height: "100px",
+                        objectFit: "contain",
+                      }}
+                    />
                   </span>
                 </div>
                 <div className="row m-0 p-0 heading">
