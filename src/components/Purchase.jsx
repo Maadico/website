@@ -62,8 +62,7 @@ const Purchase = () => {
                         <span className="fw-bold text-body">
                           {p?.DeliveredAt
                             ? new Date(p?.DeliveredAt).toLocaleDateString()
-                            : new Date().toLocaleDateString() + 7}
-                          12,March 2019
+                            : "within 7 days"}
                         </span>{" "}
                       </p>
                     </div>
