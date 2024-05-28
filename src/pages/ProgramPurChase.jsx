@@ -9,15 +9,10 @@ import Order from "../components/Ecommerce/Order";
 
 const ProgramPurChase = () => {
   const navigate = useNavigate();
-  const {
-    auth,
-    setAuth,
-    setIsAuthenticated,
-    isAuthenticate,
-    currentIndex,
-    setCurrentIndex,
-  } = useContext(UserContext);
+  const { auth, setAuth, setIsAuthenticated, isAuthenticate } =
+    useContext(UserContext);
   const { order } = useContext(OrderContext);
+  const [currentIndex, setCurrentIndex] = useState(2);
   // useEffect(() => {
   //   if (order.length > 0) {
   //     setCurrentIndex(2);
