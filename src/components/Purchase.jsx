@@ -1,11 +1,29 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { UserContext, OrderContext } from "../context/Mycontext";
 import { Link } from "react-router-dom";
 import pcod from "../Images/pcod.PNG";
+import thyroid from "../Images/thyroid.PNG";
+import diabetes from "../Images/diabetes.PNG";
+import weightLoss from "../Images/weightLoss.PNG";
+
 const Purchase = () => {
   const { auth, setCurrentIndex } = useContext(UserContext);
   const { handleGetOrderProgramPlane, order } = useContext(OrderContext);
 
+  const getImageSource = (id) => {
+    switch (id) {
+      case "6646e139ef20b15c1400a384":
+        return pcod;
+      case "6646e121ef20b15c1400a37f":
+        return thyroid;
+      case "6646e0e1ef20b15c1400a376":
+        return weightLoss;
+      case "6646e0d1ef20b15c1400a372":
+        return diabetes;
+      default:
+        return "";
+    }
+  };
   useEffect(() => {
     const fetchProgramOrder = async () => {
       try {
@@ -35,7 +53,7 @@ const Purchase = () => {
                     <div>
                       <p className="text-muted mb-2">
                         {" "}
-                        Order ID{" "}
+                        Order ID
                         <span className="fw-bold text-body">{p?._id}</span>
                       </p>
                       <p className="text-muted mb-0">
@@ -83,7 +101,7 @@ const Purchase = () => {
                     <div>
                       <img
                         className="align-self-center img-fluid"
-                        src={pcod}
+                        src={getImageSource(p?.ProgramId?._id)}
                         width="250"
                         alt=""
                       />

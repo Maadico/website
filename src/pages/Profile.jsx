@@ -18,13 +18,13 @@ const Profile = () => {
     setCurrentIndex,
   } = useContext(UserContext);
   const { order } = useContext(OrderContext);
-  useEffect(() => {
-    if (order.length > 0) {
-      setCurrentIndex(2);
-    } else {
-      setCurrentIndex(0);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (order.length > 0) {
+  //     setCurrentIndex(2);
+  //   } else {
+  //     setCurrentIndex(0);
+  //   }
+  // }, []);
   // const handleLogout = () => {
   //   setAuth({ ...auth, user: null, token: "" });
   //   setIsAuthenticated(false);

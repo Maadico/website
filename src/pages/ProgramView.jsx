@@ -16,13 +16,14 @@ import {
 import CustomersReview from "../components/Ecommerce/CustomersReview";
 const ProgramView = () => {
   const { id } = useParams();
-  const { auth, isAuthenticate } = useContext(UserContext);
+  const { auth, isAuthenticate, currentIndex, setCurrentIndex } =
+    useContext(UserContext);
   const { handleOrderProgramPlane } = useContext(OrderContext);
   const { handleFeedbackProgramm } = useContext(productContext);
   const navigate = useNavigate();
   const programInfo = programInfos[id - 1];
   const [programPrice, setProgramPrice] = useState({});
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
   const [comments, setComments] = useState([]);
 
   const [loader, setLoader] = useState(true);
@@ -63,7 +64,7 @@ const ProgramView = () => {
     return Math.floor(newPrice);
   }
 
-  console.log(programInfo?.id);
+  // console.log(programInfo?.id);
   const handleBuyProgram = async () => {
     try {
       const orderDetails = {
@@ -78,6 +79,7 @@ const ProgramView = () => {
       if (auth && auth?.token) {
         if (auth?.user?.address) {
           await handleOrderProgramPlane(orderDetails, auth);
+          setCurrentIndex(2);
         } else {
           console.log("first filled address");
           toast("first filled address", {
