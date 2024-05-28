@@ -61,7 +61,7 @@ const Purchase = () => {
                         Place On{" "}
                         <span className="fw-bold text-body">
                           {p?.DeliveredAt
-                            ? p?.DeliveredAt
+                            ? new Date(p?.DeliveredAt).toLocaleDateString()
                             : new Date().toLocaleDateString() + 7}
                           12,March 2019
                         </span>{" "}
