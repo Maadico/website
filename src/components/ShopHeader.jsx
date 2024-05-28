@@ -27,7 +27,7 @@ const ShopHeader = () => {
           <div className="container-fluid">
             <Link className="navbar-brand brandLogo logoDoctor" to="/">
               <img src={logo} alt="logo" />
-              <span>Maadico</span>
+              <span>MaaDico</span>
 
               {/* Doctor */}
             </Link>

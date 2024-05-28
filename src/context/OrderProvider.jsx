@@ -25,8 +25,15 @@ const OrederProvoider = ({ children }) => {
 
         if (data && data?.data?.data?.instrumentResponse?.redirectInfo?.url) {
           console.log(data?.data?.data?.instrumentResponse?.redirectInfo?.url);
-          window.location.href =
+          // window.location.href =
+          //   data?.data?.data?.instrumentResponse?.redirectInfo?.url;
+          const redirectUrl =
             data?.data?.data?.instrumentResponse?.redirectInfo?.url;
+          if (window.open) {
+            window.open(redirectUrl, "_blank");
+          }
+
+          return;
         }
       }
     } catch (e) {
