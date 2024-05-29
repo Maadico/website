@@ -77,7 +77,9 @@ const Order = () => {
                   </div>
                   <div>
                     <b>placedDate: </b>
-                    {or?.placedDate ? or?.placedDate : "within 7 days"}
+                    {or?.placedDate
+                      ? new Date(or?.placedDate).toLocaleDateString()
+                      : "within 7 days"}
                   </div>
                 </div>
               </div>
