@@ -13,47 +13,61 @@ const Order = () => {
     fetchOrders();
   }, []);
   return (
-    <div className="product">
+    <div className="product mb-2">
       {order?.length !== 0 ? (
         <div className="ordersPage">
           {order?.map((or, i) => (
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">S.No</th>
-                  <th scope="col">Image</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Quantity</th>
-                  <th scope="col">Price</th>
-                  <th scope="col">status</th>
-
-                  <th scope="col">
-                    <button className="btn btn-primary">View</button>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {or?.products?.map((o, i) => (
+            <>
+              <table class="table">
+                <thead>
                   <tr>
-                    <th scope="row">{i + 1}</th>
-                    <td>
-                      <img
-                        src={o?.product?.productPic[0]}
-                        alt={o?.product?.name}
-                        height="100"
-                        width="100"
-                      />
-                    </td>
-                    <td> {o?.name}</td>
-                    <td> {o?.qty}</td>
-                    <td>{o?.product?.price}</td>
-
-                    <td> {or?.status}</td>
-                    <td>view</td>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {or?.products?.map((o, i) => (
+                    <tr>
+                      <th scope="row">{i + 1}</th>
+                      <td>
+                        <img
+                          src={o?.product?.productPic[0]}
+                          alt={o?.product?.name}
+                          height="100"
+                          width="100"
+                        />
+                      </td>
+                      <td> {o?.product?.name}</td>
+                      <td> {o?.quantity}</td>
+                      <td>{o?.product?.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+
+              <div className="row">
+                <div>
+                  <span>
+                    <b>status</b> :{or?.status}
+                  </span>
+                  <span className="mx-3">
+                    <b>totalAmount</b>: ₹{or?.totalAmount}
+                  </span>
+                  <span>
+                    <b>Order Date::</b>{" "}
+                    {new Date(or?.updatedAt).toLocaleDateString()}
+                  </span>
+                  <div>
+                    <b> Address:</b> {or?.address.address1} ,
+                    {or?.address.street} ,{or?.address.district},
+                    {or?.address.city},{or?.address.state},{or?.address.zip}
+                  </div>
+                </div>
+              </div>
+            </>
           ))}
         </div>
       ) : (
