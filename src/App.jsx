@@ -41,6 +41,7 @@ import Terms from "./pages/rule/Terms";
 import { productContext, UserContext } from "./context/Mycontext";
 import Refund from "./pages/rule/Refund";
 import ShippingPolicy from "./pages/rule/ShippingPolicy";
+import Orders from "./pages/Orders";
 
 const App = () => {
   return (
@@ -104,6 +105,14 @@ const Main = () => {
           element={
             <PrivateRoute>
               <ProgramPurChase />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/orders"
+          element={
+            <PrivateRoute>
+              <Orders />
             </PrivateRoute>
           }
         />

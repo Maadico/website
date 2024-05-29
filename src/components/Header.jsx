@@ -8,12 +8,16 @@ const Header = () => {
   const { pathname } = useLocation();
   const { auth, setAuth, setIsAuthenticated, isAuthenticate } =
     useContext(UserContext);
-  const isVisible = ["/profile", "/program/", "/program-purchase"].includes(
-    pathname
-  );
+  const isVisible = [
+    "/profile",
+    "/program/",
+    "/program-purchase",
+    "/orders",
+  ].includes(pathname);
   const isVisibles =
     pathname.startsWith("/profile") ||
     pathname.startsWith("/program-purchase") ||
+    pathname.startsWith("/orders") ||
     pathname.startsWith("/program/") ||
     pathname.startsWith("/resetpassword/");
 

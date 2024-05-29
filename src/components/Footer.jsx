@@ -8,6 +8,7 @@ const Footer = () => {
   const isVisibles =
     pathname.startsWith("/program-purchase") ||
     pathname.startsWith("/profile") ||
+    pathname.startsWith("/orders") ||
     pathname.startsWith("/program/");
   return (
     <div className="footer ">

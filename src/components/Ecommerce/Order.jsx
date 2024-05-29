@@ -42,7 +42,7 @@ const Order = () => {
                       </td>
                       <td> {o?.product?.name}</td>
                       <td> {o?.quantity}</td>
-                      <td>{o?.product?.price}</td>
+                      <td>₹{o?.product?.price}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -54,16 +54,30 @@ const Order = () => {
                     <b>status</b> :{or?.status}
                   </span>
                   <span className="mx-3">
-                    <b>totalAmount</b>: ₹{or?.totalAmount}
+                    <b>totalAmount</b>: ₹{or?.totalAmount} (Including Delivery
+                    Charge)
                   </span>
                   <span>
                     <b>Order Date::</b>{" "}
-                    {new Date(or?.updatedAt).toLocaleDateString()}
+                    {new Date(or?.createdAt).toLocaleDateString()}
                   </span>
-                  <div>
+                  <div className="my-2">
                     <b> Address:</b> {or?.address.address1} ,
                     {or?.address.street} ,{or?.address.district},
                     {or?.address.city},{or?.address.state},{or?.address.zip}
+                  </div>
+
+                  <div>
+                    <b>PaymentMethod: </b>
+                    {or?.paymentMethod}
+                  </div>
+                  <div>
+                    <b>MerchantTransactionId: </b>
+                    {or?.merchantTransactionId}
+                  </div>
+                  <div>
+                    <b>placedDate: </b>
+                    {or?.placedDate ? or?.placedDate : "within 7 days"}
                   </div>
                 </div>
               </div>
