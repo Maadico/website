@@ -15,7 +15,7 @@ const Cart = () => {
     useContext(UserContext);
   const { cart, setCart, handleDeleteCart, cartGet } =
     useContext(productContext);
-  const { handleOrder } = useContext(orderContext);
+  const { handleOrder, handleGetOrders } = useContext(orderContext);
   const totalPrice = () => {
     return cart.reduce((a, { price, qty }) => a + price * qty, 0);
   };
@@ -71,6 +71,7 @@ const Cart = () => {
     }
   };
   useEffect(() => {
+    handleGetOrders(auth);
     setCLoader(true);
     const fetchedProduct = async () => {
       console.log(auth);
