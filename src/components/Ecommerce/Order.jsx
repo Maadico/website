@@ -13,9 +13,9 @@ const Order = () => {
     fetchOrders();
   }, []);
   return (
-    <div className="product mb-2">
+    <div className="product ">
       {order?.length !== 0 ? (
-        <div className="ordersPage">
+        <div className="ordersPage mb-2">
           {order?.map((or, i) => (
             <>
               <table class="table">
