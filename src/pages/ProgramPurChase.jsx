@@ -11,29 +11,15 @@ const ProgramPurChase = () => {
   const navigate = useNavigate();
   const { auth, setAuth, setIsAuthenticated, isAuthenticate } =
     useContext(UserContext);
-  const { order } = useContext(OrderContext);
   const [currentIndex, setCurrentIndex] = useState(2);
-  // useEffect(() => {
-  //   if (order.length > 0) {
-  //     setCurrentIndex(2);
-  //   } else {
-  //     setCurrentIndex(0);
-  //   }
-  // }, []);
-  // const handleLogout = () => {
-  //   setAuth({ ...auth, user: null, token: "" });
-  //   setIsAuthenticated(false);
-  //   localStorage.removeItem("auth");
-  //   navigate("/");
-  //   return;
-  // };
+
   return !isAuthenticate ? (
     <Loader />
   ) : (
     <div style={{ backgroundColor: "rgb(246,252,252)" }}>
       <div className="container-xl px-4 ">
         <nav className="nav nav-borders">
-          {["Profile", "Program", "Program Purchase", "Medical Kit"].map(
+          {["Profile", "Program", "Program Purchase", "Your Orders"].map(
             (s, i) => (
               <>
                 <span

@@ -206,10 +206,7 @@ const ProgramView = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="row productsDetailsMarginWidth97quantity">
-                <h6>Programs Components</h6>
-                <button className="btn  px-4 mx-2">200gm</button>
-              </div> */}
+
               <div className="ProgramDetailsMarginWidth97instruction mt-2">
                 <h1>Programs Components</h1>
 

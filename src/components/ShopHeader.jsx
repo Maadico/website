@@ -66,7 +66,7 @@ const ShopHeader = () => {
                     <span className="mx-1">
                       <TbFirstAidKitOff fontSize={30} />
                     </span>
-                    <span> Maadico Kit</span>
+                    <span> Products</span>
                   </Link>
                 </li>
                 <li className="nav-item">

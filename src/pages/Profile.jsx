@@ -38,7 +38,7 @@ const Profile = () => {
     <div style={{ backgroundColor: "rgb(246,252,252)" }}>
       <div className="container-xl px-4 ">
         <nav className="nav nav-borders">
-          {["Profile", "Program", "Program Purchase", "Medical Kit"].map(
+          {["Profile", "Program", "Program Purchase", "Your Orders"].map(
             (s, i) => (
               <>
                 <span

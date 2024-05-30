@@ -16,8 +16,21 @@ const Cart = () => {
   const { cart, setCart, handleDeleteCart, cartGet } =
     useContext(productContext);
   const { handleOrder, handleGetOrders } = useContext(orderContext);
+
+  function calculateNewPrice(originalPrice, discountPercentage) {
+    const dis = discountPercentage ? discountPercentage : 0;
+    console.log(originalPrice, dis);
+    const discountAmount = originalPrice * (dis / 100);
+    const newPrice = originalPrice - discountAmount;
+    return Math.floor(newPrice);
+  }
+
   const totalPrice = () => {
-    return cart.reduce((a, { price, qty }) => a + price * qty, 0);
+    return cart.reduce(
+      (a, { price, qty, discount }) =>
+        a + calculateNewPrice(price, discount) * qty,
+      0
+    );
   };
 
   const [subtotal, setSubtotal] = useState(0);
@@ -71,7 +84,6 @@ const Cart = () => {
     }
   };
   useEffect(() => {
-    handleGetOrders(auth);
     setCLoader(true);
     const fetchedProduct = async () => {
       console.log(auth);
@@ -139,6 +151,7 @@ const Cart = () => {
     console.log(productData);
     await handleOrder(productData, auth);
   };
+
   return cLoader ? (
     <Loader />
   ) : (
@@ -257,11 +270,14 @@ const Cart = () => {
                               <div className="price-wrap">
                                 {" "}
                                 <var className="price">{`₹${(
-                                  c?.price * c?.qty
+                                  calculateNewPrice(c?.price, c?.discount) *
+                                  c?.qty
                                 ).toFixed(2)}`}</var>{" "}
                                 <small className="text-muted">
                                   {" "}
-                                  ₹{c?.price} each{" "}
+                                  ₹{/* {c?.price}  */}
+                                  {calculateNewPrice(c?.price, c?.discount)}
+                                  each{" "}
                                 </small>{" "}
                               </div>
                             </td>
