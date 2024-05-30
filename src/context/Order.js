@@ -25,9 +25,10 @@ const Order = ({ children }) => {
 
           const redirectUrl =
             data?.data?.data?.instrumentResponse?.redirectInfo?.url;
-          if (window.open) {
-            window.open(redirectUrl, "_blank");
-          }
+
+          // if (window.open) {
+          //   window.open(redirectUrl, "_blank");
+          // }
           const a = document.createElement("a");
           a.href = redirectUrl;
           a.target = "_blank"; // Open in new tab
