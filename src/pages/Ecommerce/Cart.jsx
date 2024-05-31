@@ -157,23 +157,21 @@ const Cart = () => {
 
         const redirectUrl =
           data?.data?.data?.instrumentResponse?.redirectInfo?.url;
-        // if (window.open) {
-        //   window.open(redirectUrl, "_blank");
-        // }
+        if (window.open) {
+          window.open(redirectUrl, "_blank");
+        }
 
-        const a = document.createElement("a");
-        a.href = redirectUrl;
-        a.target = "_blank"; // Open in new tab
-        a.rel = "noopener noreferrer"; // Security reasons
+        // const a = document.createElement("a");
+        // a.href = redirectUrl;
+        // a.target = "_blank";
+        // a.rel = "noopener noreferrer";
 
-        // Append the anchor to the body
-        document.body.appendChild(a);
+        // document.body.appendChild(a);
 
-        // Programmatically trigger a click event on the anchor
-        a.click();
+        // a.click();
 
-        // Remove the anchor from the document
-        document.body.removeChild(a);
+        // document.body.removeChild(a);
+        return;
       }
     } catch (e) {
       console.log(e);
