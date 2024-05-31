@@ -151,28 +151,28 @@ const Cart = () => {
     console.log(productData);
 
     try {
-      const data = await handleOrder(productData, auth);
-      if (data && data?.data?.data?.instrumentResponse?.redirectInfo?.url) {
-        console.log(data?.data?.data?.instrumentResponse?.redirectInfo?.url);
+      await handleOrder(productData, auth);
+      // if (data && data?.data?.data?.instrumentResponse?.redirectInfo?.url) {
+      //   console.log(data?.data?.data?.instrumentResponse?.redirectInfo?.url);
 
-        const redirectUrl =
-          data?.data?.data?.instrumentResponse?.redirectInfo?.url;
-        if (window.open) {
-          window.open(redirectUrl, "_blank");
-        }
+      //   const redirectUrl =
+      //     data?.data?.data?.instrumentResponse?.redirectInfo?.url;
+      //   // if (window.open) {
+      //   //   window.open(redirectUrl, "_blank");
+      //   // }
 
-        // const a = document.createElement("a");
-        // a.href = redirectUrl;
-        // a.target = "_blank";
-        // a.rel = "noopener noreferrer";
+      //   const a = document.createElement("a");
+      //   a.href = redirectUrl;
+      //   a.target = "_blank";
+      //   a.rel = "noopener noreferrer";
 
-        // document.body.appendChild(a);
+      //   document.body.appendChild(a);
 
-        // a.click();
+      //   a.click();
 
-        // document.body.removeChild(a);
-        return;
-      }
+      //   document.body.removeChild(a);
+      //   return;
+      // }
     } catch (e) {
       console.log(e);
       toast(e.response.data.message, {
