@@ -149,7 +149,42 @@ const Cart = () => {
       address: auth?.user?.address,
     };
     console.log(productData);
-    await handleOrder(productData, auth);
+
+    try {
+      const data = await handleOrder(productData, auth);
+      if (data && data?.data?.data?.instrumentResponse?.redirectInfo?.url) {
+        console.log(data?.data?.data?.instrumentResponse?.redirectInfo?.url);
+
+        const redirectUrl =
+          data?.data?.data?.instrumentResponse?.redirectInfo?.url;
+        // if (window.open) {
+        //   window.open(redirectUrl, "_blank");
+        // }
+
+        const a = document.createElement("a");
+        a.href = redirectUrl;
+        a.target = "_blank"; // Open in new tab
+        a.rel = "noopener noreferrer"; // Security reasons
+
+        // Append the anchor to the body
+        document.body.appendChild(a);
+
+        // Programmatically trigger a click event on the anchor
+        a.click();
+
+        // Remove the anchor from the document
+        document.body.removeChild(a);
+      }
+    } catch (e) {
+      console.log(e);
+      toast(e.response.data.message, {
+        style: {
+          borderRadius: "10px",
+          background: " rgb(24, 50, 91)",
+          color: "#fff",
+        },
+      });
+    }
   };
 
   return cLoader ? (
