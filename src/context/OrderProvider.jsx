@@ -31,9 +31,9 @@ const OrederProvoider = ({ children }) => {
           // if (window.open) {
           //   window.open(redirectUrl, "_blank");
           // }
-
-          windowReference.location = redirectUrl;
-          return;
+          setTimeout(() => {
+            window.open(redirectUrl, "_blank");
+          });
         }
       }
     } catch (e) {
