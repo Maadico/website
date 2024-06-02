@@ -88,5 +88,27 @@
       "https://res.cloudinary.com/dhzogutcf/image/upload/v1717109087/pcod/qkvx1msxxc7v25uv6ukr.jpg",
       "https://res.cloudinary.com/dhzogutcf/image/upload/v1717109087/pcod/pspysanptbslhu6brmff.jpg"
     ]
+  },
+  {
+    "title": " 1 on 1 Doctors Consultation",
+    "id": "6646e139ef20b15c1400a384",
+
+    "Description": "All that you need to reverse PCOD/PCOS and maintain your health in the long-term",
+    "Components": [
+      "Consult our top doctors online for any health concern",
+      "Authentic information in Yoga Therapy, Naturopathy and Ayurveda",
+      "Specially designed Diet Plans and home based treatments for your ailments",
+      {
+        "Items": ["PCOD/PCOS Pack", "PCOD Care Tea", "Yogasana Module"]
+      },
+      " “The good physician treats the disease; the great physician treats the patient who has the disease.” – William Osler"
+    ],
+    "images": [
+      "https://res.cloudinary.com/dhzogutcf/image/upload/v1717363185/Consultations/hmf25dwmgd7vawx3mnto.jpg",
+      "https://res.cloudinary.com/dhzogutcf/image/upload/v1717363184/Consultations/aswxfz9z2cwvupbdbq83.jpg",
+      "https://res.cloudinary.com/dhzogutcf/image/upload/v1717363184/Consultations/ebnznbaqutrabq1s3onc.jpg",
+
+      "https://res.cloudinary.com/dhzogutcf/image/upload/v1717363184/Consultations/latzh8u8gv1rudy8mhyn.avif"
+    ]
   }
 ]

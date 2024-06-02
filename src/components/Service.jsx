@@ -168,11 +168,11 @@ const Service = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 space">
+
+            {/* <div className="col-md-4 space">
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
-                    {/* <GrYoga /> */}
                     <img
                       src={yoga}
                       alt="yoga"
@@ -194,12 +194,13 @@ const Service = () => {
                     flexibility.
                   </p>
                 </div>
-                <div className="row readMore m-0 p-0">
-                  <span>{/* Read More <FaLongArrowAltRight /> */}</span>
-                </div>
+                <div className="row readMore m-0 p-0"></div>
               </div>
-            </div>
-            <div className="col-md-4 space">
+            </div> */}
+            <div
+              className="col-md-4 space"
+              onClick={() => navigate("/program/5")}
+            >
               <div className="box m-1 text-center">
                 <div className="row logo m-0 p-0 g-0">
                   <span>
@@ -216,7 +217,9 @@ const Service = () => {
                   </p>
                 </div>
                 <div className="row readMore m-0 p-0">
-                  <span>{/* Read More <FaLongArrowAltRight /> */}</span>
+                  <span>
+                    Read More <FaLongArrowAltRight />
+                  </span>
                 </div>
               </div>
             </div>

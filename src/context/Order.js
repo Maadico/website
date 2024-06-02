@@ -29,20 +29,9 @@ const Order = ({ children }) => {
           // if (window.open) {
           //   window.open(redirectUrl, "_blank");
           // }
-          const a = document.createElement("a");
-          a.href = redirectUrl;
-          a.target = "_blank"; // Open in new tab
-          a.rel = "noopener noreferrer"; // Security reasons
-
-          // Append the anchor to the body
-          document.body.appendChild(a);
-
-          // Programmatically trigger a click event on the anchor
-          a.click();
-
-          // Remove the anchor from the document
-          document.body.removeChild(a);
-          return;
+          setTimeout(() => {
+            window.open(redirectUrl, "_blank");
+          });
         }
       }
     } catch (e) {
