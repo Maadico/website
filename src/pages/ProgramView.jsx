@@ -45,6 +45,7 @@ const ProgramView = () => {
           setLoader(false);
 
           setProgramPrice(data?.program);
+          setComments(data?.review);
         }
       } catch (e) {
         setLoader(false);

@@ -6,7 +6,7 @@ const OrederProvoider = ({ children }) => {
   const [oLoader, setOloader] = useState(true);
   const [order, setOrder] = useState([]);
   const [allOrder, setAllOrder] = useState([]);
-  let windowReference = window.open();
+
   const handleOrder = async (productData, auth) => {
     try {
       const { data } = await axios.post(

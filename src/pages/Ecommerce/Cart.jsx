@@ -15,7 +15,7 @@ const Cart = () => {
     useContext(UserContext);
   const { cart, setCart, handleDeleteCart, cartGet } =
     useContext(productContext);
-  const { handleOrder, handleGetOrders } = useContext(orderContext);
+  const { handleOrder } = useContext(orderContext);
 
   function calculateNewPrice(originalPrice, discountPercentage) {
     const dis = discountPercentage ? discountPercentage : 0;

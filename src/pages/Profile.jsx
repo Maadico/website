@@ -18,20 +18,7 @@ const Profile = () => {
     setCurrentIndex,
   } = useContext(UserContext);
   const { order } = useContext(OrderContext);
-  // useEffect(() => {
-  //   if (order.length > 0) {
-  //     setCurrentIndex(2);
-  //   } else {
-  //     setCurrentIndex(0);
-  //   }
-  // }, []);
-  // const handleLogout = () => {
-  //   setAuth({ ...auth, user: null, token: "" });
-  //   setIsAuthenticated(false);
-  //   localStorage.removeItem("auth");
-  //   navigate("/");
-  //   return;
-  // };
+
   return !isAuthenticate ? (
     <Loader />
   ) : (
@@ -47,9 +34,6 @@ const Profile = () => {
                     currentIndex === i ? "active ms-0" : ""
                   }`}
                   onClick={() => {
-                    // if (i === 3) {
-                    //   handleLogout();
-                    // }
                     setCurrentIndex(i);
                   }}
                   key={i}
@@ -70,7 +54,7 @@ const Profile = () => {
         ) : currentIndex === 2 ? (
           <Purchase />
         ) : (
-          <Order />
+          currentIndex === 3 && <Order />
         )}
       </div>
     </div>

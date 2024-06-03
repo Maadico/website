@@ -4,11 +4,11 @@ import { orderContext, UserContext } from "../../context/Mycontext";
 
 const Order = () => {
   const navigate = useNavigate();
-  const { handleGetOrders, oLoader, order } = useContext(orderContext);
+  const { handleGetOrders, order } = useContext(orderContext);
   const { auth } = useContext(UserContext);
   useEffect(() => {
-    const fetchOrders = async () => {
-      await handleGetOrders(auth);
+    const fetchOrders = () => {
+      handleGetOrders(auth);
     };
     fetchOrders();
   }, []);
@@ -18,7 +18,7 @@ const Order = () => {
         <div className="ordersPage mb-2">
           {order?.map((or, i) => (
             <>
-              <table class="table">
+              <table class="table" key={or?._id}>
                 <thead>
                   <tr>
                     <th scope="col">S.No</th>
@@ -31,7 +31,9 @@ const Order = () => {
                 <tbody>
                   {or?.products?.map((o, i) => (
                     <tr>
-                      <th scope="row">{i + 1}</th>
+                      <th scope="row" key={o?._id}>
+                        {i + 1}
+                      </th>
                       <td>
                         <img
                           src={o?.product?.productPic[0]}
