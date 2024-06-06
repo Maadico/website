@@ -20,6 +20,8 @@ const Purchase = () => {
         return weightLoss;
       case "6646e0d1ef20b15c1400a372":
         return diabetes;
+      case "665da1844ba3fa709ec8f65e":
+        return "https://img.freepik.com/free-photo/front-view-woman-working-spa_23-2150911797.jpg?t=st=1717658875~exp=1717662475~hmac=37ca7dbf808c840aa8d5826442121ad9c06baa0ea96faceefaf713f877ad2e3a&w=360";
       default:
         return "";
     }
@@ -49,7 +51,7 @@ const Purchase = () => {
                 style={{ borderRadius: "16px" }}
               >
                 <div className="card-header p-4">
-                  <div className="d-flex justify-content-between align-items-center">
+                  <div className="d-flex justify-content-between align-items-center atMobilePurchaseViewBelow">
                     <div>
                       <p className="text-muted mb-2">
                         {" "}
@@ -69,7 +71,10 @@ const Purchase = () => {
                     <div>
                       <h6 className="mb-0">
                         {" "}
-                        <Link to={`/program/${p?.pageNo}`}>
+                        <Link
+                          to={`/program/${p?.pageNo}`}
+                          className="globalColor"
+                        >
                           View Details
                         </Link>{" "}
                       </h6>
@@ -124,7 +129,7 @@ const Purchase = () => {
     <div className="row text-center py-1" style={{ minHeight: "100vh" }}>
       <h1>You have not bought any plane</h1>
       <div className="m-0 p-0 g-0">
-        <button className="btn btn-primary px-3" onClick={handleBack}>
+        <button className="btn globalBackColor px-3" onClick={handleBack}>
           <b> Plans</b>
         </button>
       </div>

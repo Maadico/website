@@ -93,7 +93,7 @@ const Order = () => {
           <h1>You have not bought any Medicine</h1>
           <div className="m-0 p-0 g-0">
             <button
-              className="btn btn-primary px-3"
+              className="btn globalBackColor px-3"
               onClick={() => navigate("/product")}
             >
               <b> Purchase</b>

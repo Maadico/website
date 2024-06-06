@@ -9,6 +9,7 @@ import { CiMedicalClipboard } from "react-icons/ci";
 import { IoMdLogIn } from "react-icons/io";
 import { TbFirstAidKitOff } from "react-icons/tb";
 import { CiHome } from "react-icons/ci";
+import { FaProductHunt } from "react-icons/fa6";
 const ShopHeader = () => {
   const { pathname } = useLocation();
   const { auth, setAuth, setIsAuthenticated, isAuthenticate } =
@@ -64,7 +65,7 @@ const ShopHeader = () => {
                     to="/product"
                   >
                     <span className="mx-1">
-                      <TbFirstAidKitOff fontSize={30} />
+                      <FaProductHunt fontSize={30} />
                     </span>
                     <span> Products</span>
                   </Link>

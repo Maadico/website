@@ -88,16 +88,16 @@ const Product = () => {
       <div className="product">
         <HomeCarousel />
         <div className="container-fluid mt-100">
-          <h1 className="py-2">Our Products</h1>
+          <h2 className="py-2 my-2 text-center">Our Products</h2>
           <div className="row">
             {products.map((p, i) => (
-              <div key={p?._id} className="col-md-4 col-sm-6">
+              <div
+                key={p?._id}
+                className="col-md-4 col-sm-6"
+                onClick={() => navigate(`/product/${p?._id}`)}
+              >
                 <div className="card mb-30">
-                  <Link
-                    className="card-img-tiles"
-                    to={`/product/${p?._id}`}
-                    data-abc="true"
-                  >
+                  <Link className="card-img-tiles" to="" data-abc="true">
                     <div className="inner">
                       <div className="main-img">
                         <img src={p.productPic[0]} alt="Category" />
@@ -111,9 +111,12 @@ const Product = () => {
                   <div className="card-body text-center">
                     <h4 className="card-title">{p?.name}</h4>
                     <p className="text-muted">Starting from ₹{p.price}</p>
-                    <Link to={`/product/${p?._id}`} className="btn viewDetails">
-                      View Products
-                    </Link>
+                    <button
+                      onClick={() => handleAddCart(p?._id)}
+                      className="btn viewDetails"
+                    >
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
               </div>

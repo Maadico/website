@@ -83,7 +83,7 @@ const UserProfile = () => {
               <p>{auth?.user?.email}</p>
             </div>
             <button
-              className="btn btn-primary"
+              className="btn globalBackColor"
               type="button"
               onClick={handleLogout}
             >
@@ -259,7 +259,7 @@ const UserProfile = () => {
 
               <button
                 disabled={addressLoader}
-                className="btn btn-primary"
+                className="btn globalBackColor"
                 type="submit"
               >
                 {addressLoader ? "Loading..." : "  Save changes"}

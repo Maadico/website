@@ -45,7 +45,8 @@ const ProgramView = () => {
           setLoader(false);
 
           setProgramPrice(data?.program);
-          setComments(data?.review);
+          // console.log(data?.review);
+          setComments(data?.program?.review);
         }
       } catch (e) {
         setLoader(false);
@@ -244,6 +245,7 @@ const ProgramView = () => {
               </div>
             </div>
           </div>
+          m
         </div>
       </div>
       <div

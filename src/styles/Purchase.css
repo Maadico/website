@@ -75,3 +75,12 @@
 .card-stepper {
     z-index: 0
 }
+
+@media screen and (max-width:512px) {
+    .atMobilePurchaseViewBelow {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+}

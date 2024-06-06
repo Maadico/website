@@ -55,13 +55,13 @@ const Home = () => {
       {showButton && (
         <div className="fixIcon">
           <div className="icon1">
-            <a href="tel:+919833429932">
+            <a href="tel:+919601645426932">
               <MdAddIcCall fontSize={25} color="white" />
             </a>
           </div>
 
           <div className="icon1">
-            <a href="https://chat.whatsapp.com/GNOwENb2FmoL1tMem8Hddl">
+            <a href="https://wa.me/919601645426" target="blank">
               <IoLogoWhatsapp fontSize={25} color="white" />
             </a>
           </div>

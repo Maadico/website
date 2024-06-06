@@ -8,7 +8,7 @@ import {
 } from "../../context/Mycontext";
 import toast from "react-hot-toast";
 import Loader from "../../components/Loader";
-
+import { MdDeleteOutline } from "react-icons/md";
 const Cart = () => {
   const navigate = useNavigate();
   const { auth, address, setAddress, isAddress, setisAddress } =
@@ -198,7 +198,7 @@ const Cart = () => {
                   <div className="row">
                     <div className="col-12">
                       {" "}
-                      <div className="card p-2 rounded">
+                      <div className="card p-2 rounded addressSmallDevice">
                         <p className="address">
                           {city}, {state}, {district}, {street} {zip}, {name}{" "}
                           {phone}
@@ -219,7 +219,7 @@ const Cart = () => {
                             className="btn viewDetails"
                             onClick={() => navigate("/profile")}
                           >
-                            Edit Address
+                            Edit
                           </button>
                         </div>
                       </div>
@@ -261,7 +261,10 @@ const Cart = () => {
                       <tbody>
                         {cart?.map((c, i) => (
                           <tr key={c?.cId}>
-                            <td>
+                            <td
+                              // style={{ width: "150px" }}
+                              className="cartWidthForSmallSize"
+                            >
                               <figure className="itemside align-items-center">
                                 <div className="aside">
                                   <img
@@ -273,7 +276,7 @@ const Cart = () => {
                                 <figcaption className="info">
                                   <h5> {c?.name}</h5>
 
-                                  <p className="text-muted small">
+                                  <p className="text-muted text-muted1 small">
                                     Total Avilable <br />
                                     {c?.quantity}
                                   </p>
@@ -299,7 +302,7 @@ const Cart = () => {
                                 </span>
                               </div>
                             </td>
-                            <td>
+                            <td className="d-flex">
                               <div className="price-wrap">
                                 {" "}
                                 <var className="price">{`₹${(
@@ -312,6 +315,9 @@ const Cart = () => {
                                   {calculateNewPrice(c?.price, c?.discount)}
                                   each{" "}
                                 </small>{" "}
+                              </div>
+                              <div onClick={() => removeFromCart(c?.cId)}>
+                                <MdDeleteOutline fontSize={20} />
                               </div>
                             </td>
                             <td className="text-right d-none d-md-block ">
@@ -347,7 +353,7 @@ const Cart = () => {
                           />{" "}
                           <span className="input-group-append">
                             {" "}
-                            <button className="btn btn-primary btn-apply coupon btn-lg py-3">
+                            <button className="btn globalBackColor btn-apply coupon btn-lg py-3">
                               Apply
                             </button>{" "}
                           </span>{" "}
@@ -376,7 +382,7 @@ const Cart = () => {
                     </dl>
                     <hr />{" "}
                     <button
-                      className="btn btn-out btn-primary btn-square btn-main"
+                      className="btn btn-out globalBackColor btn-square btn-main"
                       onClick={handleCheckout}
                     >
                       {" "}
@@ -384,7 +390,7 @@ const Cart = () => {
                     </button>{" "}
                     <Link
                       to="/product"
-                      className="btn btn-out btn-success btn-square btn-main mt-2"
+                      className="btn btn-out globalBackColor btn-square btn-main mt-2"
                     >
                       Continue Shopping
                     </Link>

@@ -28,13 +28,21 @@ const Footer = () => {
               <div className="socialFoot row">
                 <p>
                   <span>
-                    <MdEmail color="rgb(129,240,224)" fontSize={25} />
+                    <MdEmail
+                      color="rgb(129,240,224)"
+                      fontSize={25}
+                      color="white"
+                    />
                   </span>
                   <span> maadico.in@gmail.com</span>
                 </p>
                 <p>
                   <span>
-                    <MdLocationOn color="rgb(129,240,224)" fontSize={25} />
+                    <MdLocationOn
+                      color="rgb(129,240,224)"
+                      fontSize={25}
+                      color="white"
+                    />
                   </span>
                   <span>
                     Chatrapati Shivaji Marg, Adajan Gam, Adajan, Surat, Gujarat
@@ -118,7 +126,7 @@ const Footer = () => {
                 <div className="row btnFoot">
                   <a href="#contacts" className="btn btn-outline-light">
                     <span>
-                      <IoCall fontSize={20} color="rgb(129,240,224)" />
+                      <IoCall fontSize={20} color="white" />
                     </span>
                     <span className="mx-2">Book An Appointment</span>
                   </a>

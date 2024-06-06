@@ -11,6 +11,7 @@ const CustomersReview = ({ comments, onSubmitComment }) => {
     onSubmitComment(comment);
     setComment("");
   };
+  console.log(comments);
   return (
     <div>
       <div className="container customersReview my-2">
@@ -40,7 +41,7 @@ const CustomersReview = ({ comments, onSubmitComment }) => {
 
                   <ul className="media-list">
                     <div className="row">
-                      <h6 className="mt-1">Total Review {comments.length}</h6>
+                      <h6 className="mt-1">Total Review {comments?.length}</h6>
                       <hr />
                     </div>
                     {comments?.map((c, i) => (
@@ -53,7 +54,7 @@ const CustomersReview = ({ comments, onSubmitComment }) => {
                               </strong>
                             </span>
                             <span className="text-muted pull-right">
-                              <small className="text-muted">30 min ago</small>
+                              {/* <small className="text-muted">30 min ago</small> */}
                             </span>
                           </div>
                           <p>{c.reviews}</p>
