@@ -145,7 +145,7 @@ const Cart = () => {
     });
     const productData = {
       products,
-      totalAmount: Price + 0,
+      totalAmount: Price + 50,
       address: auth?.user?.address,
     };
     console.log(productData);

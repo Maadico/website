@@ -57,7 +57,7 @@ const ProgramView = () => {
       }
     };
     handleFetchProgramm();
-  }, [programInfo]);
+  }, []);
   function calculateNewPrice(originalPrice, discountPercentage) {
     const dis = discountPercentage ? discountPercentage : 0;
     console.log(originalPrice, dis);
@@ -245,7 +245,6 @@ const ProgramView = () => {
               </div>
             </div>
           </div>
-          m
         </div>
       </div>
       <div
