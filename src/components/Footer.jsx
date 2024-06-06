@@ -17,7 +17,7 @@ const Footer = () => {
           <div className=" d-flex justify-content-between align-items-baseline atSmallFooter">
             <div className="foot ">
               <div className="row footHeading">
-                <h1>Medcare</h1>
+                <h1>MaaDico</h1>
               </div>
               <div className="footDescription row">
                 <p>
