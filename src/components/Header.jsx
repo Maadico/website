@@ -21,11 +21,15 @@ const Header = () => {
     pathname.startsWith("/program/") ||
     pathname.startsWith("/resetpassword/");
 
+  const homePath = pathname === "/";
   return (
     <div
       className="container-fluid"
       id="navbarColor"
-      style={{ backgroundColor: isVisible && "rgb(246,252,252)" }}
+      style={{
+        backgroundColor: isVisible && "rgb(246,252,252)",
+        marginTop: homePath && "5vh",
+      }}
     >
       <div className="container p-0">
         <nav className="navbar navbar-expand-lg p-0">

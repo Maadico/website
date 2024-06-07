@@ -28,9 +28,7 @@ const ProgramPurChase = () => {
                     currentIndex === i ? "active ms-0" : ""
                   }`}
                   onClick={() => {
-                    // if (i === 3) {
-                    //   handleLogout();
-                    // }
+                   
                     setCurrentIndex(i);
                   }}
                   key={i}

@@ -9,6 +9,10 @@ import {
 import toast from "react-hot-toast";
 import Loader from "../../components/Loader";
 import { MdDeleteOutline } from "react-icons/md";
+import { MdAddIcCall } from "react-icons/md";
+// import { BiSolidToTop } from "react-icons/bi";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaArrowUp } from "react-icons/fa6";
 const Cart = () => {
   const navigate = useNavigate();
   const { auth, address, setAddress, isAddress, setisAddress } =
@@ -184,7 +188,25 @@ const Cart = () => {
       });
     }
   };
+  const [showButton, setShowButton] = useState(false);
+  useEffect(() => {
+    // Add scroll event listener to determine when to show the button
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 200) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return cLoader ? (
     <Loader />
   ) : (
@@ -265,7 +287,7 @@ const Cart = () => {
                               // style={{ width: "150px" }}
                               className="cartWidthForSmallSize"
                             >
-                              <figure className="itemside align-items-center">
+                              <figure className="itemside ">
                                 <div className="aside">
                                   <img
                                     src={c?.productPic[0]}
@@ -276,10 +298,10 @@ const Cart = () => {
                                 <figcaption className="info">
                                   <h5> {c?.name}</h5>
 
-                                  <p className="text-muted text-muted1 small">
+                                  {/* <p className="text-muted text-muted1 small">
                                     Total Avilable <br />
                                     {c?.quantity}
-                                  </p>
+                                  </p> */}
                                 </figcaption>
                               </figure>
                             </td>
@@ -302,25 +324,30 @@ const Cart = () => {
                                 </span>
                               </div>
                             </td>
-                            <td className="d-flex">
-                              <div className="price-wrap">
-                                {" "}
-                                <var className="price">{`₹${(
-                                  calculateNewPrice(c?.price, c?.discount) *
-                                  c?.qty
-                                ).toFixed(2)}`}</var>{" "}
-                                <small className="text-muted">
+                            <td>
+                              <div className="d-flex">
+                                <div className="price-wrap">
                                   {" "}
-                                  ₹{/* {c?.price}  */}
-                                  {calculateNewPrice(c?.price, c?.discount)}
-                                  each{" "}
-                                </small>{" "}
-                              </div>
-                              <div onClick={() => removeFromCart(c?.cId)}>
-                                <MdDeleteOutline fontSize={20} />
+                                  <var className="price">{`₹${(
+                                    calculateNewPrice(c?.price, c?.discount) *
+                                    c?.qty
+                                  ).toFixed(2)}`}</var>{" "}
+                                  <small className="text-muted">
+                                    {" "}
+                                    ₹{/* {c?.price}  */}
+                                    {calculateNewPrice(c?.price, c?.discount)}
+                                    each{" "}
+                                  </small>{" "}
+                                </div>
+                                <div
+                                  onClick={() => removeFromCart(c?.cId)}
+                                  className="hideCartDeleteIcon"
+                                >
+                                  <MdDeleteOutline fontSize={20} />
+                                </div>
                               </div>
                             </td>
-                            <td className="text-right d-none d-md-block ">
+                            <td className="hideRemoveBtn">
                               <button
                                 className="btn btn-light btn-lg"
                                 onClick={() => removeFromCart(c?.cId)}
@@ -416,6 +443,31 @@ const Cart = () => {
           >
             Find Medicines
           </button>
+        </div>
+      )}
+      {showButton && (
+        <div className="fixIcon">
+          <div className="icon1">
+            <a href="tel:+919601645426932">
+              <MdAddIcCall fontSize={25} color="white" />
+            </a>
+          </div>
+
+          <div className="icon1">
+            <a href="https://wa.me/919601645426" target="blank">
+              <IoLogoWhatsapp fontSize={25} color="white" />
+            </a>
+          </div>
+          {/* <div className="icon1">
+            <a href=" https://www.instagram.com/maadico_1?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">
+              <AiFillInstagram fontSize={25} color="white" />
+            </a>
+          </div> */}
+          <div className="icon1">
+            <a href="#navbarColor">
+              <FaArrowUp fontSize={26} color="white" />
+            </a>
+          </div>
         </div>
       )}
     </EcommerceLayout>

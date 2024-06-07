@@ -114,7 +114,7 @@ const Contact = () => {
                   </div>
                   <div className="r mx-1">
                     <h6>Location</h6>
-                    <p>Gujurat - 395009</p>
+                    <p> Gujarat - 395009</p>
                   </div>
                 </div>
               </div>

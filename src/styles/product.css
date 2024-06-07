@@ -326,6 +326,14 @@
     align-items: center;
 }
 
+.hideCartDeleteIcon {
+    display: none;
+}
+
+.hideRemoveBtn {
+    display: block;
+}
+
 .notAddedCart img {
     height: 300px;
     width: 300px;
@@ -350,6 +358,8 @@
     padding-left: 15px;
     padding-right: 7px;
 }
+
+
 
 .table-shopping-cart .price-wrap {
     line-height: 1.2
@@ -592,6 +602,9 @@ a {
 }
 
 @media screen and (max-width:603px) {
+    .aside {
+        display: none !important;
+    }
 
     .headingOfProduct h1 {
         font-size: 1.3rem;
@@ -611,6 +624,16 @@ a {
 }
 
 @media screen and (max-width:450px) {
+
+
+    .hideCartDeleteIcon {
+        display: block;
+    }
+
+    .hideRemoveBtn {
+        display: none;
+    }
+
     .headingOfProduct h1 {
         font-size: 1.1rem;
         font-weight: 700;
@@ -819,7 +842,7 @@ a {
     }
 
     .info h5 {
-        font-size: x-small;
+        font-size: medium;
     }
 
     .addressSmallDevice p {

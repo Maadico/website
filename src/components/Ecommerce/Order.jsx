@@ -90,7 +90,7 @@ const Order = () => {
         </div>
       ) : (
         <div className="row text-center py-1" style={{ minHeight: "100vh" }}>
-          <h1>You have not bought any Medicine</h1>
+          <h1>You did not order any medicine till now</h1>
           <div className="m-0 p-0 g-0">
             <button
               className="btn globalBackColor px-3"

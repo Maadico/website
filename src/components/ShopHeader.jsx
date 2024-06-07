@@ -19,7 +19,7 @@ const ShopHeader = () => {
   const { cart } = useContext(productContext);
   return (
     <div
-      className="container-fluid"
+      className="container-fluid "
       id="navbarColor"
       style={{ backgroundColor: isVisible ? "" : "rgb(246, 252, 252)" }}
     >
@@ -32,6 +32,22 @@ const ShopHeader = () => {
 
               {/* Doctor */}
             </Link>
+
+            <div className="cartShowing">
+              <Link
+                className="nav-link active shopCartPos"
+                aria-current="page"
+                to="/cart"
+              >
+                <span className="mx-1 shopCartPos">
+                  <FiShoppingCart fontSize={30} />
+                </span>
+                <div className=" shopCartRel0 bg-danger">
+                  {cart?.length ? cart?.length : 0}
+                </div>
+                {/* <span>Cart</span> */}
+              </Link>
+            </div>
             <button
               className="navbar-toggler"
               type="button"
@@ -43,8 +59,9 @@ const ShopHeader = () => {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
+
             <div
-              className="collapse navbar-collapse"
+              className="collapse navbar-collapse "
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -70,7 +87,7 @@ const ShopHeader = () => {
                     <span> Products</span>
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item cartNav">
                   <Link
                     className="nav-link active shopCartPos"
                     aria-current="page"

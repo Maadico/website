@@ -100,7 +100,7 @@ const ResetPassword = () => {
                   type="submit"
                   data-mdb-button-init
                   data-mdb-ripple-init
-                  className="btn btn-primary "
+                  className="btn globalBackColor "
                   style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
                   disabled={loader}
                 >
@@ -112,7 +112,7 @@ const ResetPassword = () => {
                   type="submit"
                   data-mdb-button-init
                   data-mdb-ripple-init
-                  className="btn btn-primary"
+                  className="btn globalBackColor"
                   style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
                   onClick={() => navigate("/login")}
                 >

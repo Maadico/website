@@ -75,6 +75,11 @@ p {
   background-color: rgb(24, 50, 91);
 }
 
+.globalBackColor:hover {
+  color: white;
+  background-color: rgb(24, 50, 91);
+}
+
 .globalColor {
   color: rgb(24, 50, 91);
 }

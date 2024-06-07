@@ -42,6 +42,7 @@ import { productContext, UserContext } from "./context/Mycontext";
 import Refund from "./pages/rule/Refund";
 import ShippingPolicy from "./pages/rule/ShippingPolicy";
 import Orders from "./pages/Orders";
+import UpHeader from "./components/UpHeader";
 
 const App = () => {
   return (
@@ -80,6 +81,7 @@ const Main = () => {
   }, [auth]);
   return (
     <div>
+      {pathname === "/" && <UpHeader />}
       {!isVisible && !dynamicIsVisible && <Header />}
 
       <Routes>

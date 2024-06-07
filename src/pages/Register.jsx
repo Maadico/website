@@ -21,6 +21,7 @@ const Register = () => {
   const [btnLoad, setBtnLoad] = useState(false);
   const [btnLoad1, setBtnLoad1] = useState(false);
   const [otp, SetOtp] = useState("");
+  const [isOtp, setIsOtp] = useState(false);
   const handleSignUpChange = (e) => {
     const { name, value } = e.target;
     setSignUpData({ ...signupData, [name]: value });
@@ -96,6 +97,7 @@ const Register = () => {
         signupData
       );
       if (res.data.success) {
+        setIsOtp(false);
         const userInfo = {
           user: res?.data?.user,
           token: res.data?.token,
@@ -146,6 +148,7 @@ const Register = () => {
       );
       if (data?.success) {
         console.log(data?.message);
+        setIsOtp(true);
         setEmailColor("green");
         setBtnLoad(false);
         toast("otp has been sent please check your mail", {
@@ -274,40 +277,41 @@ const Register = () => {
                     type="button"
                     onClick={handleVeriyEmail}
                     disabled={btnLoad}
-                    className="btn btn-primary btn-lg mx-1"
+                    className="btn globalBackColor btn-lg mx-1"
                   >
                     {btnLoad ? "verifying..." : "verify"}
                   </button>
                 </div>
               </div>
+              {isOtp && (
+                <div data-mdb-input-init className="form-outline mb-1">
+                  <label className="form-label" htmlFor="form3Example3">
+                    Otp
+                  </label>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <input
+                      type="otp"
+                      id="form3Example3"
+                      className="form-control form-control-lg"
+                      placeholder="Enter otp"
+                      name="email"
+                      value={otp}
+                      onChange={(e) => SetOtp(e.target.value)}
+                      style={{ color: OtpColor }}
+                      required
+                    />
 
-              <div data-mdb-input-init className="form-outline mb-1">
-                <label className="form-label" htmlFor="form3Example3">
-                  Otp
-                </label>
-                <div className="d-flex justify-content-between align-items-center">
-                  <input
-                    type="otp"
-                    id="form3Example3"
-                    className="form-control form-control-lg"
-                    placeholder="Enter otp"
-                    name="email"
-                    value={otp}
-                    onChange={(e) => SetOtp(e.target.value)}
-                    style={{ color: OtpColor }}
-                    required
-                  />
-
-                  <button
-                    type="button"
-                    onClick={handleVerifyOtp}
-                    disabled={btnLoad1}
-                    className="btn btn-primary btn-lg mx-1"
-                  >
-                    {btnLoad1 ? "verifying..." : "verify"}
-                  </button>
+                    <button
+                      type="button"
+                      onClick={handleVerifyOtp}
+                      disabled={btnLoad1}
+                      className="btn globalBackColor btn-lg mx-1"
+                    >
+                      {btnLoad1 ? "verifying..." : "verify"}
+                    </button>
+                  </div>
                 </div>
-              </div>
+              )}
 
               <div data-mdb-input-init className="form-outline mb-1">
                 <label className="form-label" htmlFor="form3Example4">
@@ -342,7 +346,7 @@ const Register = () => {
                   type="submit"
                   data-mdb-button-init
                   data-mdb-ripple-init
-                  className="btn btn-primary btn-lg"
+                  className="btn globalBackColor btn-lg"
                   style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
                 >
                   Register

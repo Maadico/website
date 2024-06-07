@@ -1,10 +1,14 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import EcommerceLayout from "../../components/Ecommerce/EcommerceLayout";
 import HomeCarousel from "../../components/Ecommerce/HomeCarousel";
 import { productContext, UserContext } from "../../context/Mycontext";
 import toast from "react-hot-toast";
 import Loader from "../../components/Loader";
+import { MdAddIcCall } from "react-icons/md";
+// import { BiSolidToTop } from "react-icons/bi";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaArrowUp } from "react-icons/fa6";
 const Product = () => {
   const navigate = useNavigate();
 
@@ -81,6 +85,27 @@ const Product = () => {
       });
     }
   };
+
+  const [showButton, setShowButton] = useState(false);
+  useEffect(() => {
+    // Add scroll event listener to determine when to show the button
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 200) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return pLoader ? (
     <Loader />
   ) : (
@@ -124,6 +149,31 @@ const Product = () => {
           </div>
         </div>
       </div>
+      {showButton && (
+        <div className="fixIcon">
+          <div className="icon1">
+            <a href="tel:+919601645426932">
+              <MdAddIcCall fontSize={25} color="white" />
+            </a>
+          </div>
+
+          <div className="icon1">
+            <a href="https://wa.me/919601645426" target="blank">
+              <IoLogoWhatsapp fontSize={25} color="white" />
+            </a>
+          </div>
+          {/* <div className="icon1">
+            <a href=" https://www.instagram.com/maadico_1?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">
+              <AiFillInstagram fontSize={25} color="white" />
+            </a>
+          </div> */}
+          <div className="icon1">
+            <a href="#navbarColor">
+              <FaArrowUp fontSize={26} color="white" />
+            </a>
+          </div>
+        </div>
+      )}
     </EcommerceLayout>
   );
 };

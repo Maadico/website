@@ -127,7 +127,7 @@ const Login = () => {
                   type="submit"
                   data-mdb-button-init
                   data-mdb-ripple-init
-                  className="btn btn-primary btn-lg"
+                  className="btn globalBackColor btn-lg"
                   style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
                   disabled={loader}
                 >

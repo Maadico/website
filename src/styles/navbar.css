@@ -2,6 +2,8 @@
     background-color: rgb(255, 255, 255);
     /* padding: 0 !important; */
     /* padding: 1rem 0; */
+    /* background-color: aqua; */
+
 }
 
 .brandLogo {
@@ -53,4 +55,83 @@ a:hover {
 .priceSet p .price {
     text-decoration: line-through;
     font-weight: 900;
+}
+
+/* upHeader */
+.upHeader {
+    background-color: rgb(24, 50, 91);
+    height: 5vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999999999999999;
+}
+
+.navUp_Header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.navUp_Header a:hover {
+    color: white !important;
+}
+
+/* shopHeader */
+.cartShowing {
+    display: none;
+}
+
+.cartNav {
+    display: block;
+}
+
+@media screen and (max-width:992px) {
+    .cartShowing {
+        display: block;
+    }
+
+    .cartNav {
+        display: none;
+    }
+
+    .brandLogo {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: rgb(61, 59, 81);
+        margin-left: -40px;
+    }
+
+    .brandLogo span {
+        margin-left: -20px;
+    }
+
+    .logoDoctor img {
+        height: 70px;
+        width: 90px;
+        object-fit: contain;
+
+
+    }
+
+    .shopCartRel0 {
+        position: absolute;
+        left: 12px;
+        top: -17px;
+        height: 22px;
+        width: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        color: white;
+        border-radius: 7px;
+    }
 }

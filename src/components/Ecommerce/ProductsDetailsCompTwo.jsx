@@ -213,7 +213,7 @@ const ProductsDetailsCompTwo = () => {
 
           <div className="productName">
             <h4 className="m-2">
-              25+ Farmers <br /> Empowered
+              25+ Women <br /> Empowered
             </h4>
           </div>
         </div>
@@ -410,7 +410,7 @@ const ProductsDetailsCompTwo = () => {
 
           <div className="productName">
             <h4 className="m-2">
-              Prepared in <br /> Hathras
+              Prepared in <br /> Bharja
             </h4>
           </div>
         </div>
@@ -443,7 +443,7 @@ const ProductsDetailsCompTwo = () => {
             </svg>
           </div>
           <div className="productName">
-            <h4 className="m-2">11 Lab Tests Done</h4>
+            <h4 className="m-2">Fssai Licensed</h4>
           </div>
         </div>
       </div>
