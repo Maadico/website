@@ -51,21 +51,28 @@ const Purchase = () => {
                 style={{ borderRadius: "16px" }}
               >
                 <div className="card-header p-4">
-                  <div className="d-flex justify-content-between align-items-center atMobilePurchaseViewBelow">
+                  <div className="d-flex justify-content-between  atMobilePurchaseViewBelow">
                     <div>
                       <p className="text-muted mb-2">
                         {" "}
-                        Order ID
+                        Order ID:
                         <span className="fw-bold text-body">{p?._id}</span>
                       </p>
                       <p className="text-muted mb-0">
                         {" "}
-                        Place On{" "}
+                        Place On:{" "}
                         <span className="fw-bold text-body">
                           {p?.DeliveredAt
                             ? new Date(p?.DeliveredAt).toLocaleDateString()
                             : "within 7 days"}
                         </span>{" "}
+                      </p>
+                      <p className="text-muted my-2">
+                        {" "}
+                        Subscription Status:
+                        <span className="fw-bold text-body">
+                          {p?.subscriptionType}
+                        </span>
                       </p>
                     </div>
                     <div>
@@ -82,6 +89,23 @@ const Purchase = () => {
                   </div>
                 </div>
                 <div className="card-body p-4">
+                  <div className="d-flex justify-content-between align-items-center my-2">
+                    <p className="text-muted mb-2">
+                      {" "}
+                      StartAt:
+                      <span className="fw-bold text-body">
+                        {new Date(p?.startAt).toLocaleDateString()}
+                      </span>
+                    </p>
+                    <p className="text-muted mb-2">
+                      {" "}
+                      EndAt:
+                      <span className="fw-bold text-body">
+                        {new Date(p?.endDate).toLocaleDateString()}
+                      </span>
+                    </p>
+                  </div>
+                  <hr />
                   <div className="d-flex flex-row mb-4 pb-2">
                     <div className="flex-fill">
                       <h5 className="bold">{p?.ProgramId?.name}</h5>
@@ -127,7 +151,7 @@ const Purchase = () => {
     </section>
   ) : (
     <div className="row text-center py-1" style={{ minHeight: "100vh" }}>
-      <h1>You have not bought any plane</h1>
+      <h1>You did not buy any plan till now</h1>
       <div className="m-0 p-0 g-0">
         <button className="btn globalBackColor px-3" onClick={handleBack}>
           <b> Plans</b>
