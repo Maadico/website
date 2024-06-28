@@ -195,6 +195,8 @@ const Contact = () => {
                         <TimePicker
                           onChange={onChange}
                           // defaultOpenValue={dayjs("00:00:00", "HH:mm:ss")}
+                          use12Hours
+                          format="h:mm a"
                           value={contact?.time}
                         />
                       </div>

@@ -35,6 +35,7 @@ const Home = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+ 
   return (
     <div id="heroSection">
       <Hero />
