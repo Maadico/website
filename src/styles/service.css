@@ -6,6 +6,13 @@
 
 }
 
+.programSectionCard2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .heroTitle h5 {
     color: white;
 }
@@ -79,10 +86,25 @@
     }
 }
 
+
+@media screen and (max-width:991px) {
+    .box {
+        height: 300px;
+
+    }
+
+
+}
+
 @media screen and (max-width:767px) {
     .box {
         height: 250px;
 
+    }
+
+    .programSectionCard2 {
+        display: flex;
+        flex-direction: column;
     }
 }
 

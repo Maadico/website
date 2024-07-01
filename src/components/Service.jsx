@@ -133,93 +133,68 @@ const Service = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="col-md-4 space"
-              onClick={() => navigate("/program/4")}
-            >
-              <div className="box m-1 text-center">
-                <div className="row logo m-0 p-0 g-0">
-                  <span>
-                    {/* <TbReport /> */}
-                    <img
-                      src={pcod}
-                      alt="pcod"
-                      className="img-fluid"
-                      style={{
-                        width: "100px",
-                        height: "100px",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </span>
-                </div>
-                <div className="row m-0 p-0 heading">
-                  <h5>PCOD/PCOS REVERSAL</h5>
-                </div>
-                <div className="row SubHeading m-0 p-0">
-                  <p>
-                    Integrated approach targeting symptoms and hormonal balance.
-                  </p>
-                </div>
-                <div className="row readMore m-0 p-0">
-                  <span>
-                    Read More <FaLongArrowAltRight />
-                  </span>
+            <div className="d-flex programSectionCard2 ">
+              <div
+                className="col-md-4 space"
+                onClick={() => navigate("/program/4")}
+              >
+                <div className="box m-1 text-center">
+                  <div className="row logo m-0 p-0 g-0">
+                    <span>
+                      {/* <TbReport /> */}
+                      <img
+                        src={pcod}
+                        alt="pcod"
+                        className="img-fluid"
+                        style={{
+                          width: "100px",
+                          height: "100px",
+                          objectFit: "contain",
+                        }}
+                      />
+                    </span>
+                  </div>
+                  <div className="row m-0 p-0 heading">
+                    <h5>PCOD/PCOS REVERSAL</h5>
+                  </div>
+                  <div className="row SubHeading m-0 p-0">
+                    <p>
+                      Integrated approach targeting symptoms and hormonal
+                      balance.
+                    </p>
+                  </div>
+                  <div className="row readMore m-0 p-0">
+                    <span>
+                      Read More <FaLongArrowAltRight />
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* <div className="col-md-4 space">
-              <div className="box m-1 text-center">
-                <div className="row logo m-0 p-0 g-0">
-                  <span>
-                    <img
-                      src={yoga}
-                      alt="yoga"
-                      className="img-fluid"
-                      style={{
-                        width: "100px",
-                        height: "100px",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </span>
-                </div>
-                <div className="row m-0 p-0 heading">
-                  <h5>Personalised Yoga Sessions</h5>
-                </div>
-                <div className="row SubHeading m-0 p-0">
-                  <p>
-                    Certified instructors for mental, emotional balance and
-                    flexibility.
-                  </p>
-                </div>
-                <div className="row readMore m-0 p-0"></div>
-              </div>
-            </div> */}
-            <div
-              className="col-md-4 space"
-              onClick={() => navigate("/program/5")}
-            >
-              <div className="box m-1 text-center">
-                <div className="row logo m-0 p-0 g-0">
-                  <span>
-                    <SiGooglemeet />
-                  </span>
-                </div>
-                <div className="row m-0 p-0 heading">
-                  <h5>1-1 Doctor Consultation for Personalised Diet Plans</h5>
-                </div>
-                <div className="row SubHeading m-0 p-0">
-                  <p>
-                    Personalized diet plans with doctor consultations for
-                    lasting well-being.
-                  </p>
-                </div>
-                <div className="row readMore m-0 p-0">
-                  <span>
-                    Read More <FaLongArrowAltRight />
-                  </span>
+              <div
+                className="col-md-4 space"
+                onClick={() => navigate("/program/5")}
+              >
+                <div className="box m-1 text-center">
+                  <div className="row logo m-0 p-0 g-0">
+                    <span>
+                      <SiGooglemeet />
+                    </span>
+                  </div>
+                  <div className="row m-0 p-0 heading">
+                    <h5>1-1 Doctor Consultation for Personalised Diet Plans</h5>
+                  </div>
+                  <div className="row SubHeading m-0 p-0">
+                    <p>
+                      Personalized diet plans with doctor consultations for
+                      lasting well-being.
+                    </p>
+                  </div>
+                  <div className="row readMore m-0 p-0">
+                    <span>
+                      Read More <FaLongArrowAltRight />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

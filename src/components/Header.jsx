@@ -19,19 +19,23 @@ const Header = () => {
     pathname.startsWith("/program-purchase") ||
     pathname.startsWith("/orders") ||
     pathname.startsWith("/program/") ||
-    pathname.startsWith("/resetpassword/");
+    pathname.startsWith("/resetpassword/") ||
+    pathname.startsWith("/privicy") ||
+    pathname.startsWith("/shipping-policy") ||
+    pathname.startsWith("/refund") ||
+    pathname.startsWith("/terms");
 
-  const homePath = pathname === "/";
+  const homePath = window.innerWidth >= 768;
   return (
     <div
       className="container-fluid"
       id="navbarColor"
       style={{
         backgroundColor: isVisible && "rgb(246,252,252)",
-        marginTop: homePath && "5vh",
+        marginTop: !homePath && "5vh",
       }}
     >
-      <div className="container p-0">
+      <div className="container-fluid p-0">
         <nav className="navbar navbar-expand-lg p-0">
           <div className="container-fluid">
             <Link className="navbar-brand brandLogo logoDoctor" to="/">
@@ -132,8 +136,11 @@ const Header = () => {
                       <span>
                         <strong>
                           {auth?.user?.name &&
-                            auth.user.name.charAt(0).toUpperCase() +
-                              auth.user.name.slice(1)}
+                            auth.user.name
+                              .split(" ")[0]
+                              .charAt(0)
+                              .toUpperCase() +
+                              auth.user.name.split(" ")[0].slice(1)}
                         </strong>
                       </span>
                     </Link>

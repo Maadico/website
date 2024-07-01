@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const Footer = () => {
   const { pathname } = useLocation();
   // const isVisible = ["/profile", "/program/2"].includes(pathname);
@@ -9,9 +19,16 @@ const Footer = () => {
     pathname.startsWith("/program-purchase") ||
     pathname.startsWith("/profile") ||
     pathname.startsWith("/orders") ||
-    pathname.startsWith("/program/");
+    pathname.startsWith("/product") ||
+    pathname.startsWith("/program/") ||
+    pathname.startsWith("/privicy") ||
+    pathname.startsWith("/cart") ||
+    pathname.startsWith("/shipping-policy") ||
+    pathname.startsWith("/refund") ||
+    pathname.startsWith("/terms");
   return (
     <div className="footer ">
+      <ScrollToTop />
       <div className="container ">
         <div className="row ">
           <div className=" d-flex justify-content-between align-items-baseline atSmallFooter">

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
@@ -79,9 +79,29 @@ const Main = () => {
     };
     fetchedProduct();
   }, [auth]);
+
+  const [isVisibles, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const windowWidth = window.innerWidth;
+      if (windowWidth >= 768) {
+        setIsVisible(scrolled > windowHeight);
+      } else {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
-      {pathname === "/" && <UpHeader />}
+      {pathname === "/" && isVisibles && <UpHeader />}
       {!isVisible && !dynamicIsVisible && <Header />}
 
       <Routes>
