@@ -89,15 +89,17 @@ const Main = () => {
       const windowWidth = window.innerWidth;
       if (windowWidth >= 768) {
         setIsVisible(scrolled > windowHeight);
-      } else {
-        setIsVisible(true);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+  useEffect(() => {
+    setIsVisible(window.innerWidth < 768);
   }, []);
   return (
     <div>
