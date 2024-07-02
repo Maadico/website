@@ -11,13 +11,7 @@ const WhyItsAwesome = ({ extraInfo }) => {
             </div>
             <div className="WhyItsAwesomeCompText">
               <h6>{a?.title}</h6>
-              <p>
-                {a?.description}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo in
-                atque reiciendis, quis tenetur placeat voluptates, ex corporis
-                consectetur molestiae neque earum. Nam facere recusandae quasi
-                ea nostrum, aliquam vel!
-              </p>
+              <p>{a?.description}</p>
             </div>
           </div>
         ))}
