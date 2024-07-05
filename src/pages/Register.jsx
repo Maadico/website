@@ -328,12 +328,12 @@ const Register = () => {
                 />
               </div>
               <div data-mdb-input-init className="form-outline mb-1">
-                <label className="form-label" htmlFor="form3Example4">
+                <label className="form-label" htmlFor="form3ExampleC">
                   confirm Password
                 </label>
                 <input
                   type="password"
-                  id="form3Example4"
+                  id="form3ExampleC"
                   className="form-control form-control-lg"
                   name="confirmPassword"
                   value={signupData.confirmPassword}

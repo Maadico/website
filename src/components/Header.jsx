@@ -19,7 +19,6 @@ const Header = () => {
     pathname.startsWith("/program-purchase") ||
     pathname.startsWith("/orders") ||
     pathname.startsWith("/program/") ||
-    pathname.startsWith("/resetpassword/") ||
     pathname.startsWith("/privicy") ||
     pathname.startsWith("/shipping-policy") ||
     pathname.startsWith("/refund") ||

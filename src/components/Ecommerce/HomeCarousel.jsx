@@ -10,9 +10,10 @@ function HomeCarousel() {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
-            className="d-block w-100  img-fluid"
-            src="//www.anveshan.farm/cdn/shop/files/anveshan-oils-banner.jpg?v=1706685459&width=2400"
+            className="d-block w-100img-fluid"
+            src="https://res.cloudinary.com/dhzogutcf/image/upload/v1720220438/slider/cjh6lunutxrhc9m6xt5s.jpg"
             alt="First slide"
+            style={{ height: "60vh", objectFit: "cover", width: "100%" }}
           />
 
           {/* <div class="carousel-caption d-none d-md-block">
@@ -35,14 +36,13 @@ function HomeCarousel() {
           />
         </div> */}
       </div>
-      <a
+      {/* <a
         className="carousel-control-prev text-primary"
         href="#carouselExampleIndicators"
         role="button"
         data-slide="prev"
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        {/* <span className="sr-only">Previous</span> */}
       </a>
       <a
         className="carousel-control-next"
@@ -51,8 +51,7 @@ function HomeCarousel() {
         data-slide="next"
       >
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        {/* <span className="sr-only">Next</span> */}
-      </a>
+      </a> */}
     </div>
   );
 }
