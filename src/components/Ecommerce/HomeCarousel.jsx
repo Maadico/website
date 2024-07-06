@@ -10,10 +10,10 @@ function HomeCarousel() {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
-            className="d-block w-100img-fluid"
-            src="https://res.cloudinary.com/dhzogutcf/image/upload/v1720220438/slider/cjh6lunutxrhc9m6xt5s.jpg"
+            className="d-block w-100 img-fluid"
+            src="https://res.cloudinary.com/dhzogutcf/image/upload/v1720238127/slider/bg0rvle3xrniq2pzs9jg.png"
             alt="First slide"
-            style={{ height: "60vh", objectFit: "cover", width: "100%" }}
+            style={{ height: "80vh", objectFit: "contain", width: "100%" }}
           />
 
           {/* <div class="carousel-caption d-none d-md-block">
