@@ -63,6 +63,8 @@ const Main = () => {
     "/cart",
   ].includes(pathname);
   const dynamicIsVisible = pathname.startsWith("/product/");
+  const resetPass = pathname.startsWith("/resetpassword/");
+
   console.log(isVisible, dynamicIsVisible);
   const { auth } = useContext(UserContext);
 
@@ -104,7 +106,7 @@ const Main = () => {
   return (
     <div>
       {pathname === "/" && isVisibles && <UpHeader />}
-      {!isVisible && !dynamicIsVisible && <Header />}
+      {!isVisible && !dynamicIsVisible && !resetPass && <Header />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -151,7 +153,7 @@ const Main = () => {
         <Route path="/cart" element={<Cart />} />
       </Routes>
 
-      {!isVisible && !dynamicIsVisible && <Footer />}
+      {!isVisible && !dynamicIsVisible && !resetPass && <Footer />}
     </div>
   );
 };

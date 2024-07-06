@@ -10,10 +10,9 @@ function HomeCarousel() {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
-            className="d-block w-100 img-fluid"
+            className="homeBannerCard"
             src="https://res.cloudinary.com/dhzogutcf/image/upload/v1720238127/slider/bg0rvle3xrniq2pzs9jg.png"
             alt="First slide"
-            style={{ height: "80vh", objectFit: "contain", width: "100%" }}
           />
 
           {/* <div class="carousel-caption d-none d-md-block">

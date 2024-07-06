@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import loginWall from "../Images/loginWall.jpg";
+import loginWall from "../Images/loginWall.webp";
 import { useContext } from "react";
 import { UserContext } from "../context/Mycontext";
 import axios from "axios";
@@ -73,7 +73,7 @@ const Login = () => {
       <div className="container-fluid h-custom">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-md-9 col-lg-6 col-xl-5">
-            <img src={loginWall} className="img-fluid" alt="loginWall" />
+            <img src={loginWall} className="img-fluid h-100" alt="loginWall" />
           </div>
           <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
             <form onSubmit={handleLoginSubmit}>

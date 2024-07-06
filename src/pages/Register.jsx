@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import loginWall from "../Images/loginWall.jpg";
+import loginWall from "../Images/loginWall.webp";
 import { useContext } from "react";
 import { UserContext } from "../context/Mycontext";
 import axios from "axios";

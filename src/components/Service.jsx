@@ -41,6 +41,7 @@ const Service = () => {
                         width: "100px",
                         height: "100px",
                         objectFit: "contain",
+                        borderRadius: "50%",
                       }}
                     />
                   </span>
@@ -77,6 +78,7 @@ const Service = () => {
                         width: "100px",
                         height: "100px",
                         objectFit: "contain",
+                        borderRadius: "50%",
                       }}
                     />
                   </span>
@@ -113,6 +115,7 @@ const Service = () => {
                         width: "100px",
                         height: "100px",
                         objectFit: "contain",
+                        borderRadius: "50%",
                       }}
                     />
                   </span>
@@ -150,6 +153,7 @@ const Service = () => {
                           width: "100px",
                           height: "100px",
                           objectFit: "contain",
+                          borderRadius: "50%",
                         }}
                       />
                     </span>

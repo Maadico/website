@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import loginWall from "../Images/loginWall.jpg";
+import loginWall from "../Images/loginWall.webp";
 import toast from "react-hot-toast";
 
 import axios from "axios";
