@@ -105,7 +105,13 @@ const Product = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  function calculateNewPrice(originalPrice, discountPercentage) {
+    const dis = discountPercentage ? discountPercentage : 0;
+    console.log(originalPrice, dis);
+    const discountAmount = originalPrice * (dis / 100);
+    const newPrice = originalPrice - discountAmount;
+    return Math.floor(newPrice);
+  }
   return pLoader ? (
     <Loader />
   ) : (
@@ -135,7 +141,21 @@ const Product = () => {
                   </Link>
                   <div className="card-body text-center">
                     <h4 className="card-title">{p?.name}</h4>
-                    <p className="text-muted">Starting from ₹{p.price}</p>
+                    <p
+                      className="text-muted"
+                      style={{ color: "rgb(24,50,91)" }}
+                    >
+                      Starting from
+                      <span style={{ textDecoration: "line-through" }}>
+                        {" "}
+                        ₹ {p.price}
+                      </span>
+                    </p>
+
+                    <p className="text-muted" style={{ lineHeight: "2px" }}>
+                      New Price
+                      <span> ₹ {calculateNewPrice(p?.price, p?.discount)}</span>
+                    </p>
                     <button
                       onClick={() => handleAddCart(p?._id)}
                       className="btn viewDetails"
