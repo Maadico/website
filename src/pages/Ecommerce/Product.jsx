@@ -172,14 +172,14 @@ const Product = () => {
       {showButton && (
         <div className="fixIcon">
           <div className="icon1">
-            <a href="tel:+919601645426932">
+            <a href="tel:+919930805129">
               <MdAddIcCall fontSize={25} color="white" />
             </a>
           </div>
 
           <div className="icon1">
-            <a href="https://wa.me/919601645426" target="blank">
-              <IoLogoWhatsapp fontSize={25} color="white" />
+            <a href="https://wa.me/919930805129" target="blank">
+              <IoLogoWhatsapp fontSize={25} color="green" />
             </a>
           </div>
           {/* <div className="icon1">
