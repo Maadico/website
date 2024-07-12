@@ -69,7 +69,7 @@ a:hover {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999999999999999999999;
+    z-index: 99;
 }
 
 .navUp_Header a {
@@ -100,7 +100,7 @@ a:hover {
     background-color: rgb(5, 49, 92);
     min-height: 17vh;
     width: 100%;
-    z-index: 9999999999999999999999999999999 !important;
+    z-index: 100 !important;
 }
 
 .borderInnerInput {
