@@ -288,7 +288,6 @@ const ShopHeader = () => {
                           <img src={p?.productPic[0]} alt={p?.name} />
                         </div>
                         <div className="right">
-                          {p?.discount}%
                           <div className="upp">
                             <b>{p?.name}</b>
                           </div>

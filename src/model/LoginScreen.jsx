@@ -3,7 +3,11 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import loginWall from "../Images/loginWall.webp";
 import { Link, useNavigate } from "react-router-dom";
-import { orderContext, UserContext } from "../context/Mycontext";
+import {
+  orderContext,
+  productContext,
+  UserContext,
+} from "../context/Mycontext";
 import axios from "axios";
 import toast from "react-hot-toast";
 const style = {
@@ -28,6 +32,8 @@ const LoginScreen = ({
   setIsRegister,
   isRegister,
   productData,
+  callBy = "BUY_NOW",
+  cartId,
 }) => {
   const {
     auth,
@@ -40,7 +46,8 @@ const LoginScreen = ({
     addressLoader,
   } = useContext(UserContext);
   const { handleOrder } = useContext(orderContext);
-
+  const { cart, handleAdToCart } = useContext(productContext);
+  const navigate = useNavigate();
   const [loginData, setLoginData] = useState({ email: "", password: "" });
   const [loader, setLoader] = useState(false);
   const [emailColor, setEmailColor] = useState("black");
@@ -166,13 +173,66 @@ const LoginScreen = ({
       });
     }
   };
+  const isPresent = (id) => {
+    const isCart = cart.find((c) => c?._id === id);
+    if (isCart) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+  const handleAddCart = async (id) => {
+    if (auth?.token && auth?.user) {
+      if (isPresent(id)) {
+        try {
+          const data = await handleAdToCart(id, auth);
+          toast(data, {
+            style: {
+              borderRadius: "10px",
+              background: " rgb(24, 50, 91)",
+              color: "#fff",
+            },
+          });
+          console.log(data);
+          navigate("/cart");
+        } catch (e) {
+          console.log(e);
+          toast(e, {
+            style: {
+              borderRadius: "10px",
+              background: " rgb(24, 50, 91)",
+              color: "#fff",
+            },
+          });
+          return;
+        }
+      } else {
+        toast("Already present", {
+          style: {
+            borderRadius: "10px",
+            background: " rgb(24, 50, 91)",
+            color: "#fff",
+          },
+        });
+
+        return;
+      }
+    }
+  };
   const handleUpdate = async (e) => {
     e.preventDefault();
     console.log("currect path", address);
     try {
       await handleUpdateAddress(address);
-      handleClose();
-      handleCheckout();
+      if (callBy === "BUY_NOW") {
+        handleClose();
+        handleCheckout();
+      } else if (callBy === "ADD_CART") {
+        handleClose();
+        handleAddCart(cartId);
+      }
+
       toast("Processing", {
         style: {
           borderRadius: "10px",
@@ -771,77 +831,80 @@ const LoginScreen = ({
                         />
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="divider d-flex align-items-center my-1">
-                        <h5 className="text-center fw-bold mx-3 mb-0">
-                          Price Details
-                        </h5>
-                      </div>
-                      <div className="col-md-6 my-2">
-                        <div className="mb-1 d-flex justify-content-between align-items-center">
-                          <span>Total MRP:</span>
-                          <div className="d-flex justify-content-start w-50">
-                            <span style={{ textDecoration: "line-through" }}>
-                              ₹{productData?.price}
-                            </span>
+                    {callBy === "BUY_NOW" && (
+                      <div className="row">
+                        <div className="divider d-flex align-items-center my-1">
+                          <h5 className="text-center fw-bold mx-3 mb-0">
+                            Price Details
+                          </h5>
+                        </div>
+                        <div className="col-md-6 my-2">
+                          <div className="mb-1 d-flex justify-content-between align-items-center">
+                            <span>Total MRP:</span>
+                            <div className="d-flex justify-content-start w-50">
+                              <span style={{ textDecoration: "line-through" }}>
+                                ₹{productData?.price}
+                              </span>
 
-                            <span className="mx-2">
-                              <b>
-                                ₹{" "}
-                                {calculateNewPrice(
-                                  productData?.price,
-                                  productData?.discount
-                                )}
-                              </b>
-                            </span>
+                              <span className="mx-2">
+                                <b>
+                                  ₹{" "}
+                                  {calculateNewPrice(
+                                    productData?.price,
+                                    productData?.discount
+                                  )}
+                                </b>
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                        <div className="mb-1 d-flex justify-content-between align-items-center">
-                          <span>Discount:</span>
-                          <div className="d-flex justify-content-start w-50">
-                            <span>
-                              <b>{productData?.discount}%</b>
-                            </span>
+                          <div className="mb-1 d-flex justify-content-between align-items-center">
+                            <span>Discount:</span>
+                            <div className="d-flex justify-content-start w-50">
+                              <span>
+                                <b>{productData?.discount}%</b>
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                        <div className=" mb-1 d-flex justify-content-between align-items-center">
-                          <span>Shipping charges</span>
-                          <div className="d-flex justify-content-start  w-50">
-                            <span>
-                              <b>₹50</b>
-                            </span>
+                          <div className=" mb-1 d-flex justify-content-between align-items-center">
+                            <span>Shipping charges</span>
+                            <div className="d-flex justify-content-start  w-50">
+                              <span>
+                                <b>₹50</b>
+                              </span>
+                            </div>
                           </div>
-                        </div>
 
-                        <div className=" mb-1 d-flex justify-content-between align-items-center">
-                          <span>Apply coupon:</span>
-                          <div className="d-flex justify-content-start  w-50">
-                            <span>
-                              <input
-                                className="form-control couponForModel"
-                                type="text"
-                                placeholder="Enter coupon code"
-                              />
-                            </span>
+                          <div className=" mb-1 d-flex justify-content-between align-items-center">
+                            <span>Apply coupon:</span>
+                            <div className="d-flex justify-content-start  w-50">
+                              <span>
+                                <input
+                                  className="form-control couponForModel"
+                                  type="text"
+                                  placeholder="Enter coupon code"
+                                />
+                              </span>
+                            </div>
+                          </div>
+                          <div className=" mb-1 d-flex justify-content-between align-items-center">
+                            <span>Total Amount: </span>
+                            <div className="d-flex justify-content-start  w-50">
+                              <span>
+                                <b>
+                                  ₹
+                                  {calculateNewPrice(
+                                    productData?.price,
+                                    productData?.discount
+                                  ) + 50}
+                                </b>
+                              </span>
+                            </div>
                           </div>
                         </div>
-                        <div className=" mb-1 d-flex justify-content-between align-items-center">
-                          <span>Total Amount: </span>
-                          <div className="d-flex justify-content-start  w-50">
-                            <span>
-                              <b>
-                                ₹
-                                {calculateNewPrice(
-                                  productData?.price,
-                                  productData?.discount
-                                ) + 50}
-                              </b>
-                            </span>
-                          </div>
-                        </div>
+                        <div className="col-md-6"></div>
                       </div>
-                      <div className="col-md-6"></div>
-                    </div>
+                    )}
+
                     <button
                       disabled={addressLoader}
                       className="btn globalBackColor my-2"

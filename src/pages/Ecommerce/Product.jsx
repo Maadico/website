@@ -25,6 +25,8 @@ const Product = () => {
   } = useContext(productContext);
   const { auth } = useContext(UserContext);
   const { open, handleOpen, handleClose } = useModel();
+  const [action, setAction] = useState("BUY_NOW");
+  const [cartId, setCartId] = useState("");
   // useEffect(() => {
   //   const fetchedProduct = async () => {
   //     await productGet(auth);
@@ -79,13 +81,16 @@ const Product = () => {
         return;
       }
     } else {
-      toast("please first login", {
-        style: {
-          borderRadius: "10px",
-          background: " rgb(24, 50, 91)",
-          color: "#fff",
-        },
-      });
+      setCartId(id);
+      setAction("ADD_CART");
+      handleOpen();
+      // toast("please first login", {
+      //   style: {
+      //     borderRadius: "10px",
+      //     background: " rgb(24, 50, 91)",
+      //     color: "#fff",
+      //   },
+      // });
     }
   };
 
@@ -222,6 +227,8 @@ const Product = () => {
         isRegister={isRegister}
         setIsRegister={setIsRegister}
         productData={productData}
+        callBy={action}
+        cartId={cartId}
       />
     </EcommerceLayout>
   );
