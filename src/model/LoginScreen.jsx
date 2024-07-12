@@ -126,7 +126,7 @@ const LoginScreen = ({
   };
   function calculateNewPrice(originalPrice, discountPercentage) {
     const dis = discountPercentage ? discountPercentage : 0;
-    // console.log(originalPrice, dis);
+
     const discountAmount = originalPrice * (dis / 100);
     const newPrice = originalPrice - discountAmount;
     return Math.floor(newPrice);
