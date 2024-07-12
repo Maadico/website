@@ -1,20 +1,19 @@
 import React from "react";
 // import { PiNotebookFill } from "react-icons/pi";
 import { useState, useContext } from "react";
-import axios from "axios";
+// import axios from "axios";
 // import doctor from "../Images/contactDoctor2.jpg";
 import { IoMdCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
 import { AppointMentContext } from "../context/Mycontext";
-import { DatePicker } from "antd";
+// import { DatePicker } from "antd";
 import dayjs from "dayjs";
-import { TimePicker } from "antd";
+// import { TimePicker } from "antd";
 import toast from "react-hot-toast";
 
 import customParseFormat from "dayjs/plugin/customParseFormat";
 dayjs.extend(customParseFormat);
-const dateFormat = "YYYY-MM-DD";
 
 dayjs.extend(customParseFormat);
 const Contact = () => {
@@ -22,20 +21,12 @@ const Contact = () => {
 
   const [contact, setContact] = useState({
     name: "",
-    email: "",
     phone: "",
-    appointmentTime: "",
-    time: "",
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (
-      !contact.name ||
-      !contact.phone ||
-      !contact.appointmentTime ||
-      !contact.time
-    ) {
+    if (!contact.name || !contact.phone) {
       toast("all fields necessary", {
         style: {
           borderRadius: "10px",
@@ -44,6 +35,19 @@ const Contact = () => {
         },
       });
       return;
+    }
+
+    if (contact.phone) {
+      if (contact.phone.length !== 10) {
+        toast("Phone number should be 10 digits", {
+          style: {
+            borderRadius: "10px",
+            background: "rgb(24, 50, 91)",
+            color: "#fff",
+          },
+        });
+        return;
+      }
     }
 
     try {
@@ -57,26 +61,16 @@ const Contact = () => {
       });
       setContact({
         name: "",
-        email: "",
         phone: "",
-        appointmentTime: "",
-        time: "",
       });
     } catch (e) {
       console.log(e.message);
       console.log(e);
     }
+    const requesturl = `https://calendly.com/maadico-in/30min `;
+    window.open(requesturl, "_blank");
   };
-  const handleDate = (e) => {
-    if (e) {
-      setContact((p) => ({ ...p, appointmentTime: e }));
-      console.log(e.$d);
-    }
-  };
-  const onChange = (t) => {
-    // console.log(timeString);
-    setContact((p) => ({ ...p, time: t }));
-  };
+
   return (
     <>
       <div className="contacts" id="contacts">
@@ -148,23 +142,6 @@ const Contact = () => {
                       </div>
                       <div className="col-md-6 mb-2">
                         <input
-                          type="email"
-                          className="form-control"
-                          id="inputPassword4"
-                          placeholder="Email"
-                          value={contact.email}
-                          onChange={(e) => {
-                            setContact((prevContact) => ({
-                              ...prevContact,
-                              email: e.target.value,
-                            }));
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6 my-2">
-                        <input
                           type="number"
                           className="form-control"
                           id="inputEmail4"
@@ -179,28 +156,8 @@ const Contact = () => {
                           required
                         />
                       </div>
+                    </div>
 
-                      <div className="col-md-6 my-2">
-                        <DatePicker
-                          defaultValue={dayjs("2024-04-19", dateFormat)}
-                          minDate={dayjs("2024-04-18", dateFormat)}
-                          maxDate={dayjs("2024-12-31", dateFormat)}
-                          onChange={handleDate}
-                          value={contact.appointmentTime}
-                        />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6 my-2">
-                        <TimePicker
-                          onChange={onChange}
-                          // defaultOpenValue={dayjs("00:00:00", "HH:mm:ss")}
-                          use12Hours
-                          format="h:mm a"
-                          value={contact?.time}
-                        />
-                      </div>
-                    </div>
                     <div className="row">
                       <div className="col-md-6">
                         <button

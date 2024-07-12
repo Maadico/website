@@ -68,7 +68,7 @@ const Main = () => {
   console.log(isVisible, dynamicIsVisible);
   const { auth } = useContext(UserContext);
 
-  const { cartGet } = useContext(productContext);
+  const { cartGet, productGet } = useContext(productContext);
   useEffect(() => {
     const fetchedProduct = async () => {
       if (auth?.user && auth?.token) {
@@ -103,6 +103,14 @@ const Main = () => {
   useEffect(() => {
     setIsVisible(window.innerWidth < 768);
   }, []);
+
+  useEffect(() => {
+    const fetchedProduct = async () => {
+      await productGet(auth);
+    };
+    fetchedProduct();
+  }, []);
+
   return (
     <div>
       {pathname === "/" && isVisibles && <UpHeader />}

@@ -61,16 +61,12 @@ const Home = () => {
             </a>
           </div>
 
-          <div className="icon1">
+          <div className="icon2">
             <a href="https://wa.me/919930805129" target="blank">
-              <IoLogoWhatsapp fontSize={25} color="green" />
+              <IoLogoWhatsapp fontSize={35} color="green" />
             </a>
           </div>
-          {/* <div className="icon1">
-            <a href=" https://www.instagram.com/maadico_1?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">
-              <AiFillInstagram fontSize={25} color="white" />
-            </a>
-          </div> */}
+
           <div className="icon1">
             <a href="#navbarColor">
               <FaArrowUp fontSize={26} color="white" />

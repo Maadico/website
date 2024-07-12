@@ -9,6 +9,8 @@ import { MdAddIcCall } from "react-icons/md";
 // import { BiSolidToTop } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaArrowUp } from "react-icons/fa6";
+import { useModel } from "../../hooks/useModel";
+import LoginScreen from "../../model/LoginScreen";
 const Product = () => {
   const navigate = useNavigate();
 
@@ -22,14 +24,15 @@ const Product = () => {
     handleAdToCart,
   } = useContext(productContext);
   const { auth } = useContext(UserContext);
-
-  useEffect(() => {
-    const fetchedProduct = async () => {
-      await productGet(auth);
-    };
-    fetchedProduct();
-  }, [cartLoad]);
-
+  const { open, handleOpen, handleClose } = useModel();
+  // useEffect(() => {
+  //   const fetchedProduct = async () => {
+  //     await productGet(auth);
+  //   };
+  //   fetchedProduct();
+  // }, [cartLoad]);
+  const [productData, setProductData] = useState(null);
+  const [isRegister, setIsRegister] = useState(false);
   const isPresent = (id) => {
     const isCart = cart.find((c) => c?._id === id);
     if (isCart) {
@@ -107,11 +110,20 @@ const Product = () => {
   }, []);
   function calculateNewPrice(originalPrice, discountPercentage) {
     const dis = discountPercentage ? discountPercentage : 0;
-    console.log(originalPrice, dis);
+    // console.log(originalPrice, dis);
     const discountAmount = originalPrice * (dis / 100);
     const newPrice = originalPrice - discountAmount;
     return Math.floor(newPrice);
   }
+
+  const handleBuy = (p) => {
+    setIsRegister(false);
+    setProductData(p);
+    // if ((!auth?.token && !auth?.user) || !auth?.user?.address) {
+    handleOpen();
+    // }
+  };
+
   return pLoader ? (
     <Loader />
   ) : (
@@ -156,12 +168,26 @@ const Product = () => {
                       New Price
                       <span> ₹ {calculateNewPrice(p?.price, p?.discount)}</span>
                     </p>
-                    <button
-                      onClick={() => handleAddCart(p?._id)}
-                      className="btn viewDetails"
-                    >
-                      Add to Cart
-                    </button>
+                    <div className="d-flex justify-content-center align-items-center">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleAddCart(p?._id);
+                        }}
+                        className="btn viewDetails"
+                      >
+                        Add to Cart
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleBuy(p);
+                        }}
+                        className="btn viewDetails mx-2"
+                      >
+                        Buy Now
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -177,16 +203,12 @@ const Product = () => {
             </a>
           </div>
 
-          <div className="icon1">
+          <div className="icon2">
             <a href="https://wa.me/919930805129" target="blank">
-              <IoLogoWhatsapp fontSize={25} color="green" />
+              <IoLogoWhatsapp fontSize={35} color="green" />
             </a>
           </div>
-          {/* <div className="icon1">
-            <a href=" https://www.instagram.com/maadico_1?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">
-              <AiFillInstagram fontSize={25} color="white" />
-            </a>
-          </div> */}
+
           <div className="icon1">
             <a href="#navbarColor">
               <FaArrowUp fontSize={26} color="white" />
@@ -194,6 +216,13 @@ const Product = () => {
           </div>
         </div>
       )}
+      <LoginScreen
+        open={open}
+        handleClose={handleClose}
+        isRegister={isRegister}
+        setIsRegister={setIsRegister}
+        productData={productData}
+      />
     </EcommerceLayout>
   );
 };

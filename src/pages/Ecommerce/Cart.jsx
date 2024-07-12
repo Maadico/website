@@ -156,27 +156,6 @@ const Cart = () => {
 
     try {
       await handleOrder(productData, auth);
-      // if (data && data?.data?.data?.instrumentResponse?.redirectInfo?.url) {
-      //   console.log(data?.data?.data?.instrumentResponse?.redirectInfo?.url);
-
-      //   const redirectUrl =
-      //     data?.data?.data?.instrumentResponse?.redirectInfo?.url;
-      //   // if (window.open) {
-      //   //   window.open(redirectUrl, "_blank");
-      //   // }
-
-      //   const a = document.createElement("a");
-      //   a.href = redirectUrl;
-      //   a.target = "_blank";
-      //   a.rel = "noopener noreferrer";
-
-      //   document.body.appendChild(a);
-
-      //   a.click();
-
-      //   document.body.removeChild(a);
-      //   return;
-      // }
     } catch (e) {
       console.log(e);
       toast(e.response.data.message, {
@@ -441,7 +420,7 @@ const Cart = () => {
             className="my-2 border btn viewDetails"
             onClick={() => navigate("/product")}
           >
-            Find Medicines
+            Find Products
           </button>
         </div>
       )}
@@ -453,16 +432,12 @@ const Cart = () => {
             </a>
           </div>
 
-          <div className="icon1">
-            <a href="https://wa.me/919601645426" target="blank">
-              <IoLogoWhatsapp fontSize={25} color="white" />
+          <div className="icon2">
+            <a href="https://wa.me/919930805129" target="blank">
+              <IoLogoWhatsapp fontSize={35} color="green" />
             </a>
           </div>
-          {/* <div className="icon1">
-            <a href=" https://www.instagram.com/maadico_1?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">
-              <AiFillInstagram fontSize={25} color="white" />
-            </a>
-          </div> */}
+
           <div className="icon1">
             <a href="#navbarColor">
               <FaArrowUp fontSize={26} color="white" />
