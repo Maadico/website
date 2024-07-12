@@ -144,7 +144,7 @@ const LoginScreen = ({
       return;
     }
 
-    const products = { product: productData?._id, quantity: 1 };
+    const products = [{ product: productData?._id, quantity: 1 }];
 
     const productCollection = {
       products,
