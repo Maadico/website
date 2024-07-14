@@ -689,7 +689,11 @@ const LoginScreen = ({
                         >
                           Register
                         </button>
-                        <p className="small fw-bold mt-2 pt-1 mb-0">
+                        <p
+                          className="small fw-bold mt-2 pt-1 mb-0"
+                          style={{ cursor: "pointer" }}
+                          onClick={() => setIsRegister(false)}
+                        >
                           Already Register?{" "}
                           <span className="link-danger">Login</span>
                         </p>
