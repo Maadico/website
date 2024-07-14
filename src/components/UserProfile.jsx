@@ -60,6 +60,8 @@ const UserProfile = () => {
       });
     }
   };
+
+  
   const handleLogout = () => {
     setAuth({ ...auth, user: null, token: "" });
     setIsAuthenticated(false);

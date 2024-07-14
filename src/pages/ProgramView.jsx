@@ -14,6 +14,9 @@ import {
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
 import CustomersReview from "../components/Ecommerce/CustomersReview";
+import LoginScreen from "../model/LoginScreen";
+
+import { useModel } from "../hooks/useModel";
 const ProgramView = () => {
   const { id } = useParams();
   const { auth, isAuthenticate, currentIndex, setCurrentIndex } =
@@ -21,6 +24,10 @@ const ProgramView = () => {
   const { handleOrderProgramPlane } = useContext(OrderContext);
   const { handleFeedbackProgramm } = useContext(productContext);
   const navigate = useNavigate();
+  const { open, handleOpen, handleClose } = useModel();
+  const [action, setAction] = useState("PROGRAM_BUY");
+  const [isRegister, setIsRegister] = useState(false);
+  const [productData, setProductData] = useState(null);
   const programInfo = programInfos[id - 1];
   const [programPrice, setProgramPrice] = useState({});
   // const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,23 +84,32 @@ const ProgramView = () => {
         address: auth?.user?.address,
         pageNo: id,
       };
-      console.log(orderDetails);
+      // console.log(orderDetails);
       if (auth && auth?.token) {
         if (auth?.user?.address) {
           await handleOrderProgramPlane(orderDetails, auth);
           setCurrentIndex(2);
         } else {
-          console.log("first filled address");
-          toast("first filled address", {
-            style: {
-              borderRadius: "10px",
-              background: " rgb(24, 50, 91)",
-              color: "#fff",
-            },
-          });
+          // console.log("first filled address");
+          setIsRegister(false);
+          handleOpen();
+          setProductData(orderDetails);
+          // toast("first filled address", {
+          //   style: {
+          //     borderRadius: "10px",
+          //     background: " rgb(24, 50, 91)",
+          //     color: "#fff",
+          //   },
+          // });
+          return;
         }
       } else {
-        navigate("/login");
+        setIsRegister(false);
+        handleOpen();
+        setProductData(orderDetails);
+
+        // navigate("/login");
+        return;
       }
     } catch (e) {
       console.log(e);
@@ -256,6 +272,14 @@ const ProgramView = () => {
       <CustomersReview
         comments={comments}
         onSubmitComment={handleSubmitComment}
+      />
+      <LoginScreen
+        open={open}
+        handleClose={handleClose}
+        isRegister={isRegister}
+        setIsRegister={setIsRegister}
+        callBy={action}
+        productData={productData}
       />
     </div>
   );

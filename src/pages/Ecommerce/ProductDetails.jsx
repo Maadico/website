@@ -16,6 +16,8 @@ import { MdAddIcCall } from "react-icons/md";
 // import { BiSolidToTop } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaArrowUp } from "react-icons/fa6";
+import LoginScreen from "../../model/LoginScreen";
+import { useModel } from "../../hooks/useModel";
 const ProductDetails = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(0);
 
@@ -26,6 +28,11 @@ const ProductDetails = () => {
     "https://img.freepik.com/free-vector/medication_23-2148172439.jpg?t=st=1714852642~exp=1714856242~hmac=055b3c458e89a6658ba4cb41605cc505a4546e01bd52dc7de5aafabb4a38fee2&w=740",
     "https://img.freepik.com/free-photo/medical-treatment-with-pills_23-2148108993.jpg?t=st=1714852664~exp=1714856264~hmac=5a272ff4b5b3226489bdebdf010c2d1158f8ea814c7293bbe94737a9c08fd52d&w=740",
   ];
+  const { open, handleOpen, handleClose } = useModel();
+  const [action, setAction] = useState("PRODUCT_DETAILS");
+  const [isRegister, setIsRegister] = useState(false);
+  const [productData, setProductData] = useState(null);
+
   const handleRightArrow = () => {
     if (thumbsSwiper < imagesProducts.length - 1) {
       setThumbsSwiper(thumbsSwiper + 1);
@@ -53,7 +60,16 @@ const ProductDetails = () => {
   const [currentProduct, setCurrentProduct] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [dLoader, setDLoader] = useState(true);
+  const [qty, setQty] = useState(1);
+  const increaseQuantity = (item) => {
+    setQty(qty + 1);
+  };
 
+  const decreaseQuantity = (item) => {
+    if (qty > 1) {
+      setQty(qty - 1);
+    }
+  };
   useEffect(() => {
     const fetchedProduct = async () => {
       setDLoader(true);
@@ -171,6 +187,11 @@ const ProductDetails = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const handleBuyNow = (p) => {
+    setIsRegister(false);
+    setProductData(p);
+    handleOpen();
+  };
   return dLoader ? (
     <Loader />
   ) : (
@@ -264,12 +285,36 @@ const ProductDetails = () => {
                   </div>
 
                   <div className="row">
-                    <div className="addToCartProductsDetails mt-4 d-flex justify-content-end">
+                    <div className="d-flex justify-content-end">
+                      <div className="d-flex justify-content-center border">
+                        <span
+                          onClick={() => decreaseQuantity()}
+                          className="text-xl text-gray-600 cursor-pointer btn viewDetails removeRadius"
+                        >
+                          -
+                        </span>
+                        <span className="px-2 text-xl btn bg-light">{qty}</span>
+                        <span
+                          onClick={() => increaseQuantity()}
+                          className="text-xl text-gray-600 cursor-pointer btn viewDetails removeRadius"
+                        >
+                          +
+                        </span>
+                      </div>
+                    </div>
+                    <div className="addToCartProductsDetails mt-4 d-flex justify-content-between  m-0 p-0 g-0">
                       <button
                         className="btn px-5 mx-2"
                         onClick={() => handleAddCart(pDetails?._id)}
                       >
                         ADD TO CART
+                      </button>
+
+                      <button
+                        className="btn px-5 mx-2"
+                        onClick={() => handleBuyNow(pDetails)}
+                      >
+                        BUY NOW
                       </button>
                     </div>
                   </div>
@@ -325,6 +370,15 @@ const ProductDetails = () => {
           </div>
         </div>
       )}
+      <LoginScreen
+        open={open}
+        handleClose={handleClose}
+        isRegister={isRegister}
+        setIsRegister={setIsRegister}
+        callBy={action}
+        productData={productData}
+        qty={qty}
+      />
     </EcommerceLayout>
   );
 };

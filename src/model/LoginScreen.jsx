@@ -33,7 +33,8 @@ const LoginScreen = ({
   isRegister,
   productData,
   callBy = "BUY_NOW",
-  cartId,
+  cartId = "",
+  qty = 1,
 }) => {
   const {
     auth,
@@ -44,8 +45,9 @@ const LoginScreen = ({
     isAuthenticate,
     setAddress,
     addressLoader,
+    setCurrentIndex,
   } = useContext(UserContext);
-  const { handleOrder } = useContext(orderContext);
+  const { handleOrder, handleOrderProgramPlane } = useContext(orderContext);
   const { cart, handleAdToCart } = useContext(productContext);
   const navigate = useNavigate();
   const [loginData, setLoginData] = useState({ email: "", password: "" });
@@ -56,6 +58,23 @@ const LoginScreen = ({
   const [btnLoad1, setBtnLoad1] = useState(false);
   const [otp, SetOtp] = useState("");
   const [isOtp, setIsOtp] = useState(false);
+  useEffect(() => {
+    if (auth?.user?.address) {
+      setAddress({
+        name: auth?.user?.address?.name,
+        street: auth?.user?.address?.street,
+        city: auth?.user?.address?.city,
+        state: auth?.user?.address?.state,
+        zip: auth?.user?.address?.zip,
+        country: auth?.user?.address?.country,
+        phone: auth?.user?.address?.phone,
+        address1: auth?.user?.address?.address1,
+        address2: auth?.user?.address?.address1,
+        district: auth?.user?.address?.district,
+        email: auth?.user?.address?.email,
+      });
+    }
+  }, [auth]);
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
     setLoginData({ ...loginData, [name]: value });
@@ -108,23 +127,6 @@ const LoginScreen = ({
     }
   };
 
-  useEffect(() => {
-    if (auth?.user?.address) {
-      setAddress({
-        name: auth?.user?.address?.name,
-        street: auth?.user?.address?.street,
-        city: auth?.user?.address?.city,
-        state: auth?.user?.address?.state,
-        zip: auth?.user?.address?.zip,
-        country: auth?.user?.address?.country,
-        phone: auth?.user?.address?.phone,
-        address1: auth?.user?.address?.address1,
-        address2: auth?.user?.address?.address1,
-        district: auth?.user?.address?.district,
-        email: auth?.user?.address?.email,
-      });
-    }
-  }, [auth]);
   const handleChange = (e) => {
     setAddress({
       ...address,
@@ -151,7 +153,12 @@ const LoginScreen = ({
       return;
     }
 
-    const products = [{ product: productData?._id, quantity: 1 }];
+    const products = [
+      {
+        product: productData?._id,
+        quantity: callBy === "PRODUCT_DETAILS" ? qty : 1,
+      },
+    ];
 
     const productCollection = {
       products,
@@ -220,17 +227,39 @@ const LoginScreen = ({
       }
     }
   };
+  const handleBuyProgram = async () => {
+    try {
+      await handleOrderProgramPlane(productData, auth);
+      setCurrentIndex(2);
+    } catch (e) {
+      // console.log(error)
+    }
+  };
   const handleUpdate = async (e) => {
     e.preventDefault();
     console.log("currect path", address);
     try {
       await handleUpdateAddress(address);
-      if (callBy === "BUY_NOW") {
+      if (callBy === "BUY_NOW" || callBy === "PRODUCT_DETAILS") {
         handleClose();
         handleCheckout();
       } else if (callBy === "ADD_CART") {
         handleClose();
         handleAddCart(cartId);
+      } else if (callBy === "PROGRAM_BUY") {
+        handleClose();
+        handleBuyProgram();
+      } else if (callBy === "CART_PAGE") {
+        toast("Address Updated", {
+          style: {
+            borderRadius: "10px",
+            background: " rgb(24, 50, 91)",
+            color: "#fff",
+          },
+        });
+        handleClose();
+
+        return;
       }
 
       toast("Processing", {
@@ -349,7 +378,7 @@ const LoginScreen = ({
       }
     } catch (error) {
       console.log(error);
-      toast("internal server error", {
+      toast(error.response.data.message, {
         style: {
           borderRadius: "10px",
           background: " rgb(24, 50, 91)",
@@ -831,7 +860,7 @@ const LoginScreen = ({
                         />
                       </div>
                     </div>
-                    {callBy === "BUY_NOW" && (
+                    {(callBy === "BUY_NOW" || callBy === "PRODUCT_DETAILS") && (
                       <div className="row">
                         <div className="divider d-flex align-items-center my-1">
                           <h5 className="text-center fw-bold mx-3 mb-0">
@@ -897,6 +926,15 @@ const LoginScreen = ({
                                     productData?.discount
                                   ) + 50}
                                 </b>
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className=" mb-1 d-flex justify-content-between align-items-center">
+                            <span>Total Quantity: </span>
+                            <div className="d-flex justify-content-start  w-50">
+                              <span>
+                                <b>{callBy === "PRODUCT_DETAILS" ? qty : 1}</b>
                               </span>
                             </div>
                           </div>

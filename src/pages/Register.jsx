@@ -22,6 +22,7 @@ const Register = () => {
   const [btnLoad1, setBtnLoad1] = useState(false);
   const [otp, SetOtp] = useState("");
   const [isOtp, setIsOtp] = useState(false);
+  
   const handleSignUpChange = (e) => {
     const { name, value } = e.target;
     setSignUpData({ ...signupData, [name]: value });

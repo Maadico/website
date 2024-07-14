@@ -13,6 +13,8 @@ import { MdAddIcCall } from "react-icons/md";
 // import { BiSolidToTop } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaArrowUp } from "react-icons/fa6";
+import LoginScreen from "../../model/LoginScreen";
+import { useModel } from "../../hooks/useModel";
 const Cart = () => {
   const navigate = useNavigate();
   const { auth, address, setAddress, isAddress, setisAddress } =
@@ -20,6 +22,11 @@ const Cart = () => {
   const { cart, setCart, handleDeleteCart, cartGet } =
     useContext(productContext);
   const { handleOrder } = useContext(orderContext);
+
+  const { open, handleOpen, handleClose } = useModel();
+  const [action, setAction] = useState("CART_PAGE");
+  const [isRegister, setIsRegister] = useState(false);
+  const [productData, setProductData] = useState(null);
 
   function calculateNewPrice(originalPrice, discountPercentage) {
     const dis = discountPercentage ? discountPercentage : 0;
@@ -104,8 +111,7 @@ const Cart = () => {
     fetchedProduct();
   }, [auth]);
   const handleUpdate = async () => {
-    setisAddress(true);
-    setIsEditing(true);
+    handleOpen();
   };
   const {
     name,
@@ -149,7 +155,7 @@ const Cart = () => {
     });
     const productData = {
       products,
-      totalAmount: Price + 0,
+      totalAmount: Price + 50,
       address: auth?.user?.address,
     };
     console.log(productData);
@@ -218,7 +224,7 @@ const Cart = () => {
                           </p>
                           <button
                             className="btn viewDetails"
-                            onClick={() => navigate("/profile")}
+                            onClick={handleUpdate}
                           >
                             Edit
                           </button>
@@ -227,10 +233,7 @@ const Cart = () => {
                     </div>
                   </div>
                 ) : (
-                  <button
-                    className="btn viewDetails"
-                    onClick={() => navigate("/profile")}
-                  >
+                  <button className="btn viewDetails" onClick={handleUpdate}>
                     Add Address
                   </button>
                 )}
@@ -445,6 +448,14 @@ const Cart = () => {
           </div>
         </div>
       )}
+      <LoginScreen
+        open={open}
+        handleClose={handleClose}
+        isRegister={isRegister}
+        setIsRegister={setIsRegister}
+        callBy={action}
+        productData={productData}
+      />
     </EcommerceLayout>
   );
 };

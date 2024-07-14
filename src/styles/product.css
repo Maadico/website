@@ -43,6 +43,10 @@
 
 }
 
+.removeRadius {
+    border-radius: 0 !important;
+}
+
 .card-img-tiles .main-img,
 .card-img-tiles .thumblist {
     display: table-cell;
