@@ -4,6 +4,7 @@ import Modal from "@mui/material/Modal";
 import loginWall from "../Images/loginWall.webp";
 import { Link, useNavigate } from "react-router-dom";
 import {
+  OrderContext,
   orderContext,
   productContext,
   UserContext,
@@ -47,7 +48,9 @@ const LoginScreen = ({
     addressLoader,
     setCurrentIndex,
   } = useContext(UserContext);
-  const { handleOrder, handleOrderProgramPlane } = useContext(orderContext);
+  const { handleOrder } = useContext(orderContext);
+  const { handleOrderProgramPlane } = useContext(OrderContext);
+
   const { cart, handleAdToCart } = useContext(productContext);
   const navigate = useNavigate();
   const [loginData, setLoginData] = useState({ email: "", password: "" });
@@ -229,8 +232,12 @@ const LoginScreen = ({
     }
   };
   const handleBuyProgram = async () => {
+    const programData = {
+      ...productData,
+      address: auth?.user?.address,
+    };
     try {
-      await handleOrderProgramPlane(productData, auth);
+      await handleOrderProgramPlane(programData, auth);
       setCurrentIndex(2);
     } catch (e) {
       // console.log(error)
@@ -247,9 +254,11 @@ const LoginScreen = ({
       } else if (callBy === "ADD_CART") {
         handleClose();
         handleAddCart(cartId);
+        return;
       } else if (callBy === "PROGRAM_BUY") {
         handleClose();
         handleBuyProgram();
+        return;
       } else if (callBy === "CART_PAGE") {
         toast("Address Updated", {
           style: {
@@ -949,7 +958,11 @@ const LoginScreen = ({
                       className="btn globalBackColor my-2"
                       type="submit"
                     >
-                      {addressLoader ? "Loading..." : "  Place Order"}
+                      {addressLoader
+                        ? "Loading..."
+                        : callBy === "ADD_CART"
+                        ? "Adding To Cart"
+                        : "Place Order"}
                     </button>
                   </form>
                 </div>

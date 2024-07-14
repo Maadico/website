@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 const Order = ({ children }) => {
   const [order, setOrder] = useState([]);
   const handleOrderProgramPlane = async (orderDetails, auth) => {
+    console.log(orderDetails);
     try {
       const { data } = await axios.post(
         `${process.env.REACT_APP_API_KEY}/program-orders`,

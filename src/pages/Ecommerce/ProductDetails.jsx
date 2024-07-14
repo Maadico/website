@@ -32,7 +32,7 @@ const ProductDetails = () => {
   const [action, setAction] = useState("PRODUCT_DETAILS");
   const [isRegister, setIsRegister] = useState(false);
   const [productData, setProductData] = useState(null);
-
+  const [cartId, setCartId] = useState("");
   const handleRightArrow = () => {
     if (thumbsSwiper < imagesProducts.length - 1) {
       setThumbsSwiper(thumbsSwiper + 1);
@@ -134,13 +134,16 @@ const ProductDetails = () => {
         return;
       }
     } else {
-      toast("please first login", {
-        style: {
-          borderRadius: "10px",
-          background: " rgb(24, 50, 91)",
-          color: "#fff",
-        },
-      });
+      setCartId(id);
+      setAction("ADD_CART");
+      handleOpen();
+      // toast("please first login", {
+      //   style: {
+      //     borderRadius: "10px",
+      //     background: " rgb(24, 50, 91)",
+      //     color: "#fff",
+      //   },
+      // });
     }
   };
   const handleSubmitComment = async (comment) => {
@@ -378,6 +381,7 @@ const ProductDetails = () => {
         callBy={action}
         productData={productData}
         qty={qty}
+        cartId={cartId}
       />
     </EcommerceLayout>
   );
