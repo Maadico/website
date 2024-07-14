@@ -162,7 +162,8 @@ const LoginScreen = ({
 
     const productCollection = {
       products,
-      totalAmount: calculateNewPrice(productData?.price, productData?.discount),
+      totalAmount:
+        calculateNewPrice(productData?.price, productData?.discount) + 50,
       address: auth?.user?.address,
     };
     console.log(productCollection);
