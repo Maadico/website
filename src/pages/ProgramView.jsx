@@ -239,7 +239,7 @@ const ProgramView = () => {
                   }
 
                   if (i === 3) {
-                    return c.Items.map((item, j) => (
+                    return c?.Items?.map((item, j) => (
                       <p key={j}>
                         {j + 1}. {item}
                       </p>
