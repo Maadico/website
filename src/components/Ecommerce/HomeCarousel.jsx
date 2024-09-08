@@ -11,7 +11,7 @@ function HomeCarousel() {
         <div className="carousel-item active">
           <img
             className="homeBannerCard"
-            src="https://res.cloudinary.com/dhzogutcf/image/upload/v1720238127/slider/bg0rvle3xrniq2pzs9jg.png"
+            src="https://res.cloudinary.com/dhzogutcf/image/upload/v1725781201/slider/fftobcz0n9ipsjh3nkes.webp"
             alt="First slide"
           />
 
