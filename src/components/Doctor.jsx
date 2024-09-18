@@ -4,9 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useEffect } from "react";
 import kunal from "../Images/Dr_kunal_Vijay_Bagade.jpg";
 import tanish from "../Images/Dr_Tanish_shah.jpeg";
-import komal from "../Images/Dr. Komal.jpg";
+import komal from "../Images/Komal pic.jpg";
 import govind from "../Images/Dr_govind.JPG";
 import joshi from "../Images/Dr_joshi.jpg";
+import gaurav from "../Images/Dr Gaurav.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -40,6 +41,11 @@ const doctor = [
   {
     name: "Dr Naimesh Joshi ",
     imgLink: joshi,
+    dep: "BNYS",
+  },
+  {
+    name: "Dr Gaurav Thakur",
+    imgLink: gaurav,
     dep: "BNYS",
   },
 ];
