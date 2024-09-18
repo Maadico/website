@@ -49,15 +49,15 @@ const Product = () => {
       if (isPresent(id)) {
         try {
           const data = await handleAdToCart(id, auth);
-          toast(data, {
+          toast("Added To Cart", {
             style: {
               borderRadius: "10px",
               background: " rgb(24, 50, 91)",
               color: "#fff",
             },
           });
-          console.log(data);
-          navigate("/cart");
+          // console.log(data);
+          // navigate("/cart");
         } catch (e) {
           console.log(e);
           toast(e, {
