@@ -61,7 +61,7 @@ function HomeCarousel() {
           />
         </div> */}
       </div>
-      {slider.length > 0 && (
+      {slider.length > 1 && (
         <>
           <a
             className="carousel-control-prev text-primary"
