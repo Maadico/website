@@ -466,8 +466,13 @@ a {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #0da9ef !important;
+    background-color: rgb(24, 50, 91) !important;
+    border-radius: 50%;
+    height: 40px !important;
+    width: 40px !important;
+    padding: 10px !important;
 }
+
 
 /*ProductsDetailsCompTwo  */
 .productDetailsParent {
