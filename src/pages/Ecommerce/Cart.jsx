@@ -19,8 +19,14 @@ const Cart = () => {
   const navigate = useNavigate();
   const { auth, address, setAddress, isAddress, setisAddress } =
     useContext(UserContext);
-  const { cart, setCart, handleDeleteCart, cartGet } =
-    useContext(productContext);
+  const {
+    cart,
+    setCart,
+    handleDeleteCart,
+    cartGet,
+    guestCartGet,
+    handleDeleteGuestCart,
+  } = useContext(productContext);
   const { handleOrder } = useContext(orderContext);
 
   const { open, handleOpen, handleClose } = useModel();
@@ -75,32 +81,65 @@ const Cart = () => {
   };
 
   const removeFromCart = async (itemId) => {
-    try {
-      await handleDeleteCart(auth, itemId);
-      toast("remove from cart", {
-        style: {
-          borderRadius: "10px",
-          background: " rgb(24, 50, 91)",
-          color: "#fff",
-        },
-      });
-    } catch (e) {
-      toast("something went  wrong", {
-        style: {
-          borderRadius: "10px",
-          background: " rgb(24, 50, 91)",
-          color: "#fff",
-        },
-      });
+    // console.log(itemId);
+    if (auth?.user && auth?.token) {
+      try {
+        await handleDeleteCart(auth, itemId);
+        toast("remove from cart", {
+          style: {
+            borderRadius: "10px",
+            background: " rgb(24, 50, 91)",
+            color: "#fff",
+          },
+        });
+      } catch (e) {
+        toast("something went  wrong", {
+          style: {
+            borderRadius: "10px",
+            background: " rgb(24, 50, 91)",
+            color: "#fff",
+          },
+        });
+      }
+    } else {
+      try {
+        await handleDeleteGuestCart(itemId);
+        toast("remove from cart", {
+          style: {
+            borderRadius: "10px",
+            background: " rgb(24, 50, 91)",
+            color: "#fff",
+          },
+        });
+      } catch (e) {
+        toast("something went  wrong", {
+          style: {
+            borderRadius: "10px",
+            background: " rgb(24, 50, 91)",
+            color: "#fff",
+          },
+        });
+      }
     }
   };
+
   useEffect(() => {
     setCLoader(true);
     const fetchedProduct = async () => {
-      console.log(auth);
+      // console.log(auth);
       if (auth?.user && auth?.token) {
         try {
           await cartGet(auth);
+          setCLoader(false);
+        } catch (e) {
+          console.log(e);
+          setCLoader(false);
+        }
+      } else {
+        try {
+          let storedUuid = localStorage.getItem("app_uuid");
+
+          await guestCartGet(storedUuid);
           setCLoader(false);
         } catch (e) {
           console.log(e);
@@ -139,13 +178,15 @@ const Cart = () => {
 
   const handleCheckout = async () => {
     if (!auth?.user?.address) {
-      toast("address is missing", {
-        style: {
-          borderRadius: "10px",
-          background: " rgb(24, 50, 91)",
-          color: "#fff",
-        },
-      });
+      // toast("address is missing", {
+      //   style: {
+      //     borderRadius: "10px",
+      //     background: " rgb(24, 50, 91)",
+      //     color: "#fff",
+      //   },
+      // });
+      // return;
+      handleOpen();
       return;
     }
 

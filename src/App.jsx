@@ -43,8 +43,17 @@ import Refund from "./pages/rule/Refund";
 import ShippingPolicy from "./pages/rule/ShippingPolicy";
 import Orders from "./pages/Orders";
 import UpHeader from "./components/UpHeader";
-
+import { v4 as uuidv4 } from "uuid";
 const App = () => {
+  useEffect(() => {
+    let storedUuid = localStorage.getItem("app_uuid");
+
+    if (!storedUuid) {
+      const newUuid = uuidv4();
+      localStorage.setItem("app_uuid", newUuid);
+    }
+  }, []);
+
   return (
     <BrowserRouter>
       <Main />
@@ -68,15 +77,25 @@ const Main = () => {
   console.log(isVisible, dynamicIsVisible);
   const { auth } = useContext(UserContext);
 
-  const { cartGet, productGet } = useContext(productContext);
+  const { cartGet, productGet, guestCartGet } = useContext(productContext);
+
   useEffect(() => {
     const fetchedProduct = async () => {
+      let storedUuid = localStorage.getItem("app_uuid");
+
       if (auth?.user && auth?.token) {
         try {
           await cartGet(auth);
+        
         } catch (e) {
           console.log(e);
         }
+      }else{
+        try {
+          await guestCartGet(storedUuid);
+        } catch (e) {
+          console.log(e);
+        } 
       }
     };
     fetchedProduct();
@@ -142,14 +161,7 @@ const Main = () => {
             </PrivateRoute>
           }
         />
-        <Route
-          path="/orders"
-          element={
-            <PrivateRoute>
-              <Orders />
-            </PrivateRoute>
-          }
-        />
+        <Route path="/orders" element={<PrivateRoute></PrivateRoute>} />
         <Route path="/product" element={<Product />} />
         <Route path="/privicy" element={<Privacy />} />
 

@@ -156,8 +156,10 @@ const ProductProvider = ({ children }) => {
   };
   const cartGet = async (auth) => {
     try {
+      let storedUuid = localStorage.getItem("app_uuid");
+
       const { data } = await axios.get(
-        `${process.env.REACT_APP_API_KEY}/cart`,
+        `${process.env.REACT_APP_API_KEY}/multiple-cart/${storedUuid}`,
 
         {
           headers: {
@@ -231,6 +233,75 @@ const ProductProvider = ({ children }) => {
       console.log(e);
     }
   };
+
+  const handleAdToGuestCart = async (pid, gId) => {
+    // console.log(id, auth?.token);
+    try {
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API_KEY}/cart-guest-add/${pid}/${gId}`
+      );
+
+      if (data?.success) {
+        const carts = data?.cart?.product;
+        setCart([
+          ...cart,
+          {
+            ...carts,
+            cId: data?.cart?._id,
+          },
+        ]);
+
+        return data?.message;
+      } else {
+        return data?.message;
+      }
+    } catch (e) {
+      return e.response.data.message;
+    }
+  };
+
+  const guestCartGet = async (gId) => {
+    try {
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API_KEY}/cart-guest/${gId}`
+      );
+
+      if (data?.success) {
+        const cartData = data?.cart?.map((c) => {
+          const cartDatas = c?.product;
+          const cId = c?._id;
+
+          return {
+            ...cartDatas,
+            cId,
+          };
+        });
+        // console.log(cartData);
+
+        setCart(cartData);
+        setCartLoad(true);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const handleDeleteGuestCart = async (id) => {
+    console.log("hello worlds", id);
+    try {
+      //   console.log(id);
+      const { data } = await axios.delete(
+        `${process.env.REACT_APP_API_KEY}/cart-guest-delete/${id}`
+      );
+
+      if (data?.success) {
+        setCart((prevItems) => prevItems.filter((item) => item.cId !== id));
+        // console.log(data);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
   return (
     <productContext.Provider
       value={{
@@ -248,6 +319,9 @@ const ProductProvider = ({ children }) => {
         pLoader,
         cartLoad,
         handleFeedbackProgramm,
+        handleAdToGuestCart,
+        guestCartGet,
+        handleDeleteGuestCart,
       }}
     >
       {children}

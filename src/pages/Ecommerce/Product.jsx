@@ -22,6 +22,7 @@ const Product = () => {
     productGet,
     cart,
     handleAdToCart,
+    handleAdToGuestCart,
   } = useContext(productContext);
   const { auth } = useContext(UserContext);
   const { open, handleOpen, handleClose } = useModel();
@@ -81,16 +82,19 @@ const Product = () => {
         return;
       }
     } else {
-      setCartId(id);
-      setAction("ADD_CART");
-      handleOpen();
-      // toast("please first login", {
-      //   style: {
-      //     borderRadius: "10px",
-      //     background: " rgb(24, 50, 91)",
-      //     color: "#fff",
-      //   },
-      // });
+      // setCartId(id);
+      // setAction("ADD_CART");
+      // handleOpen();
+      let storedUuid = localStorage.getItem("app_uuid");
+
+      const data = await handleAdToGuestCart(id, storedUuid);
+      toast(data, {
+        style: {
+          borderRadius: "10px",
+          background: " rgb(24, 50, 91)",
+          color: "#fff",
+        },
+      });
     }
   };
 
