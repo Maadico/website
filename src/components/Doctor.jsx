@@ -18,11 +18,11 @@ import "swiper/css/navigation";
 
 import { Pagination, Navigation } from "swiper/modules";
 const doctor = [
-  {
-    name: "Dr Govind Kumar Trivedi",
-    imgLink: govind,
-    dep: "BNYS , MD",
-  },
+  // {
+  //   name: "Dr Govind Kumar Trivedi",
+  //   imgLink: govind,
+  //   dep: "BNYS , MD",
+  // },
   {
     name: "Dr Komal Kumari",
     imgLink: komal,
